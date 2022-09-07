@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=IBM+Plex+Sans:wght@600&family=Lobster&family=Oswald:wght@500&family=Raleway&family=Roboto:wght@400;900&display=swap');
+
+header {
+    background-image: url(/img/img-header.jpg);
+    background-size: cover;
+    background-position: top;
+    z-index: 1;
+}
+
+#header-personalizado {
+    font-family: 'Oswald', sans-serif;
+}
+
+nav {
+    background-color: rgba(0, 0, 0, 0.85);
+}
+
+.navbar-color li {
+    margin-left: 3.5%;
+}
+
+.navbar-color li>a {
+    color: rgb(255, 255, 255) !important;
+}
+
+.contenido-plato {
+    background-color: rgba(0, 0, 0, 0.5);
+    /* border-radius: 2%; */
+    padding: 2%;
+    margin: 2%;
+    color: rgb(255, 255, 255);
+}
+
+.subtitulo-pregunta {
+    font-family: 'Lobster', cursive;
+    color: black;
+    /* text-shadow: 2px yellow; */
+    -webkit-text-stroke: 1px rgb(255, 255, 255);
+    font-size: 40px;
+}
+
+.contenido-plato h4 {
+    font-size: 50px;
+    font-family: 'Fredericka the Great', cursive;
+}
+
+.destacado-nombre {
+    color: gold;
+    font-size: 130%;
+    /* text-shadow: 2px black; */
+    -webkit-text-stroke: 0.5px black;
+}
+
+.subtitulo-ofertar-reserva {
+    font-size: 140%;
+}
+
+.desc-plato-destacado {
+    font-size: 90%;
+}
+
+.destacado {
+    /* margin: -5%; */
+    z-index: 1000;
+    height: 150%;
+}
+
+.destacado>h3 {
+    /* transform: rotate(-10deg); */
+    background-color: red;
+    width: 61%;
+    padding: 1%;
+    position: relative;
+}
+
+.destacado2 {
+    /* transform: rotate(30deg); */
+    background-color: red;
+    width: 65% !important;
+    padding: 1%;
+    position: relative;
+    z-index: 2;
+    margin-top: 2%;
+}
+
+/* @media (min-width: 576px) {
+    .contenido-plato h4 {
+        font-size: 70px;
+    }
+
+    .contenido-plato h5 {
+        font-size: 40px;
+    }
+} */
+
+
+/* MAIN */
+
+main {
+    background-color: #fcf0d2;
+}
+
+.btn-ordenar-estilo {
+    border: 0px;
+    background-color: gold;
+    color: black;
+    font-weight: bold;
+    padding: 4%;
+    padding-left: 10%;
+    padding-right: 10%;
+    border-radius: 10px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 96%;
+}
+
+.btn-ordenar-estilo:hover {
+    background-color: black;
+    color: gold;
+    transition: .8s;
+}
+
+.a-ordenar-estilo-header {
+    border: 0px;
+    background-color: gold;
+    color: black;
+    font-weight: bold;
+    padding: 2%;
+    border-radius: 5px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 90%;
+    text-decoration: none;
+}
+
+.a-ordenar-estilo-header:hover {
+    background-color: rgb(22, 22, 22);
+    color: rgb(223, 190, 5);
+    transition: .8s;
+    cursor: pointer;
+}
+
+.menu-opciones>div>div {
+    margin-bottom: 1%;
+}
+.menu-opciones>div>div:hover {
+    transition: .5s;
+    box-shadow: 5px 5px 5px 5px #5f5f5f;
+}
+
+.titulos {
+    font-family: 'Fredericka the Great', cursive;
+    font-size: 230%;
+    /* background-color: rgba(255, 238, 0, 0.301); */
+}
+
+.sub-titulos {
+    margin-top: 3%;
+    font-family: 'Fredericka the Great', sans-serif;
+    font-size: 180%;
+    font-weight: bold;
+    text-align: center;
+}
+
+.nombre-item {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+/* Footer */
+
+footer {
+    background-image: url(/img/img-footer.jpg);
+    height: 400px;
+    background-size: cover;
+    background-position: top;
+}
+
+footer>div {
+    background-color: rgba(0, 0, 0, 0.938);
+}
+
+footer p {
+    font-size: 120%;
+    color: white;
+}
+
+footer>div>div>div i {
+    color: gold;
+}
+
+.swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 70%;
+}
+
+.swiper-slide img {
+    width: 100%;
+}

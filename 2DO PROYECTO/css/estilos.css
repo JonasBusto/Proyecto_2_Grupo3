@@ -1,0 +1,25 @@
+#div-table {
+    width: 95%;
+}
+
+.table-th {
+    font-weight: 550;
+}
+
+th, td {
+    font-size: 80%;
+}
+
+.btn-op {
+    border: 0px;
+    border-radius: 20%;
+    background-color: white;
+}
+
+.btn-op:hover i {
+    color: rgb(0, 195, 255) !important;
+}
+
+.btn-op i {
+    font-size: 90%;
+}
