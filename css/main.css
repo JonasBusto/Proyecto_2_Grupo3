@@ -1,7 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=IBM+Plex+Sans:wght@600&family=Lobster&family=Oswald:wght@500&family=Raleway&family=Roboto:wght@400;900&display=swap');
 
 header {
-    background-image: url(/img/img-header.jpg);
+    /* background-image: url(/img/img-header.jpg); */
+    background-image: url(/img/dddd.jpeg);
     background-size: cover;
     background-position: top;
     /* z-index: 1; */
@@ -160,7 +161,7 @@ nav a:hover {
 }
 
 .destacado-nombre {
-    color: gold;
+    color: #faee9e;
     font-size: 130%;
     /* text-shadow: 2px black; */
     -webkit-text-stroke: 0.5px black;
@@ -182,7 +183,7 @@ nav a:hover {
 
 .destacado>h3 {
     /* transform: rotate(-10deg); */
-    background-color: red;
+    background-color: rgb(10, 143, 61);
     width: 61%;
     padding: 1%;
     position: relative;
@@ -201,7 +202,8 @@ nav a:hover {
 /* MAIN */
 
 main {
-    background-color: #fcf0d2;
+    /* background-color: #fcf0d2; */
+    background-color: white;
     /* display: flex; */
 }
 
@@ -221,7 +223,7 @@ main>div {
 
 .btn-ordenar-estilo {
     border: 0px;
-    background-color: gold;
+    background-color: #faee9e;
     color: black;
     font-weight: bold;
     padding: 4%;
@@ -242,7 +244,7 @@ main>div {
 
 .btn-verMas-estilo {
     border: 0px;
-    background-color: gold;
+    background-color: #faee9e;
     color: black;
     font-weight: bold;
     padding-top: 1.5%;
@@ -275,7 +277,7 @@ main>div {
 
 .a-ordenar-estilo-header {
     border: 0px;
-    background-color: gold;
+    background-color: #faee9e;
     color: black;
     font-weight: bold;
     padding: 2%;
@@ -466,9 +468,9 @@ footer>div {
     border: 0px;
     border-radius: 5px;
     width: 100%;
-    background-color: rgba(255, 255, 255, 0.678);
+    background-color: rgb(255, 255, 255);
     /* background-color: rgba(7, 7, 7, 0.562); */
-    color: white;
+    color: black;
 }
 .div-suscribirse button {
     margin-left: 3%;
