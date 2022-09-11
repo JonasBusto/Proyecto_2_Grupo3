@@ -17,11 +17,11 @@
     <header id="header-personalizado">
         <nav class="navbar navbar-expand-lg navbar-color">
             <div class="container-fluid">
-                <a class="navbar-brand text-light" href="/main.html">*LOGO*</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                <a class="navbar-brand text-light" href="#">*LOGO*</a>
+                <button class="navbar-toggler btn-navbar-toggle" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
+                    <i class="fa-solid fa-burger"></i>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav w-100 justify-content-end mb-2 mb-lg-0 mx-md-2">
@@ -42,8 +42,8 @@
                 </div>
             </div>
         </nav>
-        <div>
-            <div class="row m-0 flex-row header-plato">
+        <div class="header-plato">
+            <div class="row m-0 flex-row">
                 <div class="d-flex justify-content-center col-12 col-md-5">
                     <img src="/img/platos/plato-destacado.png" class="img-fluid w-75 mt-2" alt="plato1.png">
                 </div>
@@ -52,49 +52,85 @@
                         <h3>EL MEJOR PLATO</h3>
                         <h1>NOMBRE DEL PLATO</h1>
                     </div>
-                    <h4>DESCRIPCION</h4>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Enim voluptatem quis repellat ex,
-                        doloremque velit vitae temporibus maxime similique esse libero omnis alias culpa aspernatur
-                        minima
-                        quod voluptatibus voluptatum id.</p>
+                    <h4>VALORACIÓN DEL PLATO</h4>
+
+                    <div class="d-flex justify-content-center">
+                        <div class="d-flex flex-row justify-content-center valoracion-plato-destacado">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                        <div>
+                            <h3>4 / 5</h3>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </header>
 
     <main>
-        <div class="container-fluid mt-3">
+        <div class="container-fluid mt-3 div-ver-detalles">
             <div class="row m-0 justify-content-center">
                 <div class="col-12">
-                    <h3>Ver mas detalles</h3>
+                    <h3 class="titulos">VER MAS DETALLES</h3>
                     <div class="d-flex flex-column">
-                        <h4>DESCRIPCION</h4>
                         <div>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa numquam quos, sapiente,
-                                nam eligendi itaque optio nulla necessitatibus dolores libero asperiores, tempore quasi
-                                quisquam natus saepe! Consequuntur quas non repellendus?</p>
+                            <h4 class="sub-titulos">DESCRIPCION</h4>
+                            <div>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa numquam quos,
+                                    sapiente,
+                                    nam eligendi itaque optio nulla necessitatibus dolores libero asperiores, tempore
+                                    quasi
+                                    quisquam natus saepe! Consequuntur quas non repellendus?</p>
+                            </div>
                         </div>
-                        <h4>IMAGENES</h4>
+                        <div>
+                            <h4 class="sub-titulos">PRECIO Y CARACTERISTICAS</h4>
+                            <div class="row m-0 justify-content-center">
+                                <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4 d-flex flex-column div-caracteristicas">
+                                    <div class="d-flex flex-column align-items-center mb-auto">
+                                        <i class="fa-solid fa-sack-dollar"></i>
+                                    </div>
+                                    <div class="d-flex flex-column justify-content-between text-center">
+                                        <h5>PRECIO</h5>
+                                        <p>130.00$</p>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4 d-flex flex-column div-caracteristicas">
+                                    <div class="d-flex flex-column align-items-center mb-auto">
+                                        <i class="fa-regular fa-credit-card"></i>
+                                    </div>
+                                    <div class="d-flex flex-column justify-content-between text-center">
+                                        <h5>METODOS DE PAGOS</h5>
+                                        <p>Debido y Credito</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <h4 class="sub-titulos">IMAGENES</h4>
                         <div class="container-fluid">
                             <div class="row m-0">
-                                <div class="col-6 col-md-4 d-flex">
+                                <div class="col-6 col-md-4 p-1 d-flex">
                                     <img src="/img/img1-carousel.jpg" class="img-fluid" alt="">
                                 </div>
-                                <div class="col-6 col-md-4 d-flex">
+                                <div class="col-6 col-md-4 p-1 d-flex">
                                     <img src="/img/img1-carousel.jpg" class="img-fluid" alt="">
                                 </div>
-                                <div class="col-6 col-md-4 d-flex">
+                                <div class="col-6 col-md-4 p-1 d-flex">
                                     <img src="/img/img1-carousel.jpg" class="img-fluid" alt="">
                                 </div>
-                                <div class="col-6 col-md-4 d-flex">
+                                <div class="col-6 col-md-4 p-1 d-flex">
                                     <img src="/img/img1-carousel.jpg" class="img-fluid" alt="">
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-12  d-flex flex-column border div-reseñas">
-                    <h3>Reseñas</h3>
+                <div class="col-12 mt-3 d-flex flex-column div-reseñas">
+                    <h4 class="sub-titulos">RESEÑAS</h4>
                     <div class="d-flex flex-column">
                         <div class="d-flex flex-row">
                             <div class="d-flex flex-column w-auto mx-3 div-img-perfil">
@@ -122,8 +158,15 @@
                             </div>
                         </div>
                     </div>
+                    <div class="my-3">
+                        <label for="exampleFormControlTextarea1" class="form-label label-comentario">REALIZAR
+                            COMENTARIO</label>
+                        <h6>TU USUARIO: <b>Pepe</b></h6>
+                        <textarea class="form-control w-50" id="exampleFormControlTextarea1" rows="2"></textarea>
+                        <button id="btn-comentar" class="my-1">COMENTAR</button>
+                    </div>
                 </div>
-                
+
             </div>
         </div>
     </main>

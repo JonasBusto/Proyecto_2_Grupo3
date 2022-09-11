@@ -8,6 +8,13 @@ header {
     background-position: top;
 }
 
+.valoracion-plato-destacado {
+    color: gold
+}
+.valoracion-plato-destacado i {
+    font-size: 40px;
+}
+
 #header-personalizado {
     font-family: 'Oswald', sans-serif;
 }
@@ -27,6 +34,14 @@ nav>div {
     max-width: 1360px; 
 }
 
+.btn-navbar-toggle {
+    color: white;
+}
+
+.btn-navbar-toggle:hover {
+    color: rgb(143, 142, 142) !important;
+}
+
 .navbar-color li {
     margin-left: 3.5%;
 }
@@ -35,9 +50,14 @@ nav>div {
     color: rgb(255, 255, 255) !important;
 }
 
+nav a:hover {
+    color: rgb(143, 142, 142) !important;
+}
+
 .header-plato {
     padding-top: 1%;
     padding-bottom: 1%;
+    background-color: rgba(0, 0, 0, 0.6);
 }
 
 .header-plato h1,
@@ -46,12 +66,28 @@ nav>div {
     color: white;
 }
 
+.header-plato h3 {
+    color: black;
+}
+
 .header-plato h1 {
     font-family: 'Roboto', sans-serif;
     font-weight: bold;
     font-size: 300%;
 }
 
+.sub-titulos {
+    font-family: 'Oswald', sans-serif;
+    border-left: 11px solid #6b653c;
+    padding-left: 1%;
+}
+.sub-titulos:hover {
+    color: #6b653c;
+}
+
+.div-ver-detalles p {
+    font-family: 'Roboto', sans-serif;
+}
 
 /* MAIN */
 
@@ -74,6 +110,37 @@ main>div {
 .div-likes i {
     font-size: 130%;
 }
+
+.titulos {
+    text-align: center;
+    font-size: 225%;
+    font-family: 'Oswald', sans-serif;
+}
+
+.div-caracteristicas i {
+    font-size: 400%;
+}
+
+#btn-comentar {
+    border: 0px;
+    background-color: #faee9e;
+    color: black;
+    font-weight: bold;
+    padding: 1.5%;
+    border-radius: 10px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 96%;
+    text-decoration: none;
+}
+#btn-comentar:hover {
+    background-color: black;
+    color: #faee9e;
+}
+
+.label-comentario {
+    font-weight: bold;
+}
+
 
 /* FOOTER */
 
@@ -198,8 +265,8 @@ footer>div {
     border: 0px;
     border-radius: 5px;
     width: 100%;
-    background-color: rgba(7, 7, 7, 0.562);
-    color: white;
+    background-color: white;
+    color: black;
 }
 .div-suscribirse button {
     margin-left: 3%;

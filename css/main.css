@@ -49,7 +49,7 @@ nav a:hover {
 
 /* INICIO DE MEDIA QUERI PARA EL PADDING DEL NAVBAR */
 
-@media only screen and (max-width: 800px) {
+/* @media only screen and (max-width: 800px) {
     .div-general-contenido-plato {
         padding-top: 110% !important;
     }
@@ -80,7 +80,7 @@ nav a:hover {
     .div-general-contenido-plato {
         padding-top: 14.5% !important;
     }
-}
+} */
 @media only screen and (max-width: 380px) {
     .div-general-contenido-plato {
         padding-top: 14.8% !important;
@@ -211,6 +211,27 @@ main>div {
     max-width: 1360px;
 }
 
+/* .div-tipos-comida>div {
+    background-position: center;
+    background-size: cover;
+    height: 450px;
+    width: 300px;
+    margin: 0.5%;
+}
+
+.div-comidas-destacadas1 {
+    background-image: url(/img/img-desayuno.jpg);
+}
+.div-comidas-destacadas2 {
+    background-image: url(/img/img-ensalada.jpg);
+}
+.div-comidas-destacadas3 {
+    background-image: url(/img/img-pizza.jpg);
+}
+.div-comidas-destacadas4 {
+    background-image: url(/img/img-postres.jpg);
+} */
+
 .swiper-slide {
     background-position: center;
     background-size: cover;
@@ -238,7 +259,7 @@ main>div {
 .btn-ordenar-estilo:hover {
     cursor: pointer;
     background-color: black;
-    color: gold;
+    color: #faee9e;
     transition: .8s;
 }
 
@@ -258,7 +279,7 @@ main>div {
 .btn-verMas-estilo:hover {
     cursor: pointer;
     background-color: black;
-    color: gold;
+    color: #faee9e;
     transition: .8s;
 }
 
