@@ -31,7 +31,7 @@
     color: black;
     cursor: pointer;
     font-weight:600;
-    margin-left: auto;
+    /* margin-left: auto; */
 }
 .btn-container button:hover {
     color: #faee9e;
