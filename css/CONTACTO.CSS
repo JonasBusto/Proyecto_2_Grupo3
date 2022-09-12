@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=IBM+Plex+Sans:wght@600&family=Lobster&family=Oswald:wght@500&family=Raleway&family=Roboto:wght@400;900&display=swap');
+
+/* HEADER */
 nav {
     background-color: rgba(0, 0, 0, 0.85);
 }
@@ -10,6 +12,17 @@ nav {
 .navbar-color li>a {
     color: rgb(255, 255, 255) !important;
 }
+
+/* MAIN */
+
+main {
+    background: url('../img/fondo-login.png') no-repeat left center/cover;
+}
+
+.div-contactanos {
+    background-color: rgba(179, 179, 179, 0.726);
+}
+
 .contactanos{
     background-color:  rgb(0, 0, 0); 
     border-radius: 4px;
