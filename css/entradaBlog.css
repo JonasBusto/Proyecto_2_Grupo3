@@ -1,0 +1,374 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=IBM+Plex+Sans:wght@600&family=Lobster&family=Oswald:wght@500&family=Raleway&family=Roboto:wght@400;900&display=swap');
+
+/* HEADER */
+
+header {
+    background-image: url(/img/img-destacada.jpg);
+    background-size: cover;
+    background-position: top;
+}
+
+.valoracion-plato-destacado {
+    color: gold
+}
+
+.valoracion-plato-destacado i {
+    font-size: 40px;
+}
+
+#header-personalizado {
+    font-family: 'Oswald', sans-serif;
+}
+
+#header-personalizado>div {
+    display: flex;
+    justify-content: center;
+}
+
+#header-personalizado>div>div {
+    max-width: 1400px;
+}
+
+nav {
+    background-color: rgba(0, 0, 0, 0.85);
+}
+
+nav>div {
+    max-width: 1360px;
+}
+
+.btn-navbar-toggle {
+    color: white;
+}
+
+.btn-navbar-toggle:hover {
+    color: rgb(143, 142, 142) !important;
+}
+
+.navbar-color li {
+    margin-left: 3.5%;
+}
+
+.navbar-color li>a {
+    color: rgb(255, 255, 255) !important;
+}
+
+nav a:hover {
+    color: rgb(143, 142, 142) !important;
+}
+
+.header-plato {
+    padding-top: 1%;
+    padding-bottom: 1%;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.header-plato h1,
+.header-plato h4,
+.header-plato p {
+    color: white;
+}
+
+.header-plato h3 {
+    color: black;
+}
+
+.header-plato h1 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 300%;
+}
+
+.sub-titulos {
+    font-family: 'Oswald', sans-serif;
+    border-left: 11px solid #6b653c;
+    padding-left: 1%;
+}
+
+.sub-titulos:hover {
+    color: #6b653c;
+}
+
+.div-ver-detalles p {
+    font-family: 'Roboto', sans-serif;
+}
+
+/* MAIN */
+
+/* main {
+    
+    background-image:linear-gradient(rgba(245, 0, 0, 0.034),rgba(255, 255, 255, 0.1)),url(https://tukurtukurfoundation.com/wp-content/uploads/2019/11/bg.jpg);
+    background-size:120%;
+    background-position: center;
+    background-repeat: no-repeat;
+} */
+
+main>div {
+    max-width: 1360px;
+}
+
+.div-reseñas>h3 {
+    font-family: 'Roboto', sans-serif;
+}
+
+.valoracion {
+    color: gold;
+}
+
+.div-img-perfil {
+    min-width: 50px;
+    max-width: 70px;
+}
+
+.div-likes i {
+    font-size: 130%;
+}
+
+.titulos {
+    text-align: center;
+    font-size: 225%;
+    font-family: 'Oswald', sans-serif;
+}
+
+.div-caracteristicas i {
+    font-size: 400%;
+}
+
+#btn-comentar {
+    border: 0px;
+    background-color: #faee9e;
+    color: black;
+    font-weight: bold;
+    padding: 1.5%;
+    border-radius: 10px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 96%;
+    text-decoration: none;
+}
+
+#btn-comentar:hover {
+    background-color: black;
+    color: #faee9e;
+}
+
+.label-comentario {
+    font-weight: bold;
+}
+
+/* swiper */
+
+
+.swiper {
+    width: 100%;
+}
+
+@media (min-width: 576px) {
+    .div-1er-swipper {
+        width: 90%;
+    }
+
+    .div-1er-swipper {
+        max-width: 650px;
+        max-height: 650px;
+    }  
+}
+
+.mySwiper {
+    height: 20%;
+    padding: 10px;
+}
+
+.mySwiper .swiper-slide {
+    opacity: 0.4;
+}
+
+.mySwiper .swiper-slide-thumb-active {
+    opacity: 1;
+}
+
+.swiper-slide img {
+    width: 100%;
+    height: 100%;
+}
+
+/* swiper */
+
+
+/* FOOTER */
+
+footer {
+    background-image: url(/img/img-footer.jpg);
+    background-size: cover;
+    background-position: top;
+}
+
+footer>div {
+    background-color: rgba(17, 17, 17, 0.829);
+    display: flex;
+    justify-content: center;
+}
+
+.footer-contenido {
+    max-width: 1320px;
+}
+
+.div-btn-redes {
+    padding: 1%;
+    width: 145px;
+    height: 65px;
+}
+
+/* INICIO MEDIA QUERIS DE LOS BOTONES DE REDES */
+
+@media (max-width: 1160px) {
+    .div-btn-redes {
+        width: 135px;
+    }
+}
+
+@media (max-width: 1079px) {
+    .div-btn-redes {
+        width: 125px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .div-btn-redes {
+        width: 110px;
+    }
+}
+
+@media (max-width: 880px) {
+    .div-btn-redes {
+        width: 100px;
+    }
+}
+
+@media (max-width: 575px) {
+    .div-btn-redes {
+        width: 145px;
+    }
+}
+
+@media (max-width: 386px) {
+    .div-btn-redes {
+        width: 130px;
+    }
+}
+
+@media (max-width: 346px) {
+    .div-btn-redes {
+        width: 115px;
+    }
+}
+
+@media (max-width: 306px) {
+    .div-btn-redes {
+        width: 110px;
+    }
+}
+
+@media (max-width: 293px) {
+    .div-btn-redes {
+        width: 190px;
+    }
+}
+
+/* FIN MEDIA QUERIS DE LOS BOTONES DE REDES */
+
+.div-btn-redes a {
+    width: 100%;
+    height: 100%;
+    border: 0px;
+    border-radius: 6px;
+    font-size: 40px;
+    text-decoration: none;
+}
+
+#btn-red-facebook {
+    background-color: #4267B2;
+    color: white;
+}
+
+#btn-red-facebook:hover {
+    background-color: white;
+    color: #4267B2;
+}
+
+#btn-red-twitter {
+    background-color: #1DA1F2;
+    color: white;
+}
+
+#btn-red-twitter:hover {
+    background-color: white;
+    color: #1DA1F2;
+}
+
+#btn-red-instagram {
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+    color: white;
+}
+
+#btn-red-instagram:hover {
+    color: radial-gradient(#fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+    background-color: white !important;
+}
+
+#btn-red-whatsapp {
+    background-color: #25D366;
+    color: white;
+}
+
+#btn-red-whatsapp:hover {
+    background-color: white;
+    color: #25D366;
+}
+
+.div-suscribirse input {
+    height: 45px;
+    border: 0px;
+    border-radius: 5px;
+    width: 100%;
+    background-color: white;
+    color: black;
+}
+
+.div-suscribirse button {
+    margin-left: 3%;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: gold;
+    color: black;
+    height: 45px;
+    border: 0px;
+    border-radius: 5px;
+}
+
+.div-suscribirse button:hover {
+    cursor: pointer;
+    background-color: black;
+    color: gold;
+    transition: .8s;
+}
+
+.div-logo img {
+    width: 30%;
+}
+
+.div-redes-sociales {
+    color: white;
+    font-size: 140%
+}
+
+.div-redes-sociales h3 {
+    font-size: 90%;
+}
+
+.copyright {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    font-family: 'Roboto', sans-serif;
+    padding: 1.5%;
+    width: 100%;
+}

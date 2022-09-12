@@ -1,0 +1,532 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=IBM+Plex+Sans:wght@600&family=Lobster&family=Oswald:wght@500&family=Raleway&family=Roboto:wght@400;900&display=swap');
+
+header {
+    /* background-image: url(/img/img-header.jpg); */
+    background-image: url(/img/dddd.jpeg);
+    background-size: cover;
+    background-position: top;
+    /* z-index: 1; */
+}
+
+#header-personalizado {
+    font-family: 'Oswald', sans-serif;
+}
+
+#header-personalizado>div {
+    display: flex;
+    justify-content: center;
+}
+#header-personalizado>div>div {
+    max-width: 1900px;
+}
+
+nav {
+    background-color: rgba(0, 0, 0, 0.95);
+}
+nav>div {
+    max-width: 1320px; 
+}
+
+.btn-navbar-toggle {
+    color: white;
+}
+
+.btn-navbar-toggle:hover {
+    color: rgb(143, 142, 142) !important;
+}
+
+.navbar-color li {
+    margin-left: 3.5%;
+}
+
+.navbar-color li>a {
+    color: rgb(255, 255, 255) !important;
+}
+
+nav a:hover {
+    color: rgb(143, 142, 142) !important;
+}
+
+/* INICIO DE MEDIA QUERI PARA EL PADDING DEL NAVBAR */
+
+/* @media only screen and (max-width: 800px) {
+    .div-general-contenido-plato {
+        padding-top: 110% !important;
+    }
+}
+@media only screen and (max-width: 00px) {
+    .div-general-contenido-plato {
+        padding-top: 110% !important;
+    }
+}
+
+
+@media only screen and (max-width: 800px) {
+    .div-general-contenido-plato {
+        padding-top: 110% !important;
+    }
+}
+@media only screen and (max-width: 600px) {
+    .div-general-contenido-plato {
+        padding-top: 9% !important;
+    }
+}
+@media only screen and (max-width: 430px) {
+    .div-general-contenido-plato {
+        padding-top: 11% !important;
+    }
+}
+@media only screen and (max-width: 400px) {
+    .div-general-contenido-plato {
+        padding-top: 14.5% !important;
+    }
+} */
+@media only screen and (max-width: 380px) {
+    .div-general-contenido-plato {
+        padding-top: 14.8% !important;
+    }
+}
+@media only screen and (max-width: 360px) {
+    .div-general-contenido-plato {
+        padding-top: 15.5% !important;
+    }
+}
+@media only screen and (max-width: 340px) {
+    .div-general-contenido-plato {
+        padding-top: 16.7% !important;
+    }
+}
+@media only screen and (max-width: 321px) {
+    .div-general-contenido-plato {
+        padding-top: 17.5% !important;
+    }
+}
+@media only screen and (max-width: 310px) {
+    .div-general-contenido-plato {
+        padding-top: 18% !important;
+    }
+}
+@media only screen and (max-width: 304px) {
+    .div-general-contenido-plato {
+        padding-top: 18.5% !important;
+    }
+}
+@media only screen and (max-width: 292px) {
+    .div-general-contenido-plato {
+        padding-top: 19% !important;
+    }
+}
+@media only screen and (max-width: 282px) {
+    .div-general-contenido-plato {
+        padding-top: 19.5% !important;
+    }
+}
+@media only screen and (max-width: 275px) {
+    .div-general-contenido-plato {
+        padding-top: 20% !important;
+    }
+}
+@media only screen and (max-width: 265px) {
+    .div-general-contenido-plato {
+        padding-top: 21.3% !important;
+    }
+}
+
+
+/* FIN DE MEDIA QUERI PARA EL PADDING DEL NAVBAR */
+
+.div-general-contenido-plato {
+    background-color: rgba(0, 0, 0, 0.5);
+    /* border-radius: 2%; */
+    padding: 2%;
+    color: rgb(255, 255, 255);
+}
+
+.subtitulo-pregunta {
+    font-family: 'Lobster', cursive;
+    color: black;
+    /* text-shadow: 2px yellow; */
+    -webkit-text-stroke: 1px rgb(255, 255, 255);
+    font-size: 40px;
+}
+
+.contenido-plato h4 {
+    font-size: 40px;
+    font-family: 'Fredericka the Great', cursive;
+}
+@media (max-width: 256px) {
+    .contenido-plato h4 {
+        font-size: 40px;
+    }
+}
+
+.destacado-nombre {
+    color: #faee9e;
+    font-size: 130%;
+    /* text-shadow: 2px black; */
+    -webkit-text-stroke: 0.5px black;
+}
+
+.subtitulo-ofertar-reserva {
+    font-size: 140%;
+}
+
+.desc-plato-destacado {
+    font-size: 90%;
+}
+
+.destacado {
+    /* margin: -5%; */
+    z-index: 1000;
+    /* height: 150%; */
+}
+
+.destacado>h3 {
+    /* transform: rotate(-10deg); */
+    background-color: rgb(10, 143, 61);
+    width: 61%;
+    padding: 1%;
+    position: relative;
+}
+
+.destacado2 {
+    /* transform: rotate(30deg); */
+    background-color: red;
+    width: 65% !important;
+    padding: 1%;
+    position: relative;
+    z-index: 2;
+    margin-top: 2%;
+}
+
+/* MAIN */
+
+main {
+    /* background-color: #fcf0d2; */
+    background-color: white;
+    /* display: flex; */
+}
+
+main>div {
+    max-width: 1360px;
+}
+
+/* .div-tipos-comida>div {
+    background-position: center;
+    background-size: cover;
+    height: 450px;
+    width: 300px;
+    margin: 0.5%;
+}
+
+.div-comidas-destacadas1 {
+    background-image: url(/img/img-desayuno.jpg);
+}
+.div-comidas-destacadas2 {
+    background-image: url(/img/img-ensalada.jpg);
+}
+.div-comidas-destacadas3 {
+    background-image: url(/img/img-pizza.jpg);
+}
+.div-comidas-destacadas4 {
+    background-image: url(/img/img-postres.jpg);
+} */
+
+.swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 70%;
+}
+
+.swiper-slide img {
+    width: 100%;
+}
+
+.btn-ordenar-estilo {
+    border: 0px;
+    background-color: #faee9e;
+    color: black;
+    font-weight: bold;
+    padding: 4%;
+    padding-left: 10%;
+    padding-right: 10%;
+    border-radius: 10px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 96%;
+    text-decoration: none;
+}
+
+.btn-ordenar-estilo:hover {
+    cursor: pointer;
+    background-color: black;
+    color: #faee9e;
+    transition: .8s;
+}
+
+.btn-verMas-estilo {
+    border: 0px;
+    background-color: #faee9e;
+    color: black;
+    font-weight: bold;
+    padding-top: 1.5%;
+    padding-bottom: 1.5%;
+    border-radius: 10px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 96%;
+    text-decoration: none;
+}
+
+.btn-verMas-estilo:hover {
+    cursor: pointer;
+    background-color: black;
+    color: #faee9e;
+    transition: .8s;
+}
+
+.precio-info>h3 {
+    background-color: rgb(29, 29, 28);
+    border-radius: 15px;
+    font-size: 130%;
+    padding: 2%;
+    color: white;
+}
+
+.precio-info {
+    z-index: 1;
+    margin-top: -10%;
+}
+
+.a-ordenar-estilo-header {
+    border: 0px;
+    background-color: #faee9e;
+    color: black;
+    font-weight: bold;
+    padding: 2%;
+    border-radius: 5px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 90%;
+    text-decoration: none;
+}
+
+.a-ordenar-estilo-header:hover {
+    background-color: rgb(22, 22, 22);
+    color: rgb(223, 190, 5);
+    transition: .8s;
+    cursor: pointer;
+}
+
+.menu-opciones>div>div {
+    margin-bottom: 1%;
+}
+
+.menu-opciones>div>div:hover {
+    transition: .5s;
+    box-shadow: 5px 5px 5px 5px #5f5f5f;
+}
+
+.titulos {
+    font-family: 'Fredericka the Great', cursive;
+    font-size: 230%;
+    /* background-color: rgba(255, 238, 0, 0.301); */
+}
+@media (max-width: 256px) {
+    .titulos {
+        font-size: 200%;
+    }
+}
+@media (max-width: 225px) {
+    .titulos {
+        font-size: 180%;
+    }
+}
+
+
+.sub-titulos {
+    margin-top: 3%;
+    font-family: 'Fredericka the Great', sans-serif;
+    font-size: 180%;
+    font-weight: bold;
+    text-align: center;
+}
+
+.nombre-item {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.container-detalles-restaurante p {
+    color: #5f5f5f;
+    font-weight: 450;
+}
+
+.container-detalles-restaurante img {
+    width: 25%;
+}
+
+.container-detalles-restaurante>div {
+    height: 250px;
+}
+
+/* Footer */
+
+footer {
+    background-image: url(/img/img-footer.jpg);
+    background-size: cover;
+    background-position: top;
+} 
+
+footer>div {
+    background-color: rgba(17, 17, 17, 0.829);
+    display: flex;
+    justify-content: center;
+}
+.footer-contenido {
+    max-width: 1320px;
+}
+
+.div-btn-redes {
+    padding: 1%;
+    width: 145px;
+    height: 65px;
+}
+
+/* INICIO MEDIA QUERIS DE LOS BOTONES DE REDES */
+
+@media (max-width: 1160px) {
+    .div-btn-redes {
+        width: 135px;
+    } 
+}
+@media (max-width: 1079px) {
+    .div-btn-redes {
+        width: 125px;
+    } 
+}
+@media (max-width: 1000px) {
+    .div-btn-redes {
+        width: 110px;
+    } 
+}
+@media (max-width: 880px) {
+    .div-btn-redes {
+        width: 100px;
+    } 
+}
+@media (max-width: 575px) {
+    .div-btn-redes {
+        width: 145px;
+    } 
+}
+@media (max-width: 386px) {
+    .div-btn-redes {
+        width: 130px;
+    } 
+}
+@media (max-width: 346px) {
+    .div-btn-redes {
+        width: 115px;
+    } 
+}
+@media (max-width: 306px) {
+    .div-btn-redes {
+        width: 110px;
+    } 
+}
+@media (max-width: 293px) {
+    .div-btn-redes {
+        width: 190px;
+    } 
+}
+
+/* FIN MEDIA QUERIS DE LOS BOTONES DE REDES */
+
+.div-btn-redes a {
+    width: 100%;
+    height: 100%;
+    border: 0px;
+    border-radius: 6px;
+    font-size: 40px;
+    text-decoration: none;
+}
+
+#btn-red-facebook {
+    background-color: #4267B2;
+    color: white;
+}
+#btn-red-facebook:hover {
+    background-color: white;
+    color: #4267B2;
+}
+
+#btn-red-twitter {
+    background-color: #1DA1F2;
+    color: white;
+}
+#btn-red-twitter:hover {
+    background-color: white;
+    color: #1DA1F2;
+}
+
+#btn-red-instagram {
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+    color: white;
+}
+#btn-red-instagram:hover {
+    color: radial-gradient(#fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+    background-color: white !important;
+}
+
+#btn-red-whatsapp {
+    background-color: #25D366;
+    color: white;
+}
+#btn-red-whatsapp:hover {
+    background-color: white;
+    color: #25D366;
+}
+
+.div-suscribirse input {
+    height: 45px;
+    border: 0px;
+    border-radius: 5px;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    /* background-color: rgba(7, 7, 7, 0.562); */
+    color: black;
+}
+.div-suscribirse button {
+    margin-left: 3%;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: gold;
+    color: black;
+    height: 45px;
+    border: 0px;
+    border-radius: 5px;
+}
+.div-suscribirse button:hover {
+    cursor: pointer;
+    background-color: black;
+    color: gold;
+    transition: .8s;
+}
+
+.div-logo img {
+    width: 30%;
+}
+
+.div-redes-sociales {
+    color: white;
+    font-size: 140%
+}
+
+.div-redes-sociales h3 {
+    font-size: 90%;
+}
+
+.copyright {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    font-family: 'Roboto', sans-serif;
+    padding: 1.5%;
+    width: 100%;
+}

@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Principal</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8.3.2/swiper-bundle.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/main.css">
+    <script src="https://kit.fontawesome.com/d4c04a1274.js" crossorigin="anonymous"></script>
+</head>
+
+<body class="min-vh-100 d-flex flex-column">
+
+    <header id="header-personalizado">
+        <!-- <div class="d-flex flex-row justify-content-between">
+            <a class="navbar-brand" href="#">*LOGO*</a>
+            <div class="d-flex flex-row sobre-navbar w-auto">
+                <div class="d-flex flex-column w-auto justify-content-center text-center">
+                    <h5 class="m-0">DELIVERY EXPRESS</h5>
+                    <h4 class="m-0">1234567890</h4>
+                </div>
+                <div class="d-flex w-auto m-1">
+                    <i class="fa-solid fa-mobile-screen-button"></i>
+                </div>
+            </div>
+        </div> -->
+        <nav class="navbar navbar-expand-lg navbar-color">
+            <div class="container-fluid">
+                <a class="navbar-brand text-light" href="/index.html">*LOGO*</a>
+                <button class="navbar-toggler btn-navbar-toggle" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fa-solid fa-burger"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav w-100 justify-content-end mb-2 mb-lg-0 mx-md-2">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="/homeAdmin.html">ADMIN (Auxiliar)</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="/contacto.HTML">CONTACTO</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="/nosotros.HTML">NOSOTROS</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="/login.html">INICIAR SESIÓN</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="/register.html">REGISTRARSE</a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="container-fluid p-0 div-general-contenido-plato">
+            <div class="d-flex flex-row row p-0 m-0 contenido-plato">
+
+                <div class="col-12 col-md-6 d-flex flex-column justify-content-center text-center pb-3">
+                    <h5 class="subtitulo-pregunta">¿Estas con Hambre?</h5>
+                    <h4>NO ESPERES MAS!</h4>
+                    <p class="subtitulo-ofertar-reserva">Comienza reservando este plato destacado de la casa</p>
+                    <h5 class="destacado-nombre">FILETE DE SOLOMILLO A LA PARRILLA </h5>
+                    <p class="desc-plato-destacado">Acá iria una breve descripción</p>
+                    <div class="d-flex justify-content-center">
+                        <a href="/entradaBlog.html" class="a-ordenar-estilo-header">VER MAS DETALLES</a>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 d-flex flex-column">
+                    <img src="/img/platos/plato1.png" class="img-fluid w-100 mt-2" alt="plato1.png">
+                    <div class="destacado d-flex justify-content-end">
+                        <h3>DESTACADO DE LA SEMANA</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </header>
+
+    <main>
+        <div class="mx-auto">
+            <div class="container text-center pt-4 px-0">
+                <h2 class="titulos">ELIJE & DISFRUTA</h2>
+                <p>**AGREGAR ALGO ACERCA DE COMO ES EL RESTAURANTE Y LOS CHEFS O COCINEROS**</p>
+                <div class="swiper carousel-presentacion">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img
+                                src="https://www.newsinlevels.com/wp-content/uploads/2019/10/Depositphotos_184070152_S.jpg" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img
+                                src="https://www.newsinlevels.com/wp-content/uploads/2019/10/Depositphotos_184070152_S.jpg" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img
+                                src="https://www.newsinlevels.com/wp-content/uploads/2019/10/Depositphotos_184070152_S.jpg" />
+                        </div>
+
+                    </div>
+                    <div class="swiper-pagination2"></div>
+                </div>
+                <h3 class="titulos mt-5">MENU</h3>
+            </div>
+            <!-- <div class="container-fluid d-none d-md-block mx-1 p-0">
+                <div class="row m-0 div-tipos-comida w-100 justify-content-center">
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-2 d-flex div-comidas-destacadas1">
+                        <div>
+
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-2 d-flex div-comidas-destacadas2">
+                        <div>
+
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-2 d-flex div-comidas-destacadas3">
+                        <div>
+
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-2 d-flex div-comidas-destacadas4">
+                        <div>
+
+                        </div>
+                    </div>
+                    
+                    
+                </div>
+            </div> -->
+            <div class="container-fluid swiper menu-opciones">
+                <div class="swiper-wrapper m-0">
+                    <div
+                        class="swiper-slide h-auto d-flex flex-column align-items-center justify-content-between text-center pb-3">
+                        <div>
+                            <img src="/img/pizza/pizza-margaritta2.png" class="img-fluid w-100" alt="pizza_menu.png">
+                        </div>
+                        <div>
+                            <h4 class="nombre-item">PIZZAS</h4>
+                            <p>Lorconseis officia! Malo vero ducimus. Maxime quod mollitia ea optio!</p>
+                            <a class="btn-ordenar-estilo">VER MAS</a>
+                        </div>
+                    </div>
+                    <div
+                        class="swiper-slide h-auto d-flex flex-column align-items-center justify-content-between text-center pb-3">
+                        <div>
+                            <img src="/img/platos/plato6.png" class="img-fluid w-100" alt="pizza_menu.png">
+                        </div>
+                        <div>
+                            <h4 class="nombre-item">PLATOS ESPECIALES</h4>
+                            <p>Lorconseis officia! Malo vero ducimus. Maxime quod mollitia ea optio!</p>
+                            <a class="btn-ordenar-estilo">VER MAS</a>
+                        </div>
+                    </div>
+                    <div
+                        class="swiper-slide h-auto d-flex flex-column align-items-center justify-content-between text-center pb-3">
+                        <div>
+                            <img src="/img/postre/postre3.png" class="img-fluid w-100" alt="pizza_menu.png">
+                        </div>
+                        <div>
+                            <h4 class="nombre-item">POSTRES</h4>
+                            <p>Lorconseis officia! Malo vero ducimus. Maxime quod mollitia ea optio!</p>
+                            <a class="btn-ordenar-estilo">VER MAS</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+            <div class="container text-center pt-4">
+                <h3 class="titulos">CATEGORIAS</h3>
+            </div>
+
+            <div class="swiper menu-disponible mt-0">
+                <h3 class="sub-titulos">PIZZAS</h3>
+                <div class="swiper-wrapper m-0 justify-content-between">
+                    <div
+                        class="swiper-slide h-auto d-flex flex-column align-items-center justify-content-between text-center pb-3">
+                        <div>
+                            <img src="/img/pizza/pizza-4-quesos-salame.png" class="img-fluid w-100"
+                                alt="pizza_menu.png">
+                        </div>
+                        <div>
+                            <div class="precio-info d-flex justify-content-end">
+                                <h3><i class="fa-solid fa-dollar-sign"></i> 130.00</h3>
+                            </div>
+                            <h4 class="nombre-item">CUATRO QUESOS</h4>
+                            <p>Lorconseis officia! Malo vero ducimus. Maxime quod mollitia ea optio!</p>
+                            <a class="btn-ordenar-estilo">ORDENAR</a>
+                        </div>
+                    </div>
+                    <div
+                        class="swiper-slide h-auto d-flex flex-column align-items-center justify-content-between text-center pb-3">
+                        <div>
+                            <img src="/img/pizza/pizza-barbacoa-cerdo.png" class="img-fluid w-100" alt="pizza_menu.png">
+                        </div>
+                        <div>
+                            <div class="precio-info d-flex justify-content-end">
+                                <h3><i class="fa-solid fa-dollar-sign"></i> 130.00</h3>
+                            </div>
+                            <h4 class="nombre-item">BARBACOA + CERDO</h4>
+                            <p>Lorconseis officia! Malo vero ducimus. Maxime quod mollitia ea optio!</p>
+                            <a class="btn-ordenar-estilo">ORDENAR</a>
+                        </div>
+                    </div>
+                    <div
+                        class="swiper-slide h-auto d-flex flex-column align-items-center justify-content-between text-center pb-3">
+                        <div>
+                            <img src="/img/pizza/pizza-margaritta-sushi.png" class="img-fluid w-100"
+                                alt="pizza_menu.png">
+                        </div>
+                        <div>
+                            <div class="precio-info d-flex justify-content-end">
+                                <h3><i class="fa-solid fa-dollar-sign"></i> 130.00</h3>
+                            </div>
+                            <h4 class="nombre-item">MARGARITTA + SUSHI</h4>
+                            <p>Lorconseis officia! Malo vero ducimus. Maxime quod mollitia ea optio!</p>
+                            <a class="btn-ordenar-estilo">ORDENAR</a>
+                        </div>
+                    </div>
+                    <div
+                        class="swiper-slide h-auto d-flex flex-column align-items-center justify-content-between text-center pb-3">
+                        <div>
+                            <img src="/img/pizza/pizza-capricciosa.png" class="img-fluid w-100" alt="pizza_menu.png">
+                        </div>
+                        <div>
+                            <div class="precio-info d-flex justify-content-end">
+                                <h3><i class="fa-solid fa-dollar-sign"></i> 130.00</h3>
+                            </div>
+                            <h4 class="nombre-item">CAPRICCIOSA</h4>
+                            <p>Lorconseis officia! Malo vero ducimus. Maxime quod mollitia ea optio!</p>
+                            <a class="btn-ordenar-estilo">ORDENAR</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div> 
+            
+
+            <div class="swiper menu-disponible mt-5">
+                <h3 class="sub-titulos">PLATOS ESPECIALES</h3>
+                <div class="swiper-wrapper m-0 justify-content-between">
+                    <div
+                        class="swiper-slide h-auto d-flex flex-column align-items-center justify-content-between text-center pb-3">
+                        <div>
+                            <img src="/img/platos/plato1.png" class="img-fluid w-100" alt="pizza_menu.png">
+                        </div>
+                        <div>
+                            <div class="precio-info d-flex justify-content-end">
+                                <h3><i class="fa-solid fa-dollar-sign"></i> 130.00</h3>
+                            </div>
+                            <h4 class="nombre-item">PLATO 1</h4>
+                            <p>Lorconseis officia! Malo vero ducimus. Maxime quod mollitia ea optio!</p>
+                            <a class="btn-ordenar-estilo">ORDENAR</a>
+                        </div>
+                    </div>
+                    <div
+                        class="swiper-slide h-auto d-flex flex-column align-items-center justify-content-between text-center pb-3">
+                        <div>
+                            <img src="/img/platos/plato2.png" class="img-fluid w-100" alt="pizza_menu.png">
+                        </div>
+                        <div>
+                            <div class="precio-info d-flex justify-content-end">
+                                <h3><i class="fa-solid fa-dollar-sign"></i> 130.00</h3>
+                            </div>
+                            <h4 class="nombre-item">PLATO 2</h4>
+                            <p>Lorconseis officia! Malo vero ducimus. Maxime quod mollitia ea optio!</p>
+                            <a class="btn-ordenar-estilo">ORDENAR</a>
+                        </div>
+                    </div>
+                    <div
+                        class="swiper-slide h-auto d-flex flex-column align-items-center justify-content-between text-center pb-3">
+                        <div>
+                            <img src="/img/platos/plato3.png" class="img-fluid w-100" alt="pizza_menu.png">
+                        </div>
+                        <div>
+                            <div class="precio-info d-flex justify-content-end">
+                                <h3><i class="fa-solid fa-dollar-sign"></i> 130.00</h3>
+                            </div>
+                            <h4 class="nombre-item">PLATO 3</h4>
+                            <p>Lorconseis officia! Malo vero ducimus. Maxime quod mollitia ea optio!</p>
+                            <a class="btn-ordenar-estilo">ORDENAR</a>
+                        </div>
+                    </div>
+                    <div
+                        class="swiper-slide h-auto d-flex flex-column align-items-center justify-content-between text-center pb-3">
+                        <div>
+                            <img src="/img/platos/plato7.png" class="img-fluid w-100" alt="pizza_menu.png">
+                        </div>
+                        <div>
+                            <div class="precio-info d-flex justify-content-end">
+                                <h3><i class="fa-solid fa-dollar-sign"></i> 130.00</h3>
+                            </div>
+                            <h4 class="nombre-item">PLATO 4</h4>
+                            <p>Lorconseis officia! Malo vero ducimus. Maxime quod mollitia ea optio!</p>
+                            <a class="btn-ordenar-estilo">ORDENAR</a>
+                        </div>
+                    </div>
+                    <div
+                        class="swiper-slide h-auto d-flex flex-column align-items-center justify-content-between text-center pb-3">
+                        <div>
+                            <img src="/img/platos/plato5.png" class="img-fluid w-100" alt="pizza_menu.png">
+                        </div>
+                        <div>
+                            <div class="precio-info d-flex justify-content-end">
+                                <h3><i class="fa-solid fa-dollar-sign"></i> 130.00</h3>
+                            </div>
+                            <h4 class="nombre-item">PLATO 5</h4>
+                            <p>Lorconseis officia! Malo vero ducimus. Maxime quod mollitia ea optio!</p>
+                            <a class="btn-ordenar-estilo">ORDENAR</a>
+                        </div>
+                    </div>
+                    <div
+                        class="swiper-slide h-auto d-flex flex-column align-items-center justify-content-between text-center pb-3">
+                        <div>
+                            <img src="/img/platos/plato6.png" class="img-fluid w-100" alt="pizza_menu.png">
+                        </div>
+                        <div>
+                            <div class="precio-info d-flex justify-content-end">
+                                <h3><i class="fa-solid fa-dollar-sign"></i> 130.00</h3>
+                            </div>
+                            <h4 class="nombre-item">PLATO 6</h4>
+                            <p>Lorconseis officia! Malo vero ducimus. Maxime quod mollitia ea optio!</p>
+                            <a class="btn-ordenar-estilo">ORDENAR</a>
+                        </div>
+                    </div>
+                    <div
+                        class="swiper-slide h-auto d-flex flex-column align-items-center justify-content-between text-center pb-3">
+                        <div>
+                            <img src="/img/platos/plato8.png" class="img-fluid w-100" alt="pizza_menu.png">
+                        </div>
+                        <div>
+                            <div class="precio-info d-flex justify-content-end">
+                                <h3><i class="fa-solid fa-dollar-sign"></i> 130.00</h3>
+                            </div>
+                            <h4 class="nombre-item">PLATO 7</h4>
+                            <p>Lorconseis officia! Malo vero ducimus. Maxime quod mollitia ea optio!</p>
+                            <a class="btn-ordenar-estilo">ORDENAR</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+
+            <div class="swiper menu-disponible mt-5">
+                <h3 class="sub-titulos">POSTRES</h3>
+                <div class="swiper-wrapper m-0 justify-content-between">
+                    <div
+                        class="swiper-slide h-auto d-flex flex-column align-items-center justify-content-between text-center pb-3">
+                        <div>
+                            <img src="/img/postre/postre1.png" class="img-fluid w-100" alt="pizza_menu.png">
+                        </div>
+                        <div>
+                            <div class="precio-info d-flex justify-content-end">
+                                <h3><i class="fa-solid fa-dollar-sign"></i> 130.00</h3>
+                            </div>
+                            <h4 class="nombre-item">POSTRE 1</h4>
+                            <p>Lorconseis officia! Malo vero ducimus. Maxime quod mollitia ea optio!</p>
+                            <a class="btn-ordenar-estilo">ORDENAR</a>
+                        </div>
+                    </div>
+                    <div
+                        class="swiper-slide h-auto d-flex flex-column align-items-center justify-content-between text-center pb-3">
+                        <div>
+                            <img src="/img/postre/postre2.png" class="img-fluid w-100" alt="pizza_menu.png">
+                        </div>
+                        <div>
+                            <div class="precio-info d-flex justify-content-end">
+                                <h3><i class="fa-solid fa-dollar-sign"></i> 130.00</h3>
+                            </div>
+                            <h4 class="nombre-item">POSTRE 2</h4>
+                            <p>Lorconseis officia! Malo vero ducimus. Maxime quod mollitia ea optio!</p>
+                            <a class="btn-ordenar-estilo">ORDENAR</a>
+                        </div>
+                    </div>
+                    <div
+                        class="swiper-slide h-auto d-flex flex-column align-items-center justify-content-between text-center pb-3">
+                        <div>
+                            <img src="/img/postre/postre3.png" class="img-fluid w-100" alt="pizza_menu.png">
+                        </div>
+                        <div>
+                            <div class="precio-info d-flex justify-content-end">
+                                <h3><i class="fa-solid fa-dollar-sign"></i> 130.00</h3>
+                            </div>
+                            <h4 class="nombre-item">POSTRE 3</h4>
+                            <p>Lorconseis officia! Malo vero ducimus. Maxime quod mollitia ea optio!</p>
+                            <a class="btn-ordenar-estilo">ORDENAR</a>
+                        </div>
+                    </div>
+                    <div
+                        class="swiper-slide h-auto d-flex flex-column align-items-center justify-content-between text-center pb-3">
+                        <div>
+                            <img src="/img/postre/postre4.png" class="img-fluid w-100" alt="pizza_menu.png">
+                        </div>
+                        <div>
+                            <div class="precio-info d-flex justify-content-end">
+                                <h3><i class="fa-solid fa-dollar-sign"></i> 130.00</h3>
+                            </div>
+                            <h4 class="nombre-item">POSTRE 4</h4>
+                            <p>Lorconseis officia! Malo vero ducimus. Maxime quod mollitia ea optio!</p>
+                            <a class="btn-ordenar-estilo">ORDENAR</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+
+            <div class="swiper menu-disponible mt-5">
+                <h3 class="sub-titulos">POLLO FRITO</h3>
+                <div class="swiper-wrapper m-0 justify-content-between">
+                    <div
+                        class="swiper-slide h-auto d-flex flex-column align-items-center justify-content-between text-center pb-3">
+                        <div>
+                            <img src="/img/pollo frito/pollo-frito-ensalada.png" class="img-fluid w-100"
+                                alt="pizza_menu.png">
+                        </div>
+                        <div>
+                            <div class="precio-info d-flex justify-content-end">
+                                <h3><i class="fa-solid fa-dollar-sign"></i> 130.00</h3>
+                            </div>
+                            <h4 class="nombre-item">POLLO FRITO + ENSALDA DE VERDURAS</h4>
+                            <p>Lorconseis officia! Malo vero ducimus. Maxime quod mollitia ea optio!</p>
+                            <a class="btn-ordenar-estilo">ORDENAR</a>
+                        </div>
+                    </div>
+                    <div
+                        class="swiper-slide h-auto d-flex flex-column align-items-center justify-content-between text-center pb-3">
+                        <div>
+                            <img src="/img/pollo frito/pollo-frito-papas-fritas.png" class="img-fluid w-100"
+                                alt="pizza_menu.png">
+                        </div>
+                        <div>
+                            <div class="precio-info d-flex justify-content-end">
+                                <h3><i class="fa-solid fa-dollar-sign"></i> 130.00</h3>
+                            </div>
+                            <h4 class="nombre-item">POLLO FRITO + PAPAS FRITAS</h4>
+                            <p>Lorconseis officia! Malo vero ducimus. Maxime quod mollitia ea optio!</p>
+                            <a class="btn-ordenar-estilo">ORDENAR</a>
+                        </div>
+                    </div>
+                    <div
+                        class="swiper-slide h-auto d-flex flex-column align-items-center justify-content-between text-center pb-3">
+                        <div>
+                            <img src="/img/pollo frito/pollo-frito-salsa.png" class="img-fluid w-100"
+                                alt="pizza_menu.png">
+                        </div>
+                        <div>
+                            <div class="precio-info d-flex justify-content-end">
+                                <h3><i class="fa-solid fa-dollar-sign"></i> 130.00</h3>
+                            </div>
+                            <h4 class="nombre-item">POLLO FRITO + SALSA DE TOMATE</h4>
+                            <p>Lorconseis officia! Malo vero ducimus. Maxime quod mollitia ea optio!</p>
+                            <a class="btn-ordenar-estilo">ORDENAR</a>
+                        </div>
+                    </div>
+                    <div
+                        class="swiper-slide h-auto d-flex flex-column align-items-center justify-content-between text-center pb-3">
+                        <div>
+                            <img src="/img/pollo frito/pollo-frito-solo.png" class="img-fluid w-100"
+                                alt="pizza_menu.png">
+                        </div>
+                        <div>
+                            <div class="precio-info d-flex justify-content-end">
+                                <h3><i class="fa-solid fa-dollar-sign"></i> 130.00</h3>
+                            </div>
+                            <h4 class="nombre-item">POLLO FRITO SIN AGREGADOS</h4>
+                            <p>Lorconseis officia! Malo vero ducimus. Maxime quod mollitia ea optio!</p>
+                            <a class="btn-ordenar-estilo">ORDENAR</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+
+            <div class="d-flex w-100 mt-4 justify-content-center">
+                <a href="#" class="btn btn-verMas-estilo">VER MAS CATEGORIAS</a>
+            </div>
+
+            <div class="container">
+                <div class="row container-detalles-restaurante m-0 mt-5 justify-content-center">
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4 d-flex flex-column">
+                        <div class="d-flex flex-column align-items-center mb-auto">
+                            <img class="img-fluid w-50"
+                                src="https://preview.codeless.co/picante/pizza/wp-content/uploads/2019/04/ps3.png"
+                                alt="chef.png">
+                        </div>
+                        <div class="d-flex flex-column justify-content-between text-center">
+                            <h5>PEDIDOS POR MOTO</h5>
+                            <p>Tus pedidos pueden ser enviados por delivery. No te preocupes, que llega en el tiempo
+                                pactado.</p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4 d-flex flex-column justify-content-between">
+                        <div class="d-flex flex-column align-items-center mb-auto">
+                            <img class="img-fluid"
+                                src="https://preview.codeless.co/picante/pizza/wp-content/uploads/2019/04/ps4.png"
+                                alt="chef.png">
+                        </div>
+                        <div class="d-flex flex-column justify-content-between text-center">
+                            <h5>COMPRAR ONLINES</h5>
+                            <p>Realiza los pedidos web de forma rápida y sencilla cuando quieras. ¡En línea las 24 horas
+                                del
+                                día!</p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4 d-flex flex-column">
+                        <div class="d-flex flex-column align-items-center mb-auto">
+                            <img class="img-fluid"
+                                src="https://preview.codeless.co/picante/pizza/wp-content/uploads/2019/04/ps2.png"
+                                alt="chef.png">
+
+                        </div>
+                        <div class="d-flex flex-column justify-content-between text-center">
+                            <h5>LOS MEJORES CHEFS</h5>
+                            <p>Chefs capacitados y preparados para realizar el mejor plato, para sastifacer tu padalar.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4 d-flex flex-column">
+                        <div class="d-flex flex-column align-items-center mb-auto">
+                            <img class="img-fluid"
+                                src="https://preview.codeless.co/picante/pizza/wp-content/uploads/2019/04/ps1.png"
+                                alt="chef.png">
+                        </div>
+                        <div class="d-flex flex-column justify-content-between text-center">
+                            <h5>POSTRES CON FRUTAS NATURALES</h5>
+                            <p>Todos los postres estan hechos con frutas frescas y naturales.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="mt-auto">
+        <div class="d-flex flex-column align-items-center">
+            <div class="row footer-contenido m-0 justify-content-center p-0 pt-4 text-white w-100">
+                <div class="col-12 col-sm-6 col-md-3 p-0 d-flex flex-column align-items-center">
+                    <a href="/main.html" class="m-0 p-0 d-flex flex-column align-items-center text-decoration-none">
+                        <img class="rounded-circle" src="/img/logo.jpeg" width="100" height="100" alt="logo">
+                        <h5 class="my-2">NOMBRE DEL GRUPO ©</h5>
+                    </a>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 p-0 d-flex flex-column align-items-center">
+                    <h5 class="mb-3">REDES SOCIALES</h5>
+                    <div class="mb-2 w-75">
+                        <div class="row m-0 justify-content-center">
+                            <div class="col-6 div-btn-redes">
+                                <a href="https://www.facebook.com" id="btn-red-facebook"
+                                    class="d-flex align-items-center justify-content-center">
+                                    <i class="fa-brands fa-facebook"></i>
+                                </a>
+                            </div>
+                            <div class="col-6 div-btn-redes">
+                                <a href="https://www.twitter.com" id="btn-red-twitter"
+                                    class="d-flex align-items-center justify-content-center">
+                                    <i class="fa-brands fa-twitter"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="row m-0 justify-content-center">
+                            <div class="col-6 div-btn-redes">
+                                <a href="https://www.instagram.com" id="btn-red-instagram"
+                                    class="d-flex align-items-center justify-content-center">
+                                    <i class="fa-brands fa-instagram"></i>
+                                </a>
+                            </div>
+                            <div class="col-6 div-btn-redes">
+                                <a href="https://web.whatsapp.com/" id="btn-red-whatsapp"
+                                    class="d-flex align-items-center justify-content-center">
+                                    <i class="fa-brands fa-whatsapp"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div
+                    class="container-fluid mt-4 mt-sm-0 mx-1 div-suscribirse col-12 col-sm-12 col-md-4 d-flex justify-content-center justify-content-md-between">
+                    <div class="row m-0 flex-column w-auto">
+                        <div
+                            class="col-12 col-md-6 d-flex flex-column justify-content-center justify-content-md-start w-100">
+                            <h5 class="text-center">SUSCRIBETE</h5>
+                            <p>Subscribite para estar al tanto de los nuevos platos que ingresen al menu!</p>
+                        </div>
+                        <div class="col-12 col-md-6 d-flex w-100">
+                            <input type="Introduce tu email">
+                            <button class="btn">SUSCRIBETE</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 p-0 mt-4 copyright">
+                <p class="m-0 my-2 text white text-center">COPYRIGHT© - GRUPO 3 - PROYECTO 2 - 2022</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8.3.2/swiper-bundle.min.js"></script>
+    <script src="/script/main.js"></script>
+</body>
+
+</html>

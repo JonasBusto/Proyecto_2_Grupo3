@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=IBM+Plex+Sans:wght@600&family=Lobster&family=Oswald:wght@500&family=Raleway&family=Roboto:wght@400;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+.login form input {
+    display: block;
+    padding: 10px;
+    border: 1px solid #33485F;
+    border-radius: 5px;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+.btn-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.btn-container button {
+    margin: 10px;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: #faee9e;
+    color: black;
+    cursor: pointer;
+    font-weight:600;
+    margin-left: auto;
+}
+.btn-container button:hover {
+    color: #faee9e;
+    background-color: black;
+}
+
+.background {
+    background: url('../img/fondo-login.png') no-repeat center center/cover;
+    padding: 0;
+    max-width: 100vw;
+}
+
+
+.titulo-tabla {
+    display: flex;
+    justify-content: center;
+}
+
+.color-icono {
+    color: black;
+    padding: 5px;
+}
+
+.color-fondo {
+    background-color: #faee9e;
+}
+
+.form-personalizar {
+    width: 310px;
+    border-radius: 15px;
+    background-color: rgba(179, 179, 179, 0.726);
+}
+
+.mi-cuenta-titulo {
+    z-index: 1;
+    width: 100%;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    /* background-color: #0f0f0fda; */
+    background-color: black;
+    color: white;
+    /* box-shadow: 10px 10px 10px rgb(37, 37, 37); */
+    /* font-family: 'Oswald', sans-serif; */
+}
+
+.div-input i, .div-input-login i{
+    /* padding: 2px; */
+    font-size: 15px;
+}
+.div-input>div, .div-input-login>div {
+    width: 50px;
+    height: 46px;
+    border: 1px solid black;
+    /* background-color: #797979da; */
+    background-color: #faee9e;
+}
+.div-input>div:hover, .div-input-login>div:hover {
+    color: #faee9e;
+    background-color: black;
+}
+
+.div-input input {
+    border: 1px solid black;
+    border-left: 0px !important;
+    border-radius: 0% !important;
+}
+
+.div-input-login>div {
+    width: 50px;
+    height: 50px;
+}
+
+.div-input-login input {
+    border: 1px solid black;
+    border-right: 0px !important;
+    border-radius: 0% !important;
+    width: 87%;
+}
+
+.div-input-email-login input{
+    border: 1px solid black;
+    border-radius: 0% !important;
+    width: 100%;
+}
+
+form a {
+    text-decoration: none;
+    color: blue !important;
+}
+form a:hover {
+    cursor: pointer;
+}
+
+@media (max-width: 380px) {
+    .background {
+        background: url('../img/fondo-login.png') no-repeat right center/cover;
+    } 
+}
+@media (max-width: 325px) {
+    .form-personalizar {
+        width: 95%;
+    }
+}
+@media (max-width: 291px) {
+    .div-input>div {
+        width: 40px;
+    }
+
+    .div-input-login {
+        width: 90%;
+    }
+    .div-input-email-login {
+        width: 90%;
+    }
+}
+@media (max-width: 265px) {
+    .div-input>div {
+        display: none !important;
+    }
+    .div-input input {
+        border-left: 2px solid grey !important;
+    }
+    .div-input, .div-input-login {
+        display: flex;
+        justify-content: center;
+    }
+
+}
+
+.modal-header {
+    background-color: rgba(0, 0, 0, 0.801);
+    color: white;
+    font-family: 'Oswald', sans-serif;
+}
+.modal-content {
+    background-color: rgba(179, 179, 179, 0.815);
+}
+.modal-body p {
+    font-weight: 450;
+}
+.modal-footer button {
+    background-color: #faee9e;
+    font-weight: bold;
+    border: 1.5px solid black;
+}
+.modal-footer button:hover {
+    color: #faee9e;
+    background-color: black;
+    font-weight: bold;
+}

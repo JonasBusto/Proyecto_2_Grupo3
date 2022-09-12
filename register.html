@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+
+    <!-- HOJA DE ESTILO -->
+    <link rel="stylesheet" href="../css/login.css">
+    <link rel="stylesheet" href="../css/main.css">
+
+    <!-- FONTAWSOME -->
+    <script src="https://kit.fontawesome.com/d4c04a1274.js" crossorigin="anonymous"></script>
+
+    <title>Registro de Usuarios</title>
+</head>
+<body>
+    <!-- INICIO NAVBAR -->
+    <header id="header-personalizado" class="sticky-top">
+        <nav class="navbar navbar-expand-lg navbar-color">
+            <div class="container-fluid">
+                <a class="navbar-brand text-light" href="/index.html">*LOGO*</a>
+                <button class="navbar-toggler btn-navbar-toggle" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fa-solid fa-burger"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav w-100 justify-content-end mb-2 mb-lg-0 mx-md-2">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="/contacto.HTML">CONTACTO</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="/nosotros.HTML">NOSOTROS</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="/login.html">INICIAR SESIÓN</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="/register.html">REGISTRARSE</a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="login background py-3">
+            <div class="mx-auto form-personalizar d-flex flex-column align-items-center">
+                <h3 class="text-center mi-cuenta-titulo py-2">REGISTRAR</h3>
+                <form class="" action="" method="POST">
+                    <div class="d-flex div-input">
+                        <div class="d-flex align-items-center justify-content-center">
+                            <i class="fa-solid fa-user"></i>
+                        </div>
+                        <input class="m-0" type="text" name="name" required placeholder="Nombre/s">
+                    </div>
+                    <div class="d-flex div-input my-3">
+                        <div class="d-flex align-items-center justify-content-center">
+                            <i class="fa-solid fa-user"></i>
+                        </div>
+                        <input class="m-0" type="text" name="lastName" required placeholder="Apellido/s">
+                    </div>
+                    <div class="d-flex div-input my-3">
+                        <div class="d-flex align-items-center justify-content-center">
+                            <i class="fa-solid fa-envelope"></i>
+                        </div>
+                        <input class="m-0" type="text" name="email" required placeholder="Email">
+                    </div>
+                    <div class="d-flex div-input my-3">
+                        <div class="d-flex align-items-center justify-content-center">
+                            <i class="fa-solid fa-phone"></i>
+                        </div>
+                        <input class="m-0" type="text" name="numberPhone" required placeholder="Telefono">
+                    </div>
+                    <div class="d-flex div-input my-3">
+                        <div class="d-flex align-items-center justify-content-center">
+                            <i class="fa-solid fa-lock-open"></i>
+                        </div>
+                        <input class="m-0" type="password" name="pass" required placeholder="Contraseña">
+                    </div>
+                    <div class="d-flex div-input my-3">
+                        <div class="d-flex align-items-center justify-content-center">
+                            <i class="fa-solid fa-lock-open"></i>
+                        </div>
+                        <input class="m-0" type="password" name="validpPass" required placeholder="Confirmar contraseña">
+                    </div>
+                    <div class="btn-container">
+                        <button type="submit">REGISTRARSE</button>               
+                    </div>
+                    <p class="text-center m-0 pb-3">¿Ya tienes cuenta? Inicia sesión <a class="text-decoration-none" href="/login.html">aquí</a></p>
+                </form>
+            </div>
+        </section>     
+    </main>
+
+    <footer class="mt-auto">
+        <div class="d-flex flex-column align-items-center">
+            <div class="row footer-contenido m-0 justify-content-center p-0 pt-4 text-white w-100">
+                <div class="col-12 col-sm-6 col-md-3 p-0 d-flex flex-column align-items-center">
+                    <a href="/main.html" class="m-0 p-0 d-flex flex-column align-items-center text-decoration-none">
+                        <img class="rounded-circle" src="/img/logo.jpeg" width="100" height="100" alt="logo">
+                        <h5 class="my-2">NOMBRE DEL GRUPO ©</h5>
+                    </a>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 p-0 d-flex flex-column align-items-center">
+                    <h5 class="mb-3">REDES SOCIALES</h5>
+                    <div class="mb-2 w-75">
+                        <div class="row m-0 justify-content-center">
+                            <div class="col-6 div-btn-redes">
+                                <a href="https://www.facebook.com" id="btn-red-facebook"
+                                    class="d-flex align-items-center justify-content-center">
+                                    <i class="fa-brands fa-facebook"></i>
+                                </a>
+                            </div>
+                            <div class="col-6 div-btn-redes">
+                                <a href="https://www.twitter.com" id="btn-red-twitter"
+                                    class="d-flex align-items-center justify-content-center">
+                                    <i class="fa-brands fa-twitter"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="row m-0 justify-content-center">
+                            <div class="col-6 div-btn-redes">
+                                <a href="https://www.instagram.com" id="btn-red-instagram"
+                                    class="d-flex align-items-center justify-content-center">
+                                    <i class="fa-brands fa-instagram"></i>
+                                </a>
+                            </div>
+                            <div class="col-6 div-btn-redes">
+                                <a href="https://web.whatsapp.com/" id="btn-red-whatsapp"
+                                    class="d-flex align-items-center justify-content-center">
+                                    <i class="fa-brands fa-whatsapp"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div
+                    class="container-fluid mt-4 mt-sm-0 mx-1 div-suscribirse col-12 col-sm-12 col-md-4 d-flex justify-content-center justify-content-md-between">
+                    <div class="row m-0 flex-column w-auto">
+                        <div
+                            class="col-12 col-md-6 d-flex flex-column justify-content-center justify-content-md-start w-100">
+                            <h5 class="text-center">SUSCRIBETE</h5>
+                            <p>Subscribite para estar al tanto de los nuevos platos que ingresen al menu!</p>
+                        </div>
+                        <div class="col-12 col-md-6 d-flex w-100">
+                            <input type="Introduce tu email">
+                            <button class="btn">SUSCRIBETE</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 p-0 mt-4 copyright">
+                <p class="m-0 my-2 text white text-center">COPYRIGHT© - GRUPO 3 - PROYECTO 2 - 2022</p>
+            </div>
+        </div>
+    </footer>
+
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+</body>
+</html>
