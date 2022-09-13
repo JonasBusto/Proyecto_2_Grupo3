@@ -1,0 +1,6 @@
+.td-col-opciones-comida {
+    padding-left: 5% !important;
+    padding-right: 5% !important;
+    display: flex;
+    justify-content: space-between;
+}

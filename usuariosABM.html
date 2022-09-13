@@ -10,7 +10,7 @@
         integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
 
     <!-- HOJA DE ESTILO -->
-    <link rel="stylesheet" href="/css/abmUsuarios.css">
+    <link rel="stylesheet" href="/css/vistasABMadmin.css">
     <link rel="stylesheet" href="/css/main.css">
 
     <!-- FONTAWSONW CDN-->
@@ -33,10 +33,10 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav w-100 justify-content-end mb-2 mb-lg-0 mx-md-2">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="/homeUser.html">ABM USUARIOS</a>
+                            <a class="nav-link active" aria-current="page" href="/usuariosABM.html">ABM USUARIOS</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="/homeAdmin.html">ABM COMIDAS</a>
+                            <a class="nav-link active" aria-current="page" href="/comidasABM.html">ABM COMIDAS</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link active" aria-current="page" href="/contacto.HTML">CONTACTO</a>
@@ -55,52 +55,56 @@
             </div>
         </nav>
     </header>
-    
+
     <main>
-        <div class="tittle-table">
-            <h3 class="text-center margin">Administrar Menus</h3>
-            <div class="container p/0 btn-container">
-                <button type="submit" class="color-fondo">Nuevo</button>
+        <div class="d-flex mx-auto pt-4 pb-3 justify-content-center div-administrador">
+            <div class="d-flex flex-column">
+                <div class="d-flex flex-column align-items-center">
+                    <h3 class="text-center py-2 titulo-admin">ADMINISTRAR USUARIO</h3>
+                    <div class="container pt-2 p-0 btn-admin-nuevo">
+                        <button>AÑADIR USUARIO</button>
+                    </div>
+                </div>
+                <table class="table table-color mx-4 w-auto table-striped table-hover container mt-3 table-bordered">
+                    <thead>
+                        <tr>
+                            <th scope="col">ID</th>
+                            <th scope="col">Usuario</th>
+                            <th scope="col">Opciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>Mark</td>
+                            <td class="td-col-opciones">
+                                <a href=""><i class="fa-solid fa-trash-can color-icono"></i></a>
+                                <a href=""><i class="fa-solid fa-pen-to-square color-icono"></i></a>
+                                <a href=""><i class="fa-solid fa-star color-icono"></i></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td>Jacob</td>
+                            <td class="td-col-opciones">
+                                <a href=""><i class="fa-solid fa-trash-can color-icono"></i></a>
+                                <a href=""><i class="fa-solid fa-pen-to-square color-icono"></i></a>
+                                <a href=""><i class="fa-solid fa-star color-icono"></i></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td>Ultima</td>
+                            <td class="td-col-opciones">
+                                <a href=""><i class="fa-solid fa-trash-can color-icono"></i></a>
+                                <a href=""><i class="fa-solid fa-pen-to-square color-icono"></i></a>
+                                <a href=""><i class="fa-solid fa-star color-icono"></i></a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
-        <table class="table container mt-3 table-bordered">
-            <thead class="color-fondo">
-                <tr>
-                    <th scope="col">ID</th>
-                    <th scope="col">Usuario</th>
-                    <th scope="col">Opciones</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <th scope="row">1</th>
-                    <td>Mark</td>
-                    <td>
-                        <span><a href=""><i class="fa-solid fa-trash-can color-icono"></i></a></span>
-                        <span><a href=""><i class="fa-solid fa-pen-to-square color-icono"></i></span>
-                        <span><a href=""><i class="fa-solid fa-star color-icono"></i></a></span>
-                    </td>
-                </tr>
-                <tr>
-                    <th scope="row">2</th>
-                    <td>Jacob</td>
-                    <td>
-                        <span><a href=""><i class="fa-solid fa-trash-can color-icono"></i></a></span>
-                        <span><a href=""><i class="fa-solid fa-pen-to-square color-icono"></i></span>
-                        <span><a href=""><i class="fa-solid fa-star color-icono"></i></a></span>
-                    </td>
-                </tr>
-                <tr>
-                    <th scope="row">2</th>
-                    <td>Ultima</td>
-                    <td>
-                        <span><a href=""><i class="fa-solid fa-trash-can color-icono"></i></a></span>
-                        <span><a href=""><i class="fa-solid fa-pen-to-square color-icono"></i></span>
-                        <span><a href=""><i class="fa-solid fa-star color-icono"></i></a></span>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
     </main>
 
     <footer class="mt-auto">
