@@ -14,21 +14,23 @@ ACERCA DE NOSOTROS */
     
 }
 .card-nosotros {
-    background-color: #faee93;
+    background-color: black;
     border: 0;
     border-radius: 0px;
     box-shadow: 5px 5px 5px rgb(102, 100, 100);
     transition: all 0.3s ease-in;
     -webkit-transition: all 0.3s ease-in;
     -moz-transition: all 0.3s ease-in;
+    color: white;
     
 }
 .card-nosotros:hover{
-    background-color: black;
-    color:white;
+    background-color: white;
+    color: black;
     border-radius: 5px;
     border: none;
-    box-shadow: 5px 5px 5px  #faee93;
+    box-shadow: 5px 5px 5px rgb(102, 100, 100);
+   
 
 }
 /* .card-nosotros:hover .quienes-somos :hover{
