@@ -69,7 +69,7 @@
                     <div class="container pt-2 p-0 btn-admin-nuevo">
                         <button data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">AÑADIR
                             COMIDA</button>
-                        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        <div class="modal fade" data-bs-backdrop="static" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
                             aria-hidden="true">
                             <div class="modal-dialog">
                                 <div class="modal-content">
@@ -88,7 +88,13 @@
                                                     placeholder="Descripción"></textarea>
                                             </div>
                                             <div class="mb-3">
-                                                <input type="text" class="form-control" id="" placeholder="Categoría">
+                                                <select class="form-select" aria-label="Default select example"
+                                                    id="select-nuevo-cat">
+                                                    <option value="categoria1">Categoria 1</option>
+                                                    <option value="categoria2">Categoria 2</option>
+                                                    <option value="categoria3">Categoria 3</option>
+                                                    <option value="otro">Otro</option>
+                                                </select>
                                             </div>
                                             <div class="mb-3">
                                                 <input type="text" class="form-control" id="" placeholder="Precio">
@@ -120,46 +126,146 @@
                                 <th scope="col">Opciones</th>
                             </tr>
                         </thead>
-                        <tbody>
+                        <tbody id="tbody-inyectar">
                             <tr>
                                 <th scope="row">1</th>
                                 <td>Mark</td>
                                 <td>Otto</td>
-                                <td>@mdo</td>
                                 <td>
-                                    Publico <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                    <div>
+                                        <a data-bs-toggle="modal" data-bs-target="#modalVerDesc1">Ver Mas...</a>
+
+                                        <div class="modal fade" data-bs-backdrop="static" id="modalVerDesc1"
+                                            tabindex="-1" aria-labelledby="modalVerDesc1Label" aria-hidden="true">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title" id="modalVerDesc1Label">Descripción</h5>
+                                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                            aria-label="Close"></button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <h5>Comida #1: Pizza X</h5>
+                                                        <div class="d-flex flex-column align-items-center">
+
+                                                            <p>Lorem ipsum dolor sit amet, consectetur
+                                                                adipisicing elit. Sed deleniti assumenda voluptatum,
+                                                                sequi
+                                                                cumque totam, aliquam nobis nemo voluptatibus maxime
+                                                                veniam
+                                                                expedita sit vitae nulla fugit corporis consectetur esse
+                                                                autem!</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <div class="d-flex justify-content-center">
+                                                            <button type="button" class="btn btn-primary mx-4"
+                                                                data-bs-dismiss="modal">Cerrar</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="form-switch">
+                                    <div class="d-flex justify-content-center">
+                                        <input class="mx-auto form-check-input w-50" type="checkbox" role="switch"
+                                        id="">
+                                    </div>
                                 </td>
                                 <td class="td-col-opciones-comida">
-                                    <a href=""><i class="fa-solid fa-trash-can color-icono"></i></a>
-                                    <a href=""><i class="fa-solid fa-pen-to-square color-icono"></i></a>
-                                    <a href=""><i class="fa-solid fa-star color-icono"></i></a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <th scope="row">2</th>
-                                <td>Jacob</td>
-                                <td>Thornton</td>
-                                <td>@fat</td>
-                                <td>
-                                    Publico <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                                </td>
-                                <td class="td-col-opciones-comida">
-                                    <a href=""><i class="fa-solid fa-trash-can color-icono"></i></a>
-                                    <a href=""><i class="fa-solid fa-pen-to-square color-icono"></i></a>
-                                    <a href=""><i class="fa-solid fa-star color-icono"></i></a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <th scope="row">2</th>
-                                <td>Ultima</td>
-                                <td>Thornton</td>
-                                <td>@fat</td>
-                                <td>
-                                    Publico <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                                </td>
-                                <td class="td-col-opciones-comida">
-                                    <a href=""><i class="fa-solid fa-trash-can color-icono"></i></a>
-                                    <a href=""><i class="fa-solid fa-pen-to-square color-icono"></i></a>
+                                    <!-- MODAL ELIMINAR COMIDA -->
+                                    <div>
+                                        <a><i class="fa-solid fa-trash-can color-icono" data-bs-toggle="modal"
+                                                data-bs-target="#modalEliminarComida1"></i></a>
+
+                                        <div class="modal fade" data-bs-backdrop="static" id="modalEliminarComida1"
+                                            tabindex="-1" aria-labelledby="modalEliminarComida1Label"
+                                            aria-hidden="true">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title" id="modalEliminarComida1Label">Eliminar
+                                                            comida</h5>
+                                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                            aria-label="Close"></button>
+                                                    </div>
+                                                    <div
+                                                        class="modal-body container d-flex flex-column align-items-center">
+                                                        <p class="fw-bold">¿Esta seguro de eliminar la comida "Pizza X"?
+                                                        </p>
+                                                        <div class="d-flex justify-content-center">
+                                                            <button type="button" class="btn mx-4"
+                                                                data-bs-dismiss="modal">Cancelar</button>
+                                                            <button type="button" class="mx-4 btn">Eliminar</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- MODAL MODIFICAR COMIDA -->
+                                    <div>
+                                        <a><i class="fa-solid fa-pen-to-square color-icono" data-bs-toggle="modal"
+                                                data-bs-target="#modalModificarComida1"></i></a>
+
+                                        <div class="modal fade" data-bs-backdrop="static" id="modalModificarComida1"
+                                            tabindex="-1" aria-labelledby="modalModificarComida1Label"
+                                            aria-hidden="true">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title" id="modalModificarComida1Label">
+                                                            Modificar comida</h5>
+                                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                            aria-label="Close"></button>
+                                                    </div>
+                                                    <div class="modal-body d-flex flex-column">
+                                                        <p class="fw-bold">Comida #1
+                                                        </p>
+                                                        <div class="d-flex flex-column">
+                                                            <div class="mb-3">
+                                                                <label class="form-label">Nombre (Pizza X)</label>
+                                                                <input type="text" class="form-control" id=""
+                                                                    placeholder="Pizza X">
+                                                            </div>
+                                                            <div class="d-flex flex-column mb-3">
+                                                                <label class="form-label">Categoria (Categoria
+                                                                    Actual)</label>
+                                                                <select class="form-select"
+                                                                    aria-label="Default select example">
+                                                                    <option selected>Categoria Actual</option>
+                                                                    <option value="categoria1">Categoria 1</option>
+                                                                    <option value="categoria2">Categoria 2</option>
+                                                                    <option value="categoria3">Categoria 3</option>
+                                                                    <option value="otro">Otro</option>
+                                                                </select>
+                                                            </div>
+                                                            <div class="mb-3">
+                                                                <label class="form-label">Precio (130.00 $)</label>
+                                                                <input type="text" class="form-control"
+                                                                    placeholder="130.00" id="">
+                                                            </div>
+                                                            <div class="mb-3">
+                                                                <label class="form-label">Descripción</label>
+                                                                <textarea class="form-control"
+                                                                    id="exampleFormControlTextarea1"
+                                                                    rows="3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, sapiente quam facere aliquid minima magnam hic alias obcaecati fuga laborum, dignissimos a sed! Fugit eius debitis temporibus iure, iusto dignissimos?</textarea>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="modal-footer d-flex justify-content-between">
+                                                        <button class="btn mx-4"
+                                                            data-bs-dismiss="modal">Cancelar</button>
+                                                        <button class="mx-4 btn">Guardar
+                                                            Cambios</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                     <a href=""><i class="fa-solid fa-star color-icono"></i></a>
                                 </td>
                             </tr>
