@@ -1,5 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=IBM+Plex+Sans:wght@600&family=Lobster&family=Oswald:wght@500&family=Raleway&family=Roboto:wght@400;900&display=swap');
 
+/* body {
+    min-height: 100vh;
+    margin: 0;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+} */
+
+
 /* HEADER */
 
 header {
@@ -155,8 +163,25 @@ main>div {
     font-weight: bold;
 }
 
-/* swiper */
 
+
+/* swiper */
+.swiper-button-next, .swiper-button-prev {
+    color: black;
+    font-weight: bold;
+    background-color: #faee9e;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+    box-shadow: 5px 5px 5px black;
+    border-radius: 5px;
+}
+.swiper-button-next:hover, .swiper-button-prev:hover {
+    color: #faee9e;
+    background-color: black;
+    box-shadow: 5px 5px 5px rgb(48, 47, 47);
+}
 
 .swiper {
     width: 100%;

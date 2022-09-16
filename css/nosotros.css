@@ -1,5 +1,13 @@
 /* 
 ACERCA DE NOSOTROS */
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}
+
 .quienes-somos{
     font-family: Impact, Haettenschweiler, 'Arial Narrow', sans-serif;
    
