@@ -81,10 +81,10 @@
                                     <div class="modal-body">
                                         <form>
                                             <div class="mb-3">
-                                                <input type="text" class="form-control" id="" placeholder="Nombre">
+                                                <input type="text" class="form-control" id="input-nuevo-nombre" placeholder="Nombre">
                                             </div>
                                             <div class="mb-3">
-                                                <textarea class="form-control" id=""
+                                                <textarea class="form-control" id="textarea-nueva-desc"
                                                     placeholder="Descripción"></textarea>
                                             </div>
                                             <div class="mb-3">
@@ -97,16 +97,16 @@
                                                 </select>
                                             </div>
                                             <div class="mb-3">
-                                                <input type="text" class="form-control" id="" placeholder="Precio">
+                                                <input type="text" class="form-control" id="input-nuevo-precio" placeholder="Precio">
                                             </div>
                                             <div class="mb-3">
-                                                <input type="text" class="form-control" id="" placeholder="url imagen">
+                                                <input type="text" class="form-control" id="input-nueva-img-url" placeholder="url imagen">
                                             </div>
                                         </form>
                                     </div>
                                     <div class="modal-footer">
                                         <button type="button" class="btn" data-bs-dismiss="modal">Cerrar</button>
-                                        <button type="button" class="btn">Guardar</button>
+                                        <button type="button" class="btn" id="btn-guardar">Guardar</button>
                                     </div>
                                 </div>
                             </div>
@@ -120,6 +120,7 @@
                             <tr>
                                 <th scope="col">Código</th>
                                 <th scope="col">Nombre</th>
+                                <th scope="col">Precio</th>
                                 <th scope="col">Categoría</th>
                                 <th scope="col">Descripción</th>
                                 <th scope="col">Imagenes</th>
@@ -128,289 +129,7 @@
                             </tr>
                         </thead>
                         <tbody id="tbody-inyectar">
-                            <tr>
-                                <th scope="row">1</th>
-                                <td>Mark</td>
-                                <td>Otto</td>
-                                <td>
-                                    <div>
-                                        <a data-bs-toggle="modal" data-bs-target="#modalVerDesc1">Ver Mas...</a>
-
-                                        <div class="modal fade" data-bs-backdrop="static" id="modalVerDesc1"
-                                            tabindex="-1" aria-labelledby="modalVerDesc1Label" aria-hidden="true">
-                                            <div class="modal-dialog">
-                                                <div class="modal-content">
-                                                    <div class="modal-header">
-                                                        <h5 class="modal-title" id="modalVerDesc1Label">Descripción</h5>
-                                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                                            aria-label="Close"></button>
-                                                    </div>
-                                                    <div class="modal-body">
-                                                        <h5>Comida #1: Pizza X</h5>
-                                                        <div class="d-flex flex-column align-items-center">
-
-                                                            <p>Lorem ipsum dolor sit amet, consectetur
-                                                                adipisicing elit. Sed deleniti assumenda voluptatum,
-                                                                sequi
-                                                                cumque totam, aliquam nobis nemo voluptatibus maxime
-                                                                veniam
-                                                                expedita sit vitae nulla fugit corporis consectetur esse
-                                                                autem!</p>
-                                                        </div>
-                                                    </div>
-                                                    <div class="modal-footer">
-                                                        <div class="d-flex justify-content-center">
-                                                            <button type="button" class="btn btn-primary mx-4"
-                                                                data-bs-dismiss="modal">Cerrar</button>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div>
-                                        <!-- MODAL VER IMAGENES -->
-                                        <a data-bs-toggle="modal" data-bs-target="#modalVerImagenes1"
-                                            class="text-decoration-none">Ver</a>
-
-                                        <div class="modal fade" data-bs-backdrop="static" id="modalVerImagenes1"
-                                            tabindex="-1" aria-labelledby="modalVerImagenes1Label" aria-hidden="true">
-                                            <div class="modal-dialog">
-                                                <div class="modal-content">
-                                                    <div class="modal-header">
-                                                        <h5 class="modal-title" id="modalVerImagenes1Label">Imagenes
-                                                        </h5>
-                                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                                            aria-label="Close"></button>
-                                                    </div>
-                                                    <div class="modal-body d-flex flex-column align-items-center">
-                                                        <div class="d-flex flex-column w-100">
-                                                            <div class="d-flex flex-column container-fluid">
-                                                                <div class="row m-0">
-                                                                    <div class="col-12 d-flex flex-column">
-                                                                        <p class="mx-4">Imagen principal: </p>
-                                                                        <img class="img-fluid"
-                                                                            src="/img/pizza/pizza-barbacoa-cerdo.png"
-                                                                            alt="">
-                                                                    </div>
-                                                                    <div class="col-12 d-flex flex-column">
-                                                                        <p class="mx-4">Más Imagenes</p>
-                                                                        <div class="row m-0">
-                                                                            <div class="col-12 col-sm-4 p-0 px-1">
-                                                                                <img class="img-fluid"
-                                                                                    src="/img/carousel-img1.png" alt="">
-                                                                            </div>
-                                                                            <div class="col-12 col-sm-4 p-0 px-1">
-                                                                                <img class="img-fluid"
-                                                                                    src="/img/carousel-img1.png" alt="">
-                                                                            </div>
-                                                                            <div class="col-12 col-sm-4 p-0 px-1">
-                                                                                <img class="img-fluid"
-                                                                                    src="/img/carousel-img1.png" alt="">
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div>
-
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="modal-footer d-flex justify-content-between">
-                                                        <button class="btn mx-4" data-bs-dismiss="modal">Cerrar</button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td class="form-switch">
-                                    <div class="d-flex justify-content-center">
-                                        <input class="mx-auto form-check-input w-50" type="checkbox" role="switch"
-                                            id="">
-                                    </div>
-                                </td>
-                                <td class="td-col-opciones-comida">
-                                    <!-- MODAL ELIMINAR COMIDA -->
-                                    <div>
-                                        <a><i class="fa-solid fa-trash-can color-icono" data-bs-toggle="modal"
-                                                data-bs-target="#modalEliminarComida1"></i></a>
-
-                                        <div class="modal fade" data-bs-backdrop="static" id="modalEliminarComida1"
-                                            tabindex="-1" aria-labelledby="modalEliminarComida1Label"
-                                            aria-hidden="true">
-                                            <div class="modal-dialog">
-                                                <div class="modal-content">
-                                                    <div class="modal-header">
-                                                        <h5 class="modal-title" id="modalEliminarComida1Label">Eliminar
-                                                            comida</h5>
-                                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                                            aria-label="Close"></button>
-                                                    </div>
-                                                    <div
-                                                        class="modal-body container d-flex flex-column align-items-center">
-                                                        <p class="fw-bold">¿Esta seguro de eliminar la comida "Pizza X"?
-                                                        </p>
-                                                        <div class="d-flex justify-content-center">
-                                                            <button type="button" class="btn mx-4"
-                                                                data-bs-dismiss="modal">Cancelar</button>
-                                                            <button type="button" class="mx-4 btn">Eliminar</button>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <!-- MODAL MODIFICAR COMIDA -->
-                                    <div>
-                                        <a><i class="fa-solid fa-pen-to-square color-icono" data-bs-toggle="modal"
-                                                data-bs-target="#modalModificarComida1"></i></a>
-
-                                        <div class="modal fade" data-bs-backdrop="static" id="modalModificarComida1"
-                                            tabindex="-1" aria-labelledby="modalModificarComida1Label"
-                                            aria-hidden="true">
-                                            <div class="modal-dialog">
-                                                <div class="modal-content">
-                                                    <div class="modal-header">
-                                                        <h5 class="modal-title" id="modalModificarComida1Label">
-                                                            Modificar comida</h5>
-                                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                                            aria-label="Close"></button>
-                                                    </div>
-                                                    <div class="modal-body d-flex flex-column">
-                                                        <p class="fw-bold">Comida #1
-                                                        </p>
-                                                        <div class="d-flex flex-column">
-                                                            <div class="mb-3">
-                                                                <label class="form-label">Nombre (Pizza X)</label>
-                                                                <input type="text" class="form-control" id=""
-                                                                    placeholder="Pizza X">
-                                                            </div>
-                                                            <div class="d-flex flex-column mb-3">
-                                                                <label class="form-label">Categoria (Categoria
-                                                                    Actual)</label>
-                                                                <select class="form-select"
-                                                                    aria-label="Default select example">
-                                                                    <option selected>Categoria Actual</option>
-                                                                    <option value="categoria1">Categoria 1</option>
-                                                                    <option value="categoria2">Categoria 2</option>
-                                                                    <option value="categoria3">Categoria 3</option>
-                                                                    <option value="otro">Otro</option>
-                                                                </select>
-                                                            </div>
-                                                            <div class="mb-3">
-                                                                <label class="form-label">Precio (130.00 $)</label>
-                                                                <input type="text" class="form-control"
-                                                                    placeholder="130.00" id="">
-                                                            </div>
-                                                            <div class="mb-3">
-                                                                <label class="form-label">Imagenes</label>
-                                                                <div>
-                                                                    <!-- MODAL MODIFICAR IMAGENES -->
-                                                                    <button data-bs-toggle="modal"
-                                                                        data-bs-target="#modalModificarImagenes1"
-                                                                        class="btn">Modificar Imagenes</button>
-
-
-                                                                </div>
-                                                            </div>
-                                                            <div class="mb-3">
-                                                                <label class="form-label">Descripción</label>
-                                                                <textarea class="form-control"
-                                                                    id="exampleFormControlTextarea1"
-                                                                    rows="3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, sapiente quam facere aliquid minima magnam hic alias obcaecati fuga laborum, dignissimos a sed! Fugit eius debitis temporibus iure, iusto dignissimos?</textarea>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="modal-footer d-flex justify-content-between">
-                                                        <button class="btn mx-4"
-                                                            data-bs-dismiss="modal">Cancelar</button>
-                                                        <button class="mx-4 btn">Guardar
-                                                            Cambios</button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="modal fade" data-bs-backdrop="static" id="modalModificarImagenes1"
-                                            tabindex="-1" aria-labelledby="modalModificarImagenes1Label"
-                                            aria-hidden="true">
-                                            <div class="modal-dialog">
-                                                <div class="modal-content">
-                                                    <div class="modal-header">
-                                                        <h5 class="modal-title" id="modalModificarImagenes1Label">
-                                                            Modificar Imagenes
-                                                        </h5>
-                                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                                            aria-label="Close"></button>
-                                                    </div>
-                                                    <div class="modal-body d-flex flex-column align-items-center">
-                                                        <div class="d-flex flex-column w-100">
-                                                            <div class="d-flex flex-column container-fluid">
-                                                                <div class="row m-0">
-                                                                    <div class="col-12 d-flex flex-column">
-                                                                        <p class="mx-4">
-                                                                            Imagen
-                                                                            principal: </p>
-                                                                        <img class="img-fluid"
-                                                                            src="/img/pizza/pizza-barbacoa-cerdo.png"
-                                                                            alt="">
-                                                                        <div class="mb-3">
-                                                                            <label class="form-label">Modificar imagen
-                                                                                principal</label>
-                                                                            <input type="text" class="form-control"
-                                                                                placeholder="130.00" disabled
-                                                                                value="url actual" id="">
-                                                                                
-                                                                        </div>
-                                                                        <div class="mb-3">
-                                                                            <label class="form-label">Nueva URL</label>
-                                                                            <input type="text" class="form-control"
-                                                                                placeholder="Ingrese la nueva URL" id="">
-
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="col-12 d-flex flex-column">
-                                                                        <p class="mx-4">Más
-                                                                            Imagenes</p>
-                                                                        <div class="row m-0">
-                                                                            <div class="col-12 col-sm-4 p-0 px-1">
-                                                                                <img class="img-fluid"
-                                                                                    src="/img/carousel-img1.png" alt="">
-                                                                            </div>
-                                                                            <div class="col-12 col-sm-4 p-0 px-1">
-                                                                                <img class="img-fluid"
-                                                                                    src="/img/carousel-img1.png" alt="">
-                                                                            </div>
-                                                                            <div class="col-12 col-sm-4 p-0 px-1">
-                                                                                <img class="img-fluid"
-                                                                                    src="/img/carousel-img1.png" alt="">
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div>
-
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="modal-footer d-flex justify-content-between">
-                                                        <button class="btn mx-4"
-                                                            data-bs-dismiss="modal">Cancelar</button>
-                                                        <button class="mx-4 btn">Guardar
-                                                            Cambios</button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <a href=""><i class="fa-solid fa-star color-icono"></i></a>
-                                </td>
-                            </tr>
+                            
                         </tbody>
                     </table>
                 </div>
