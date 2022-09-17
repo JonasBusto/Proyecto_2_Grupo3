@@ -242,7 +242,7 @@ const actualizarPagina = () => {
                                             <!-- MODAL MODIFICAR IMAGENES -->
                                             <button data-bs-toggle="modal"
                                                 data-bs-target="#modalModificarImagenes${i}"
-                                                class="btn">Modificar Imagenes</button>
+                                                class="btn">Modificar Imagen</button>
 
 
                                         </div>
@@ -288,7 +288,7 @@ const actualizarPagina = () => {
                                                 <img class="img-fluid"
                                                     src="${arrayComidas[i].url}"
                                                     alt="img_principal.png">
-                                                <div class="mb-3">
+                                                <div class="my-3">
                                                     <label class="form-label">Modificar imagen
                                                         principal</label>
                                                     <input type="text" class="form-control"
@@ -301,24 +301,6 @@ const actualizarPagina = () => {
                                                     <input type="text" class="form-control"
                                                         placeholder="Ingrese la nueva URL" id="input-modificar-url${i}">
 
-                                                </div>
-                                            </div>
-                                            <div class="col-12 d-flex flex-column">
-                                                <p class="mx-4">Más
-                                                    Imagenes</p>
-                                                <div class="row m-0">
-                                                    <div class="col-12 col-sm-4 p-0 px-1">
-                                                        <img class="img-fluid"
-                                                            src="/img/carousel-img1.png" alt="">
-                                                    </div>
-                                                    <div class="col-12 col-sm-4 p-0 px-1">
-                                                        <img class="img-fluid"
-                                                            src="/img/carousel-img1.png" alt="">
-                                                    </div>
-                                                    <div class="col-12 col-sm-4 p-0 px-1">
-                                                        <img class="img-fluid"
-                                                            src="/img/carousel-img1.png" alt="">
-                                                    </div>
                                                 </div>
                                             </div>
                                             <div>
