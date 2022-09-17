@@ -39,8 +39,15 @@ function modificarComida(index) {
 }
 
 function publicarComida(index) {
-    const aa = document.getElementById("btn-publicado" + index);
-    console.log(aa.);
+    console.log(arrayComidas[index].publicado)
+    const btnPublicado = document.getElementById("btn-publicado" + index);
+    if(btnPublicado.checked) {
+        arrayComidas[index].publicado = true;
+    }else {
+        arrayComidas[index].publicado = false;
+    }
+    console.log(arrayComidas[index].publicado)
+    localStorage.setItem("Comidas", JSON.stringify(arrayComidas));
 }
 
 const actualizarPagina = () => {
