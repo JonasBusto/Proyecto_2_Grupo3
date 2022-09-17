@@ -50,6 +50,15 @@ function publicarComida(index) {
     localStorage.setItem("Comidas", JSON.stringify(arrayComidas));
 }
 
+const modificarIMGurl = (index) => {
+    const inputModificarUrl = document.getElementById("input-modificar-url" + index);
+    console.log(inputModificarUrl.value);
+    console.log(arrayComidas[index].url);
+    arrayComidas[index].url = inputModificarUrl.value;
+    localStorage.setItem("Comidas", JSON.stringify(arrayComidas));
+    location.reload();
+}
+
 const actualizarPagina = () => {
     tBodyInyectar.innerHTML = "";
     for (let i = 0; i < arrayComidas.length; i++) {
@@ -277,20 +286,20 @@ const actualizarPagina = () => {
                                                     Imagen
                                                     principal: </p>
                                                 <img class="img-fluid"
-                                                    src="/img/pizza/pizza-barbacoa-cerdo.png"
-                                                    alt="">
+                                                    src="${arrayComidas[i].url}"
+                                                    alt="img_principal.png">
                                                 <div class="mb-3">
                                                     <label class="form-label">Modificar imagen
                                                         principal</label>
                                                     <input type="text" class="form-control"
                                                         placeholder="130.00" disabled
-                                                        value="url actual" id="">
+                                                        value="${arrayComidas[i].url}">
                                                         
                                                 </div>
                                                 <div class="mb-3">
                                                     <label class="form-label">Nueva URL</label>
                                                     <input type="text" class="form-control"
-                                                        placeholder="Ingrese la nueva URL" id="">
+                                                        placeholder="Ingrese la nueva URL" id="input-modificar-url${i}">
 
                                                 </div>
                                             </div>
@@ -322,8 +331,8 @@ const actualizarPagina = () => {
                             <div class="modal-footer d-flex justify-content-between">
                                 <button class="btn mx-4"
                                     data-bs-dismiss="modal">Cancelar</button>
-                                <button class="mx-4 btn">Guardar
-                                    Cambios</button>
+                                <button class="mx-4 btn" id="btn-modificar-img${i}">Guardar
+                                    Cambio</button>
                             </div>
                         </div>
                     </div>
@@ -343,6 +352,9 @@ const actualizarPagina = () => {
    
         const btnPublicar = document.getElementById("btn-publicado" + i);
         btnPublicar.addEventListener("click", ()=> publicarComida(i));
+    
+        const btnModificarIMG = document.getElementById("btn-modificar-img" + i);
+        btnModificarIMG.addEventListener("click", ()=>modificarIMGurl(i));
     }
 }
 
