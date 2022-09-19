@@ -1,0 +1,10 @@
+header {
+    background-image: url(https://wallpaperaccess.com/full/767277.jpg);
+    background-size: cover;
+    background-position: top;
+}
+
+#input-buscar-comida {
+    border-radius: 0%;
+    border: 1px solid black;
+}
