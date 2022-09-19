@@ -63,6 +63,12 @@ main {
     background-color: black;
 }
 
+@media (max-width: 580px) {
+    .btn-admin-nuevo>button {
+        margin-left: 0%;
+    }
+}
+
 .table-color {
     background-color: #d8d8d8;
 }
@@ -78,7 +84,7 @@ table>tbody a {
     justify-content: space-between;
 }
 
-.modal-body input, .modal-body select, .modal-body textarea {
+.modal-body input, #input-buscar, .modal-body select, .modal-body textarea {
     border-radius: 0%;
     border: 1px solid black;
 }
@@ -100,4 +106,9 @@ table>tbody a {
 }
 .form-switch input:checked {
     background-color: black;
+}
+
+.btn-eliminar-desactivado {
+    color: rgb(151, 150, 150);
+    pointer-events: none;
 }
