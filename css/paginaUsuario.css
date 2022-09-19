@@ -5,6 +5,235 @@ header {
 }
 
 #input-buscar-comida {
+    width: 80%;
     border-radius: 0%;
     border: 1px solid black;
+}
+
+.div-input-buscar {
+    /* background-color: #ddca51; */
+}
+
+.div-filtros-estilo {
+    margin-top: 1rem;
+    background-color: rgb(214, 214, 214);
+    border-radius: 5px;
+    padding: 1rem;
+    box-shadow: 10px 10px 10px rgb(168, 168, 168);
+    margin-top: 2rem;
+}
+.div-filtros-estilo:hover {
+    box-shadow: 10px 10px 10px rgb(102, 102, 102);
+}
+.div-filtros-estilo h4, .div-filtros-estilo p {
+    font-family: 'Oswald', sans-serif;
+}
+.div-filtros-estilo p {
+    margin: 0%;
+    margin-bottom: 0.1rem;
+}
+.div-filtros-estilo h4 {
+    color: rgb(105, 105, 105);
+}
+.div-filtros-estilo p:hover {
+    cursor: pointer;
+    color: grey;
+}
+
+/*  */
+
+main {
+    /* z-index: 5; */
+    /* background-color: #fcf0d2; */
+    background-color: white;
+    /* display: flex; */
+}
+
+main>div {
+    max-width: 1360px;
+}
+
+.swiper-button-next, .swiper-button-prev {
+    color: black;
+    font-weight: bold;
+    background-color: #faee9e;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+    box-shadow: 5px 5px 5px black;
+    border-radius: 5px;
+}
+.swiper-button-next:hover, .swiper-button-prev:hover {
+    color: #faee9e;
+    background-color: black;
+    box-shadow: 5px 5px 5px rgb(48, 47, 47);
+}
+
+/* .div-tipos-comida>div {
+    background-position: center;
+    background-size: cover;
+    height: 450px;
+    width: 300px;
+    margin: 0.5%;
+}
+
+.div-comidas-destacadas1 {
+    background-image: url(/img/img-desayuno.jpg);
+}
+.div-comidas-destacadas2 {
+    background-image: url(/img/img-ensalada.jpg);
+}
+.div-comidas-destacadas3 {
+    background-image: url(/img/img-pizza.jpg);
+}
+.div-comidas-destacadas4 {
+    background-image: url(/img/img-postres.jpg);
+} */
+
+.swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 70%;
+}
+
+.swiper-slide img {
+    width: 100%;
+}
+
+.btn-ordenar-estilo {
+    border: 0px;
+    background-color: #faee9e;
+    color: black;
+    font-weight: bold;
+    padding: 4%;
+    padding-left: 10%;
+    padding-right: 10%;
+    border-radius: 10px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 96%;
+    text-decoration: none;
+}
+
+.btn-ordenar-estilo:hover {
+    cursor: pointer;
+    background-color: black;
+    color: #faee9e;
+    transition: .8s;
+}
+
+.btn-verMas-estilo {
+    border: 0px;
+    background-color: #faee9e;
+    color: black;
+    font-weight: bold;
+    padding-top: 1.5%;
+    padding-bottom: 1.5%;
+    border-radius: 10px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 96%;
+    text-decoration: none;
+}
+
+.btn-verMas-estilo:hover {
+    cursor: pointer;
+    background-color: black;
+    color: #faee9e;
+    transition: .8s;
+}
+
+.precio-info>h3 {
+    background-color: rgb(29, 29, 28);
+    border-radius: 15px;
+    font-size: 130%;
+    padding: 2%;
+    color: white;
+}
+
+.precio-info {
+    z-index: 1;
+    margin-top: -10%;
+}
+
+.a-ordenar-estilo-header {
+    border: 0px;
+    background-color: #faee9e;
+    color: black;
+    font-weight: bold;
+    padding: 2%;
+    border-radius: 5px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 90%;
+    text-decoration: none;
+}
+
+.a-ordenar-estilo-header:hover {
+    background-color: black;
+    color: #faee9e;
+    transition: .8s;
+    cursor: pointer;
+}
+
+.menu-opciones>div>div {
+    margin-bottom: 1%;
+}
+
+.menu-opciones>div>div:hover {
+    transition: .5s;
+    box-shadow: 5px 5px 5px 5px #5f5f5f;
+}
+
+.titulos {
+    font-family: 'Fredericka the Great', cursive;
+    font-size: 230%;
+    /* background-color: rgba(255, 238, 0, 0.301); */
+}
+@media (max-width: 256px) {
+    .titulos {
+        font-size: 200%;
+    }
+}
+@media (max-width: 225px) {
+    .titulos {
+        font-size: 180%;
+    }
+}
+
+
+.sub-titulos {
+    margin-top: 5%;
+    font-family: 'Fredericka the Great', sans-serif;
+    font-size: 180%;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: -30px;
+}
+
+.menu-disponible img {
+    margin-top: 80px;
+    padding-left: 55px; 
+    padding-right: 55px;
+}
+
+.menu-opciones img {
+    margin-top: 80px;
+    padding-left: 55px; 
+    padding-right: 55px;
+}
+
+.nombre-item {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.container-detalles-restaurante p {
+    color: #5f5f5f;
+    font-weight: 450;
+}
+
+.container-detalles-restaurante img {
+    width: 25%;
+}
+
+.container-detalles-restaurante>div {
+    height: 250px;
 }
