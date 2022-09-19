@@ -53,6 +53,10 @@ nav>div {
     color: rgb(143, 142, 142) !important;
 }
 
+.navbar-color {
+    position: fixed;
+    width: 100%;
+}
 .navbar-color li {
     margin-left: 3.5%;
 }
@@ -66,7 +70,7 @@ nav a:hover {
 }
 
 .header-plato {
-    padding-top: 1%;
+    padding-top: 5.3rem;
     padding-bottom: 1%;
     background-color: rgba(0, 0, 0, 0.6);
 }
@@ -248,55 +252,52 @@ footer>div {
 @media (max-width: 1160px) {
     .div-btn-redes {
         width: 135px;
-    }
+    } 
 }
-
 @media (max-width: 1079px) {
     .div-btn-redes {
         width: 125px;
-    }
+    } 
 }
-
 @media (max-width: 1000px) {
     .div-btn-redes {
         width: 110px;
-    }
+    } 
 }
-
 @media (max-width: 880px) {
     .div-btn-redes {
         width: 100px;
-    }
+    } 
 }
-
+@media (max-width: 800px) {
+    .div-btn-redes {
+        width: 90px;
+    } 
+}
 @media (max-width: 575px) {
     .div-btn-redes {
         width: 145px;
-    }
+    } 
 }
-
 @media (max-width: 386px) {
     .div-btn-redes {
         width: 130px;
-    }
+    } 
 }
-
 @media (max-width: 346px) {
     .div-btn-redes {
         width: 115px;
-    }
+    } 
 }
-
 @media (max-width: 306px) {
     .div-btn-redes {
         width: 110px;
-    }
+    } 
 }
-
 @media (max-width: 293px) {
     .div-btn-redes {
-        width: 190px;
-    }
+        width: 100px;
+    } 
 }
 
 /* FIN MEDIA QUERIS DE LOS BOTONES DE REDES */

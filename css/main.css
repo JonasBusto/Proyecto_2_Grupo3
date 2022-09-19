@@ -23,6 +23,7 @@ header {
 
 nav {
     background-color: rgba(0, 0, 0, 0.95);
+    z-index: 1001;
 }
 nav>div {
     max-width: 1320px; 
@@ -36,6 +37,10 @@ nav>div {
     color: rgb(143, 142, 142) !important;
 }
 
+.navbar-color {
+    position: fixed;
+    width: 100%;
+}
 .navbar-color li {
     margin-left: 3.5%;
 }
@@ -48,95 +53,8 @@ nav a:hover {
     color: rgb(143, 142, 142) !important;
 }
 
-/* INICIO DE MEDIA QUERI PARA EL PADDING DEL NAVBAR */
-
-/* @media only screen and (max-width: 800px) {
-    .div-general-contenido-plato {
-        padding-top: 110% !important;
-    }
-}
-@media only screen and (max-width: 00px) {
-    .div-general-contenido-plato {
-        padding-top: 110% !important;
-    }
-}
-
-
-@media only screen and (max-width: 800px) {
-    .div-general-contenido-plato {
-        padding-top: 110% !important;
-    }
-}
-@media only screen and (max-width: 600px) {
-    .div-general-contenido-plato {
-        padding-top: 9% !important;
-    }
-}
-@media only screen and (max-width: 430px) {
-    .div-general-contenido-plato {
-        padding-top: 11% !important;
-    }
-}
-@media only screen and (max-width: 400px) {
-    .div-general-contenido-plato {
-        padding-top: 14.5% !important;
-    }
-} */
-@media only screen and (max-width: 380px) {
-    .div-general-contenido-plato {
-        padding-top: 14.8% !important;
-    }
-}
-@media only screen and (max-width: 360px) {
-    .div-general-contenido-plato {
-        padding-top: 15.5% !important;
-    }
-}
-@media only screen and (max-width: 340px) {
-    .div-general-contenido-plato {
-        padding-top: 16.7% !important;
-    }
-}
-@media only screen and (max-width: 321px) {
-    .div-general-contenido-plato {
-        padding-top: 17.5% !important;
-    }
-}
-@media only screen and (max-width: 310px) {
-    .div-general-contenido-plato {
-        padding-top: 18% !important;
-    }
-}
-@media only screen and (max-width: 304px) {
-    .div-general-contenido-plato {
-        padding-top: 18.5% !important;
-    }
-}
-@media only screen and (max-width: 292px) {
-    .div-general-contenido-plato {
-        padding-top: 19% !important;
-    }
-}
-@media only screen and (max-width: 282px) {
-    .div-general-contenido-plato {
-        padding-top: 19.5% !important;
-    }
-}
-@media only screen and (max-width: 275px) {
-    .div-general-contenido-plato {
-        padding-top: 20% !important;
-    }
-}
-@media only screen and (max-width: 265px) {
-    .div-general-contenido-plato {
-        padding-top: 21.3% !important;
-    }
-}
-
-
-/* FIN DE MEDIA QUERI PARA EL PADDING DEL NAVBAR */
-
 .div-general-contenido-plato {
+    padding-top: 5.3rem !important;
     background-color: rgba(0, 0, 0, 0.5);
     /* border-radius: 2%; */
     padding: 2%;
@@ -203,6 +121,7 @@ nav a:hover {
 /* MAIN */
 
 main {
+    z-index: 5;
     /* background-color: #fcf0d2; */
     background-color: white;
     /* display: flex; */
@@ -446,6 +365,11 @@ footer>div {
         width: 100px;
     } 
 }
+@media (max-width: 800px) {
+    .div-btn-redes {
+        width: 90px;
+    } 
+}
 @media (max-width: 575px) {
     .div-btn-redes {
         width: 145px;
@@ -468,7 +392,7 @@ footer>div {
 }
 @media (max-width: 293px) {
     .div-btn-redes {
-        width: 190px;
+        width: 100px;
     } 
 }
 

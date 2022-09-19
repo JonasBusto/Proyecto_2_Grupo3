@@ -22,9 +22,11 @@ class Comida {
 }
 
 // Cargo comidas en el localStorage
-// let arrayComidasInicial = [];
-// arrayComidasInicial.push(new Comida("100", "pizza", "desc1", "pizza", "190", "url", false));
-// localStorage.setItem("Comidas", JSON.stringify(arrayComidasInicial));
+if(JSON.parse(localStorage.getItem("Comidas")) === null) {
+    let arrayComidasInicial = [];
+    arrayComidasInicial.push(new Comida(0, "pizza", "desc1", "pizza", "190", "url", true));
+    localStorage.setItem("Comidas", JSON.stringify(arrayComidasInicial));
+}
 
 // arrayComidasAux --> Contendra siempre lo del localStorage
 let arrayComidasAux = JSON.parse(localStorage.getItem("Comidas")) || [];
@@ -61,7 +63,7 @@ function modificarComida(index) {
     const inputModificadoNombre = document.getElementById("input-modificado-nombre" + index);
     const inputNuevoPrecio = document.getElementById("input-nuevo-precio" + index);
     const nuevaDesc = document.getElementById("textarea-nueva-descripcion" + index);
-    const alerta = document.getElementById("inyectar-alerta" + index)
+    const alerta = document.getElementById("inyectar-alerta" + index);
 
     let encontrado = funcionVerificarExistenciaAUX(index)[0];
     let encontradoIndex = funcionVerificarExistenciaAUX(index)[1];
@@ -69,7 +71,7 @@ function modificarComida(index) {
     if (encontrado) {
         if (inputModificadoNombre.value.trim() === "" || inputNuevoPrecio.value.trim() === "" || nuevaDesc.value.trim() === "") {
             alerta.innerHTML = `
-            <p class="text-danger">*Verifique los datos que ingresa*</p>
+            <h6 class="text-danger">*VERIFIQUE LOS DATOS QUE INGRESA*</h6>
             `
             setTimeout(() => {
                 alerta.innerHTML = "";
@@ -155,14 +157,23 @@ function destacarComida(index) {
 
 const modificarIMGurl = (index) => {
     const inputModificarUrl = document.getElementById("input-modificar-url" + index);
-
+    const alerta = document.getElementById("inyectar-alerta-url" + index);
     let encontrado = funcionVerificarExistenciaAUX(index)[0];
     let encontradoIndex = funcionVerificarExistenciaAUX(index)[1];
 
     if (encontrado) {
-        arrayComidasAux[encontradoIndex].url = inputModificarUrl.value;
-        localStorage.setItem("Comidas", JSON.stringify(arrayComidasAux));
-        location.reload();
+        if (inputModificarUrl.value.trim() === "") {
+            alerta.innerHTML = `
+            <h6 class="text-danger">*CAMPO "Nueva URL" VACIO*</h6>
+            `
+            setTimeout(() => {
+                alerta.innerHTML = "";
+            }, 1500);
+        } else {
+            arrayComidasAux[encontradoIndex].url = inputModificarUrl.value;
+            localStorage.setItem("Comidas", JSON.stringify(arrayComidasAux));
+            location.reload();
+        }
     }
 
 }
@@ -172,13 +183,15 @@ const actualizarPagina = () => {
     for (let i = 0; i < arrayComidas.length; i++) {
         const tr = document.createElement("tr");
         tr.innerHTML = `
-        <th scope="row">${arrayComidas[i].id}</th>
-        <td>${arrayComidas[i].nombre}</td>
-        <td>${arrayComidas[i].precio}$</td>
-        <td>${arrayComidas[i].categoria}</td>
+        <th scope="row" class="text-center pt-3">${arrayComidas[i].id}</th>
+        <td class="text-center pt-3">${arrayComidas[i].nombre}</td>
+        <td class="text-center pt-3">${arrayComidas[i].precio}$</td>
+        <td class="text-center pt-3">${arrayComidas[i].categoria}</td>
         <td>
             <div>
-                <a data-bs-toggle="modal" data-bs-target="#modalVerDesc${arrayComidas[i].id}">Ver Mas...</a>
+                <div class="w-100 d-flex justify-content-center">
+                    <a class="mx-auto anchor-btn-ver" data-bs-toggle="modal" data-bs-target="#modalVerDesc${arrayComidas[i].id}">VER MAS</a>
+                </div>
 
                 <div class="modal fade" data-bs-backdrop="static" id="modalVerDesc${arrayComidas[i].id}"
                     tabindex="-1" aria-labelledby="modalVerDesc${arrayComidas[i].id}Label" aria-hidden="true">
@@ -210,15 +223,17 @@ const actualizarPagina = () => {
         <td>
             <div>
                 <!-- MODAL VER IMAGENES -->
-                <a data-bs-toggle="modal" data-bs-target="#modalVerImagenes${arrayComidas[i].id}"
-                    class="text-decoration-none">Ver</a>
-
+                <div class="w-100 d-flex justify-content-center">
+                    <a data-bs-toggle="modal" data-bs-target="#modalVerImagenes${arrayComidas[i].id}"
+                    class="text-decoration-none anchor-btn-ver">VER</a>
+                </div>
+                
                 <div class="modal fade" data-bs-backdrop="static" id="modalVerImagenes${arrayComidas[i].id}"
                     tabindex="-1" aria-labelledby="modalVerImagenes${arrayComidas[i].id}Label" aria-hidden="true">
                     <div class="modal-dialog">
                         <div class="modal-content">
                             <div class="modal-header">
-                                <h5 class="modal-title" id="modalVerImagenes${arrayComidas[i].id}Label">Imagenes
+                                <h5 class="modal-title" id="modalVerImagenes${arrayComidas[i].id}Label">Imagenes (Comida: ${arrayComidas[i].nombre} - #${arrayComidas[i].id})
                                 </h5>
                                 <button type="button" class="btn-close" data-bs-dismiss="modal"
                                     aria-label="Close"></button>
@@ -230,25 +245,8 @@ const actualizarPagina = () => {
                                             <div class="col-12 d-flex flex-column">
                                                 <p class="mx-4">Imagen principal: </p>
                                                 <img class="img-fluid"
-                                                    src="/img/pizza/pizza-barbacoa-cerdo.png"
-                                                    alt="">
-                                            </div>
-                                            <div class="col-12 d-flex flex-column">
-                                                <p class="mx-4">Más Imagenes</p>
-                                                <div class="row m-0">
-                                                    <div class="col-12 col-sm-4 p-0 px-1">
-                                                        <img class="img-fluid"
-                                                            src="/img/carousel-img1.png" alt="">
-                                                    </div>
-                                                    <div class="col-12 col-sm-4 p-0 px-1">
-                                                        <img class="img-fluid"
-                                                            src="/img/carousel-img1.png" alt="">
-                                                    </div>
-                                                    <div class="col-12 col-sm-4 p-0 px-1">
-                                                        <img class="img-fluid"
-                                                            src="/img/carousel-img1.png" alt="">
-                                                    </div>
-                                                </div>
+                                                    src="${arrayComidas[i].url}"
+                                                    alt="img_comida.png">
                                             </div>
                                             <div>
 
@@ -265,12 +263,12 @@ const actualizarPagina = () => {
                 </div>
             </div>
         </td>
-        <td class="">
-            <div class="d-flex justify-content-center">
+        <td class="div-btn-destacado">
+            <div class="d-flex my-2 justify-content-center">
                 <a><i class="fa-solid fa-star ${arrayComidas[i].destacado ? "text-warning" : "color-icono"}" id="btn-destacado${arrayComidas[i].id}"></i></a>
             </div>
         </td>
-        <td class="td-col-opciones-comida">
+        <td class="td-col-opciones-comida py-3">
             <!-- MODAL ELIMINAR COMIDA -->
             <div>
                 <a><i class="fa-solid fa-trash-can color-icono ${arrayComidas[i].destacado ? "btn-eliminar-desactivado" : ""}" data-bs-toggle="modal"
@@ -384,7 +382,7 @@ const actualizarPagina = () => {
                         <div class="modal-content">
                             <div class="modal-header">
                                 <h5 class="modal-title" id="modalModificarImagenes${arrayComidas[i].id}Label">
-                                    Modificar Imagenes
+                                    Modificar Imagen
                                 </h5>
                                 <button type="button" class="btn-close" data-bs-dismiss="modal"
                                     aria-label="Close"></button>
@@ -422,11 +420,16 @@ const actualizarPagina = () => {
                                     </div>
                                 </div>
                             </div>
-                            <div class="modal-footer d-flex justify-content-between">
-                                <button class="btn mx-4"
+                            <div class="modal-footer d-flex flex-column">
+                                <div id="inyectar-alerta-url${arrayComidas[i].id}">
+                                    
+                                </div>
+                                <div class="d-flex justify-content-between w-100">
+                                    <button class="btn mx-4"
                                     data-bs-dismiss="modal">Cancelar</button>
-                                <button class="mx-4 btn" id="btn-modificar-img${arrayComidas[i].id}">Guardar
+                                    <button class="mx-4 btn" id="btn-modificar-img${arrayComidas[i].id}">Guardar
                                     Cambio</button>
+                                </div>
                             </div>
                         </div>
                     </div>

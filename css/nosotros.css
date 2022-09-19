@@ -49,3 +49,13 @@ body {
 main {
     background: url('../img/fondo-login.png') no-repeat center center/cover;
 }
+
+@media (max-width: 991px) {
+    main {
+        background-position: -200px;
+    }
+}
+
+.equipo {
+    padding-top: 2rem;
+}
