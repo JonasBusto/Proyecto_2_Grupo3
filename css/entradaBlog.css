@@ -223,6 +223,21 @@ main>div {
 /* swiper */
 
 
+.div-btn-ordenar-comida button {
+    margin: 10px;
+    border-radius: 0px;
+    padding: 10px;
+    background-color: #faee9e;
+    color: black;
+    cursor: pointer;
+    /* font-weight: 600; */
+    border: 1px solid black;
+}
+.div-btn-ordenar-comida button:hover {
+    color: #faee9e;
+    background-color: black;
+}
+
 /* FOOTER */
 
 footer {
@@ -338,14 +353,6 @@ footer>div {
     transition: .8s;
 }
 
-/* @media (min-width: 992px) {
-    .div-suscribirse input {
-        width: 100%;
-    }
-    .div-suscribirse button {
-        width: 100%;
-    }
-} */
 
 .div-logo img {
     width: 30%;

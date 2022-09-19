@@ -1,0 +1,14 @@
+.anchor-btn-habilitar {
+    margin: 0px;
+    border-radius: 0px;
+    padding: 5px;
+    background-color: #faee9e;
+    color: black;
+    cursor: pointer;
+    text-decoration: none;
+    border: 1px solid black;
+}
+.anchor-btn-habilitar:hover {
+    color: #faee9e;
+    background-color: black;
+}

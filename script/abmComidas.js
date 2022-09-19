@@ -211,7 +211,7 @@ const actualizarPagina = () => {
                             </div>
                             <div class="modal-footer">
                                 <div class="d-flex justify-content-center">
-                                    <button type="button" class="btn btn-primary mx-4"
+                                    <button type="button" class="btn mx-4"
                                         data-bs-dismiss="modal">Cerrar</button>
                                 </div>
                             </div>
@@ -317,7 +317,7 @@ const actualizarPagina = () => {
                                     aria-label="Close"></button>
                             </div>
                             <div class="modal-body d-flex flex-column">
-                                <p class="fw-bold">Comida #1
+                                <p class="fw-bold">Comida #${arrayComidas[i].id}
                                 </p>
                                 <div class="d-flex flex-column">
                                     <div class="mb-3">

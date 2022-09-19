@@ -85,7 +85,7 @@ table>tbody a {
     justify-content: space-between;
 }
 
-.modal-body input, #input-buscar, .modal-body select, .modal-body textarea {
+.modal-body input, #input-buscar, #input-buscar-usuario, .modal-body select, .modal-body textarea {
     border-radius: 0%;
     border: 1px solid black;
 }
