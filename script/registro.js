@@ -40,7 +40,7 @@ function validarRegistro() {
                 Swal.fire({
                     title: 'REGISTRO EXITOSO',
                     icon: 'success',
-                    html: 'Debe esperar a que el <b>Administrador</b> lo de <b>ALTA</b> en el sistema para poder <b>AUTENTICARSE</b> al mismo.',
+                    html: 'Debe esperar a que el <b>Administrador</b> lo dé de <b>ALTA</b> en el sistema para poder <b>AUTENTICARSE</b> al mismo.',
                     confirmButtonText: 'ACEPTAR',
                 })
                 document.getElementById('usuario').value = ''
