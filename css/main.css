@@ -31,10 +31,14 @@ nav>div {
 
 .btn-navbar-toggle {
     color: white;
+    font-size: 2rem;
+    border: 4px solid rgba(255, 255, 255, 0.123);
+    background-color: rgba(255, 255, 255, 0.027);
 }
 
 .btn-navbar-toggle:hover {
     color: rgb(143, 142, 142) !important;
+    border: 4px solid rgba(255, 255, 255, 0.315);
 }
 
 .navbar-color {
@@ -406,6 +410,24 @@ footer>div {
     font-size: 40px;
     text-decoration: none;
 }
+
+#btn-red-twitter i:hover {
+    transition: 1s;
+    color: #1DA1F2;
+}
+#btn-red-facebook i:hover {
+    transition: 1s;
+    color: #4267B2;
+}
+#btn-red-whatsapp i:hover {
+    transition: 1s;
+    color: #25D366;
+}
+#btn-red-instagram i:hover {
+    transition: 1s;
+    color: #E1306C
+}
+
 
 .div-suscribirse input {
     height: 45px;

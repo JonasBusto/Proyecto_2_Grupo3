@@ -22,7 +22,7 @@ body {
     
 }
 .card-nosotros {
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.685);
     border: 0;
     border-radius: 0px;
     box-shadow: 5px 5px 5px rgb(102, 100, 100);
@@ -33,18 +33,15 @@ body {
     
 }
 .card-nosotros:hover{
-    background-color: white;
+    transition: 1.3s;
+    background-color: rgba(255, 255, 255, 0.37);
     color: black;
     border-radius: 5px;
     border: none;
-    box-shadow: 5px 5px 5px rgb(102, 100, 100);
+    box-shadow: 8px 8px 8px rgb(53, 53, 53);
    
 
 }
-/* .card-nosotros:hover .quienes-somos :hover{
-    color:rgb(102, 100, 100);
-   
-} */
 
 main {
     background: url('../img/fondo-login.png') no-repeat center center/cover;
