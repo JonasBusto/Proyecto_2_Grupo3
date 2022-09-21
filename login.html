@@ -62,21 +62,21 @@
                 <!-- <h1>*LOGO*</h1> -->
                 <form action="" method="POST">
                     <div class="d-flex mx-auto flex-column mx-0 div-input-email-login my-3">
-                        <input class="m-0" type="text" name="usuario" required placeholder="Usuario"
-                            id="usuario">
+                        <input class="m-0" type="text" name="usuario" required placeholder="Usuario" id="usuario">
                     </div>
                     <p class="text-center text-danger" id="errorNombre"></p>
                     <div class="d-flex mx-auto div-input-login my-3">
-                        <input class="m-0" type="password" name="pass" required placeholder="Contraseña" id="contraseña">
-                        <div class="d-flex align-items-center justify-content-center">
-                            <i class="fa-solid fa-eye"></i>
+                        <input class="m-0" type="password" name="pass" required placeholder="Contraseña"
+                            id="contraseña">
+                        <div class="d-flex align-items-center justify-content-center" id="div-visualizar-contraseña">
+                            <i class="fa-solid fa-eye-slash" id="icono-eye"></i>
                         </div>
                     </div>
                     <p class="text-center text-danger" id="errorPass"></p>
                     <!-- <input type="password" name="pass1" required placeholder="Confirmar contraseña" id="validarPass">
                     <p class="text-center text-danger" id="errorPass1"></p> -->
                     <div class="btn-container">
-                        <button type="submit" onclick="iniciarSesion()">INICIAR SESIÓN</button>
+                        <button type="button" onclick="login()">INICIAR SESIÓN</button>
                     </div>
                     <p class="text-center">¿Eres nuevo? Haz click <a href="/register.html">aquí</a></p>
 
@@ -97,7 +97,8 @@
                                 <div class="modal-body">
                                     <p><b>Atención: </b>Debera introducir el email con el cual creo su cuenta, y
                                         presionar en "Enviar". De esta forma, le llegara a ese mismo correo la clave de
-                                        recuperación, si y solo si existe una cuenta asociada a dicho email. Muchas gracias!</p>
+                                        recuperación, si y solo si existe una cuenta asociada a dicho email. Muchas
+                                        gracias!</p>
                                     <form>
                                         <div class="mb-3">
                                             <input type="text" class="form-control" id="recipient-name"
@@ -193,8 +194,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
         crossorigin="anonymous"></script>
-
-    <script src="./js/login.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="./script/login.js"></script>
 </body>
 
 </html>
