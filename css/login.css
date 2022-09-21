@@ -148,7 +148,9 @@ main {
 
 form a {
     text-decoration: none;
-    color: blue !important;
+    font-weight: bold;
+    font-style: italic;
+    color: black !important;
 }
 
 form a:hover {

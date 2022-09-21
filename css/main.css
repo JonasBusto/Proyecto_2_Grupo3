@@ -485,3 +485,21 @@ footer>div {
     padding: 1.5%;
     width: 100%;
 }
+
+.swal2-styled {
+    margin: 10px !important;
+    border-radius: 0px !important;
+    padding: 10px !important;
+    background-color: #faee9e !important;
+    color: black !important;
+    cursor: pointer !important;
+    font-weight: 600 !important;
+    border: 1px solid black !important;
+}
+.swal2-styled:hover {
+    color: #faee9e !important;
+    background-color: black !important;
+}
+.swal2-container>div {
+    color: black !important;
+}
