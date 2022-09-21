@@ -77,3 +77,30 @@ function validarRegistro() {
 
     }
 }
+
+const contraseña = document.getElementById('contraseña');
+const validarContraseña = document.getElementById('validarContraseña');
+const iconoPrimerCandado = document.getElementById("1er-icono-candado");
+const iconoSegundoCandado = document.getElementById("2do-icono-candado");
+const divPrimerCandado = document.getElementById("div-primer-candado");
+const divSegundoCandado = document.getElementById("div-segundo-candado");
+
+divPrimerCandado.addEventListener("click", ()=> {
+    if(contraseña.type === "password") {
+        contraseña.type = "text";
+    }else {
+        contraseña.type = "password";
+    }
+    iconoPrimerCandado.classList.toggle("fa-lock");
+    iconoPrimerCandado.classList.toggle("fa-lock-open");
+})
+
+divSegundoCandado.addEventListener("click", ()=> {
+    if(validarContraseña.type === "password") {
+        validarContraseña.type = "text";
+    }else {
+        validarContraseña.type = "password";
+    }
+    iconoSegundoCandado.classList.toggle("fa-lock");
+    iconoSegundoCandado.classList.toggle("fa-lock-open");
+})
