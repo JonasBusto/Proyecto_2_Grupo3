@@ -1,3 +1,7 @@
+if (JSON.parse(localStorage.getItem("Usuarios")) === null) {
+  localStorage.setItem("Usuarios", JSON.stringify([{ id: 1, usuario: "Administrador", contraseña: "admin", role: 'admin', habilitado: true }]))
+}
+
 // Obtengo los elementos que necesito
 //Esto lo hizo fernanda
 //const nombre = document.getElementById('nombre');
