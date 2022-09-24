@@ -7,6 +7,7 @@ function login() {
     let contraseña = document.getElementById('contraseña').value;
     let localSTG = JSON.parse(localStorage.getItem('Usuarios')) || [];
     let usuarioExistente = localSTG.filter(local => local.usuario.toLowerCase().trim() === usuario.toLowerCase().trim());
+    
     if (usuario.trim() === '' || contraseña.trim() === '') {
         Swal.fire({
             title: 'CAMPOS INCOMPLETO',
@@ -32,13 +33,14 @@ function login() {
                     confirmButtonText: 'ACEPTAR'
                 })
             }
+        } else {
+            Swal.fire({
+                title: 'El usuario o contraseñas son invalidas',
+                icon: 'warning',
+                confirmButtonText: 'ACEPTAR'
+            })
         }
-
-
-
     }
-
-
 }
 
 
