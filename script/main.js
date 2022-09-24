@@ -32,6 +32,12 @@ if (JSON.parse(localStorage.getItem("Comidas")) === null) {
     arrayComidasInicial.push(new Comida(9, "Chocolate + Dulce de Leche", "desc2_postre", "Postre", 649.99, "https://res.cloudinary.com/dtccrvpzp/image/upload/v1663972878/RCS%20-%20Proyecto%202%20-%20Grupo%203-%202022/postre/postre2_xvedij.png", false));
     arrayComidasInicial.push(new Comida(10, "Frutilla + Anana", "desc3_postre", "Postre", 450.00, "https://res.cloudinary.com/dtccrvpzp/image/upload/v1663972878/RCS%20-%20Proyecto%202%20-%20Grupo%203-%202022/postre/postre3_vgajqy.png", false));
     arrayComidasInicial.push(new Comida(11, "Pastel de frutilla", "desc4_postre", "Postre", 274.99, "https://res.cloudinary.com/dtccrvpzp/image/upload/v1663972880/RCS%20-%20Proyecto%202%20-%20Grupo%203-%202022/postre/postre6_bkp0ff.png", false));
+    
+    // PASTAS - FIDEOS
+    arrayComidasInicial.push(new Comida(12, "Pasta con tallarines fettuccine", "desc1_pasta", "Pastas_fideos", 194.99, "https://res.cloudinary.com/dtccrvpzp/image/upload/v1663990910/RCS%20-%20Proyecto%202%20-%20Grupo%203-%202022/pastas/fideos_tallarines_fettuccine_bbtc9p.png", false));
+    arrayComidasInicial.push(new Comida(13, "Pasta con albondigas", "desc2_pasta", "Pastas_fideos", 399.99, "https://res.cloudinary.com/dtccrvpzp/image/upload/v1663990910/RCS%20-%20Proyecto%202%20-%20Grupo%203-%202022/pastas/fideos_con_salsa_albondiga_l8fpm4.png", false));
+    arrayComidasInicial.push(new Comida(14, "Pasta a la boloñesa al dente", "desc3_pasta", "Pastas_fideos", 499.99, "https://res.cloudinary.com/dtccrvpzp/image/upload/v1663990909/RCS%20-%20Proyecto%202%20-%20Grupo%203-%202022/pastas/fideos_bolo%C3%B1esa_al_dente_sjyxab.png", false));
+    arrayComidasInicial.push(new Comida(15, "Pasta con loncha de jamon", "desc4_pasta", "Pastas_fideos", 274.99, "https://res.cloudinary.com/dtccrvpzp/image/upload/v1663990909/RCS%20-%20Proyecto%202%20-%20Grupo%203-%202022/pastas/fideos_con_loncha_de_jamon_gj53zr.png", false));
 
     localStorage.setItem("Comidas", JSON.stringify(arrayComidasInicial));
 }
@@ -40,6 +46,7 @@ const divInyectarDestacado = document.getElementById("inyectar-destacado");
 const divInyectarPizzas = document.getElementById("inyectar-pizzas");
 const divInyectarPlatosEsp = document.getElementById("inyectar-platos-esp");
 const divInyectarPostres = document.getElementById("inyectar-postres");
+const divInyectarPastasFideos = document.getElementById("inyectar-pastas-fideos");
 
 
 function inyectarDestacado() {
@@ -128,6 +135,30 @@ const inyectarComidas = () => {
 
         if (localSTG[i].categoria === "Postre") {
             divInyectarPostres.innerHTML += `
+            <div
+                class="swiper-slide h-auto d-flex flex-column align-items-center justify-content-between text-center pb-3">
+                <div>
+                    <img src="${localSTG[i].url}" class="img-fluid w-100"
+                        alt="pizza_menu.png">
+                </div>
+                <div>
+                    <div class="precio-info d-flex justify-content-end">
+                        <h3><i class="fa-solid fa-dollar-sign"></i> ${localSTG[i].precio}</h3>
+                    </div>
+                    <h4 class="nombre-item">${localSTG[i].nombre}</h4>
+                    <p>${localSTG[i].descripcion}</p>
+                    <a href="/entradaBlog.html?id=${localSTG[i].id}" class="btn-ordenar-estilo">VER MAS</a>
+                </div>
+            </div>
+        `
+        }
+    }
+    
+    // INYECTO PASTAS/FIDEOS
+    for (let i = 0; i < localSTG.length; i++) {
+
+        if (localSTG[i].categoria === "Pastas_fideos") {
+            divInyectarPastasFideos.innerHTML += `
             <div
                 class="swiper-slide h-auto d-flex flex-column align-items-center justify-content-between text-center pb-3">
                 <div>
