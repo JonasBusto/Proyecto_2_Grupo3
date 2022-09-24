@@ -7,7 +7,7 @@ function login() {
     let contraseña = document.getElementById('contraseña').value;
     let localSTG = JSON.parse(localStorage.getItem('Usuarios')) || [];
     let usuarioExistente = localSTG.filter(local => local.usuario.toLowerCase().trim() === usuario.toLowerCase().trim());
-    
+
     if (usuario.trim() === '' || contraseña.trim() === '') {
         Swal.fire({
             title: 'CAMPOS INCOMPLETO',
@@ -19,13 +19,23 @@ function login() {
         //corroboro que el usuario ingresado exista
         if (usuarioExistente.length > 0) {
             if (usuarioExistente[0].contraseña === contraseña) {
-                usuarioExistente[0].role === 'admin'
-                    ?
-                    //localStorage.setItem('id', JSON.stringify(usuarioExiste[0].id))
-                    //ternario para redirigiar si son admin o usuario
-                    location.href = '/usuariosABM.html'
-                    :
-                    location.href = '/paginaUsuario.html'
+                if (usuarioExistente[0].habilitado === true) {
+
+                    usuarioExistente[0].role === 'admin'
+                        ?
+                        //localStorage.setItem('id', JSON.stringify(usuarioExiste[0].id))
+                        //ternario para redirigiar si son admin o usuario
+                        location.href = '/usuariosABM.html'
+                        :
+                        location.href = '/paginaUsuario.html'
+                } else {
+                    Swal.fire({
+                        title: "El usuario EXISTE pero esta INHABILITADO.",
+                        icon: 'warning',
+                        html: "Espera a ser dado de <b>ALTA</b> por el <b>ADMINISTRADOR</b>.",
+                        confirmButtonText: 'ACEPTAR'
+                    })
+                }
             } else {
                 Swal.fire({
                     title: 'El usuario o contraseñas son invalidas',
@@ -42,7 +52,6 @@ function login() {
         }
     }
 }
-
 
 // Permitir funcionalidad para visualizar o no la contraseña haciendo click en el icono del "ojo"
 const btnVisualizar = document.getElementById("div-visualizar-contraseña");
