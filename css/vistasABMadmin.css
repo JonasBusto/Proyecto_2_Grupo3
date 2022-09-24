@@ -119,6 +119,6 @@ table>tbody a {
     overflow: auto;
 }
 
-.modal-content {
+.modal {
     z-index: 10000 !important;
 }
