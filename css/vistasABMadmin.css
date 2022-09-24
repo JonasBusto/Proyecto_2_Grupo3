@@ -122,3 +122,7 @@ table>tbody a {
 .modal {
     z-index: 10000 !important;
 }
+
+.clickable {
+    cursor: pointer;
+}

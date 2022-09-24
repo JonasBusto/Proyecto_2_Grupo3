@@ -270,8 +270,8 @@ const actualizarPagina = () => {
 
             <!-- MODAL MODIFICAR COMIDA -->
             <div>
-                <button><i class="fa-solid fa-pen-to-square color-icono" data-bs-toggle="modal"
-                        data-bs-target="#modalModificarComida${arrayComidas[i].id}"></i></button>
+                <a class="clickable"><i class="fa-solid clickable fa-pen-to-square color-icono" data-bs-toggle="modal"
+                        data-bs-target="#modalModificarComida${arrayComidas[i].id}"></i></a>
 
                 <div class="modal fade" data-bs-backdrop="static" id="modalModificarComida${arrayComidas[i].id}"
                     tabindex="-1" aria-labelledby="modalModificarComida${arrayComidas[i].id}Label"
