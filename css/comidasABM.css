@@ -23,3 +23,9 @@
     color: #faee9e;
     background-color: black;
 }
+
+.navbar-color, #header-personalizado {
+    position:sticky;
+    top: 0;
+
+}
