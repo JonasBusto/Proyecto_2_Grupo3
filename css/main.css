@@ -1,0 +1,506 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=IBM+Plex+Sans:wght@600&family=Lobster&family=Oswald:wght@500&family=Raleway&family=Roboto:wght@400;900&display=swap');
+
+
+header {
+    /* background-image: url(/img/img-header.jpg); */
+    background-image: url(/img/dddd.jpeg);
+    background-size: cover;
+    background-position: top;
+    /* z-index: 1; */
+}
+
+#header-personalizado {
+    font-family: 'Oswald', sans-serif;
+}
+
+#header-personalizado>div {
+    display: flex;
+    justify-content: center;
+}
+#header-personalizado>div>div {
+    max-width: 1900px;
+}
+
+nav {
+    background-color: rgba(0, 0, 0, 0.95);
+    z-index: 1001;
+}
+nav>div {
+    max-width: 1320px; 
+}
+
+.btn-navbar-toggle {
+    color: white;
+    font-size: 2rem;
+    border: 4px solid rgba(255, 255, 255, 0.123);
+    background-color: rgba(255, 255, 255, 0.027);
+}
+
+.btn-navbar-toggle:hover {
+    color: rgb(143, 142, 142) !important;
+    border: 4px solid rgba(255, 255, 255, 0.315);
+}
+
+.navbar-color {
+    position: fixed;
+    width: 100%;
+}
+.navbar-color li {
+    margin-left: 3.5%;
+}
+
+.navbar-color li>a {
+    color: rgb(255, 255, 255) !important;
+}
+
+nav a:hover {
+    color: rgb(143, 142, 142) !important;
+}
+
+.div-general-contenido-plato {
+    padding-top: 5.3rem !important;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* border-radius: 2%; */
+    padding: 2%;
+    color: rgb(255, 255, 255);
+}
+
+.subtitulo-pregunta {
+    font-family: 'Lobster', cursive;
+    color: black;
+    /* text-shadow: 2px yellow; */
+    -webkit-text-stroke: 1px rgb(255, 255, 255);
+    font-size: 40px;
+}
+
+.contenido-plato h4 {
+    font-size: 40px;
+    font-family: 'Fredericka the Great', cursive;
+}
+@media (max-width: 256px) {
+    .contenido-plato h4 {
+        font-size: 40px;
+    }
+}
+
+.destacado-nombre {
+    color: #faee9e;
+    font-size: 130%;
+    /* text-shadow: 2px black; */
+    -webkit-text-stroke: 0.5px black;
+}
+
+.subtitulo-ofertar-reserva {
+    font-size: 140%;
+}
+
+.desc-plato-destacado {
+    font-size: 90%;
+}
+
+.destacado {
+    /* margin: -5%; */
+    z-index: 1000;
+    /* height: 150%; */
+}
+
+.destacado>h3 {
+    /* transform: rotate(-10deg); */
+    background-color: rgb(10, 143, 61);
+    width: 61%;
+    padding: 1%;
+    position: relative;
+}
+
+.destacado2 {
+    /* transform: rotate(30deg); */
+    background-color: red;
+    width: 65% !important;
+    padding: 1%;
+    position: relative;
+    z-index: 2;
+    margin-top: 2%;
+}
+
+/* MAIN */
+
+main {
+    /* z-index: 5; */
+    /* background-color: #fcf0d2; */
+    background-color: white;
+    /* display: flex; */
+}
+
+main>div {
+    max-width: 1360px;
+}
+
+.swiper-button-next, .swiper-button-prev {
+    color: black;
+    font-weight: bold;
+    background-color: #faee9e;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+    box-shadow: 5px 5px 5px black;
+    border-radius: 5px;
+}
+.swiper-button-next:hover, .swiper-button-prev:hover {
+    color: #faee9e;
+    background-color: black;
+    box-shadow: 5px 5px 5px rgb(48, 47, 47);
+}
+
+/* .div-tipos-comida>div {
+    background-position: center;
+    background-size: cover;
+    height: 450px;
+    width: 300px;
+    margin: 0.5%;
+}
+
+.div-comidas-destacadas1 {
+    background-image: url(/img/img-desayuno.jpg);
+}
+.div-comidas-destacadas2 {
+    background-image: url(/img/img-ensalada.jpg);
+}
+.div-comidas-destacadas3 {
+    background-image: url(/img/img-pizza.jpg);
+}
+.div-comidas-destacadas4 {
+    background-image: url(/img/img-postres.jpg);
+} */
+
+.swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 70%;
+}
+
+.swiper-slide img {
+    width: 100%;
+}
+
+.btn-ordenar-estilo {
+    border: 0px;
+    background-color: #faee9e;
+    color: black;
+    font-weight: bold;
+    padding: 4%;
+    padding-left: 10%;
+    padding-right: 10%;
+    border-radius: 10px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 96%;
+    text-decoration: none;
+}
+
+.btn-ordenar-estilo:hover {
+    cursor: pointer;
+    background-color: black;
+    color: #faee9e;
+    transition: .8s;
+}
+
+.btn-verMas-estilo {
+    border: 0px;
+    background-color: #faee9e;
+    color: black;
+    font-weight: bold;
+    padding-top: 1.5%;
+    padding-bottom: 1.5%;
+    border-radius: 10px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 96%;
+    text-decoration: none;
+}
+
+.btn-verMas-estilo:hover {
+    cursor: pointer;
+    background-color: black;
+    color: #faee9e;
+    transition: .8s;
+}
+
+.precio-info>h3 {
+    background-color: rgb(29, 29, 28);
+    border-radius: 15px;
+    font-size: 130%;
+    padding: 2%;
+    color: white;
+}
+
+.precio-info {
+    min-width: 296px;
+    z-index: 1;
+    margin-top: -10%;
+}
+
+.a-ordenar-estilo-header {
+    border: 0px;
+    background-color: #faee9e;
+    color: black;
+    font-weight: bold;
+    padding: 2%;
+    border-radius: 5px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 90%;
+    text-decoration: none;
+}
+
+.a-ordenar-estilo-header:hover {
+    background-color: black;
+    color: #faee9e;
+    transition: .8s;
+    cursor: pointer;
+}
+
+.menu-opciones>div>div {
+    margin-bottom: 1%;
+}
+
+.menu-opciones>div>div:hover {
+    transition: .5s;
+    box-shadow: 5px 5px 5px 5px #5f5f5f;
+}
+
+.titulos {
+    font-family: 'Fredericka the Great', cursive;
+    font-size: 230%;
+    /* background-color: rgba(255, 238, 0, 0.301); */
+}
+@media (max-width: 256px) {
+    .titulos {
+        font-size: 200%;
+    }
+}
+@media (max-width: 225px) {
+    .titulos {
+        font-size: 180%;
+    }
+}
+
+
+.sub-titulos {
+    margin-top: 5%;
+    font-family: 'Fredericka the Great', sans-serif;
+    font-size: 180%;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: -30px;
+}
+
+.menu-disponible img {
+    margin-top: 80px;
+    padding-left: 55px; 
+    padding-right: 55px;
+}
+
+.menu-opciones img {
+    margin-top: 80px;
+    padding-left: 55px; 
+    padding-right: 55px;
+}
+
+.nombre-item {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.container-detalles-restaurante p {
+    color: #5f5f5f;
+    font-weight: 450;
+}
+
+.container-detalles-restaurante img {
+    width: 25%;
+}
+
+.container-detalles-restaurante>div {
+    height: 250px;
+}
+
+/* Footer */
+
+footer {
+    background-image: url(/img/img-footer.jpg);
+    background-size: cover;
+    background-position: top;
+} 
+
+footer>div {
+    background-color: rgba(17, 17, 17, 0.829);
+    display: flex;
+    justify-content: center;
+}
+.footer-contenido {
+    max-width: 1320px;
+}
+
+.footer-contenido>div>a {
+    color: white;
+}
+
+.div-btn-redes {
+    padding: 1%;
+    width: 145px;
+    height: 65px;
+}
+
+/* INICIO MEDIA QUERIS DE LOS BOTONES DE REDES */
+
+@media (max-width: 1160px) {
+    .div-btn-redes {
+        width: 135px;
+    } 
+}
+@media (max-width: 1079px) {
+    .div-btn-redes {
+        width: 125px;
+    } 
+}
+@media (max-width: 1000px) {
+    .div-btn-redes {
+        width: 110px;
+    } 
+}
+@media (max-width: 880px) {
+    .div-btn-redes {
+        width: 100px;
+    } 
+}
+@media (max-width: 800px) {
+    .div-btn-redes {
+        width: 90px;
+    } 
+}
+@media (max-width: 575px) {
+    .div-btn-redes {
+        width: 145px;
+    } 
+}
+@media (max-width: 386px) {
+    .div-btn-redes {
+        width: 130px;
+    } 
+}
+@media (max-width: 346px) {
+    .div-btn-redes {
+        width: 115px;
+    } 
+}
+@media (max-width: 306px) {
+    .div-btn-redes {
+        width: 110px;
+    } 
+}
+@media (max-width: 293px) {
+    .div-btn-redes {
+        width: 100px;
+    } 
+}
+
+/* FIN MEDIA QUERIS DE LOS BOTONES DE REDES */
+
+.div-btn-redes a {
+    width: 100%;
+    height: 100%;
+    border: 0px;
+    border-radius: 6px;
+    font-size: 40px;
+    text-decoration: none;
+}
+
+#btn-red-twitter i:hover {
+    transition: 1s;
+    color: #1DA1F2;
+}
+#btn-red-facebook i:hover {
+    transition: 1s;
+    color: #4267B2;
+}
+#btn-red-whatsapp i:hover {
+    transition: 1s;
+    color: #25D366;
+}
+#btn-red-instagram i:hover {
+    transition: 1s;
+    color: #E1306C
+}
+
+
+.div-suscribirse input {
+    height: 45px;
+    border: 0px;
+    border-radius: 5px;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    /* background-color: rgba(7, 7, 7, 0.562); */
+    color: black;
+}
+.div-suscribirse button {
+    margin-left: 3%;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: #faee9e;
+    color: black;
+    height: 45px;
+    border: 0px;
+    border-radius: 5px;
+}
+
+.div-suscribirse button:hover {
+    cursor: pointer;
+    background-color: black;
+    color: #faee9e;
+    transition: .8s;
+}
+
+/* @media (min-width: 992px) {
+    .div-suscribirse input {
+        width: 100%;
+    }
+    .div-suscribirse button {
+        width: 100%;
+    }
+} */
+
+.div-logo img {
+    width: 30%;
+}
+
+.div-redes-sociales {
+    color: white;
+    font-size: 140%
+}
+
+.div-redes-sociales h3 {
+    font-size: 90%;
+}
+
+.copyright {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    font-family: 'Roboto', sans-serif;
+    padding: 1.5%;
+    width: 100%;
+}
+
+.swal2-styled {
+    margin: 10px !important;
+    border-radius: 0px !important;
+    padding: 10px !important;
+    background-color: #faee9e !important;
+    color: black !important;
+    cursor: pointer !important;
+    font-weight: 600 !important;
+    border: 1px solid black !important;
+}
+.swal2-styled:hover {
+    color: #faee9e !important;
+    background-color: black !important;
+}
+.swal2-container>div {
+    color: black !important;
+}

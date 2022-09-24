@@ -1,0 +1,25 @@
+.td-col-opciones-comida {
+    padding-left: 5% !important;
+    padding-right: 5% !important;
+    display: flex;
+    justify-content: space-between;
+}
+.td-col-opciones-comida i:hover, .div-btn-destacado i:hover {
+    cursor: pointer;
+    color: #242424;
+}
+
+.anchor-btn-ver {
+    margin: 0px;
+    border-radius: 0px;
+    padding: 5px;
+    background-color: #faee9e;
+    color: black;
+    cursor: pointer;
+    text-decoration: none;
+    border: 1px solid black;
+}
+.anchor-btn-ver:hover {
+    color: #faee9e;
+    background-color: black;
+}

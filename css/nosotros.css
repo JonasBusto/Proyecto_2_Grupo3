@@ -1,0 +1,58 @@
+/* 
+ACERCA DE NOSOTROS */
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}
+
+.quienes-somos{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow', sans-serif;
+   
+}
+
+.subtitulo-somos{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow', sans-serif;
+    font-size: 20px;
+}
+.imagen-card{
+    margin-top: -40px;
+    
+}
+.card-nosotros {
+    background-color: rgba(0, 0, 0, 0.685);
+    border: 0;
+    border-radius: 0px;
+    box-shadow: 5px 5px 5px rgb(102, 100, 100);
+    transition: all 0.3s ease-in;
+    -webkit-transition: all 0.3s ease-in;
+    -moz-transition: all 0.3s ease-in;
+    color: white;
+    
+}
+.card-nosotros:hover{
+    transition: 1.3s;
+    background-color: rgba(255, 255, 255, 0.37);
+    color: black;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 8px 8px 8px rgb(53, 53, 53);
+   
+
+}
+
+main {
+    background: url('../img/fondo-login.png') no-repeat center center/cover;
+}
+
+@media (max-width: 991px) {
+    main {
+        background-position: -200px;
+    }
+}
+
+.equipo {
+    padding-top: 2rem;
+}
