@@ -46,27 +46,29 @@ function login() {
       confirmButtonText: 'ACEPTAR'
     })
   } else {
-    Swal.fire({
-      title: 'El usuario o contraseñas son invalidas',
-      icon: 'warning',
-      confirmButtonText: 'ACEPTAR'
-    })
-  }
-  //corroboro que el usuario ingresado exista
-  if (usuarioExistente.length > 0) {
-    if (usuarioExistente[0].contraseña === contraseña) {
-      usuarioExistente[0].role === 'admin'
-        ?
-        //localStorage.setItem('id', JSON.stringify(usuarioExiste[0].id))
-        //ternario para redirigiar si son admin o usuario
-        location.href = '/usuariosABM.html'
-        :
-        location.href = '/paginaUsuario.html'
+
+    //corroboro que el usuario ingresado exista
+    if (usuarioExistente.length > 0) {
+      if (usuarioExistente[0].contraseña === contraseña) {
+        usuarioExistente[0].role === 'admin'
+          ?
+          //localStorage.setItem('id', JSON.stringify(usuarioExiste[0].id))
+          //ternario para redirigiar si son admin o usuario
+          location.href = '/usuariosABM.html'
+          :
+          location.href = '/paginaUsuario.html'
+      } else {
+        Swal.fire({
+          title: 'El usuario o contraseñas son invalidas',
+          icon: 'warning',
+          confirmButtonText: 'ACEPTAR'
+        })
+      }
     }
 
-  }
 
-}
+
+  }
 
 
 // Permitir funcionalidad para visualizar o no la contraseña haciendo click en el icono del "ojo"
