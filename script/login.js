@@ -20,14 +20,12 @@ function login() {
         if (usuarioExistente.length > 0) {
             if (usuarioExistente[0].contraseña === contraseña) {
                 if (usuarioExistente[0].habilitado === true) {
-
-                    usuarioExistente[0].role === 'admin'
-                        ?
-                        //localStorage.setItem('id', JSON.stringify(usuarioExiste[0].id))
-                        //ternario para redirigiar si son admin o usuario
-                        location.href = '/usuariosABM.html'
-                        :
-                        location.href = '/paginaUsuario.html'
+                    if(usuarioExistente[0].role === 'admin') {
+                        localStorage.setItem('id', JSON.stringify(usuarioExistente[0].id));
+                        location.href = '/usuariosABM.html';
+                    } else {
+                        location.href = '/paginaUsuario.html';
+                    }
                 } else {
                     Swal.fire({
                         title: "El usuario EXISTE pero esta INHABILITADO.",

@@ -42,6 +42,19 @@ if (JSON.parse(localStorage.getItem("Comidas")) === null) {
     localStorage.setItem("Comidas", JSON.stringify(arrayComidasInicial));
 }
 
+if(JSON.parse(localStorage.getItem("Usuarios")) === null) {
+    let arrayUsuariosInicial = [];
+    arrayUsuariosInicial.push({id: 1, usuario: "Administrador", contraseña: "admin", role: "admin", habilitado: true});
+
+    // USUARIO HABILITADO
+    arrayUsuariosInicial.push({id: 2, usuario: "Rolling", contraseña: "rolling2022", role: "usuario", habilitado: true});
+    
+    // USUARIO INHABILITADO
+    arrayUsuariosInicial.push({id: 3, usuario: "Grupo3", contraseña: "grupo3", role: "usuario", habilitado: false});
+
+    localStorage.setItem("Usuarios", JSON.stringify(arrayUsuariosInicial));
+}
+
 const divInyectarDestacado = document.getElementById("inyectar-destacado");
 const divInyectarPizzas = document.getElementById("inyectar-pizzas");
 const divInyectarPlatosEsp = document.getElementById("inyectar-platos-esp");
