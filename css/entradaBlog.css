@@ -156,6 +156,7 @@ main>div {
     font-family: 'Roboto', sans-serif;
     font-size: 96%;
     text-decoration: none;
+    cursor: not-allowed;
 }
 
 #btn-comentar:hover {

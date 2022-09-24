@@ -121,38 +121,6 @@ function destacarComida(index) {
         location.reload();
     }
 
-
-    // Lo de abajo era para destacar unicamente una comida. Si queria destacar otra, debia quitar 
-    // el destacado a la actual para recien luego destacar otra comida. No me gusto esto, asi que hice lo de arriba
-
-    // for (let i = 0; i < arrayComidasAux.length; i++) {
-    //     if (arrayComidasAux[i].destacado === true) {
-    //         contadorDestacado++;
-    //     }
-    // }
-
-
-    // if (encontrado) {
-    //     if (arrayComidasAux[encontradoIndex].destacado === false) {
-    //         if (contadorDestacado >= 1) {
-    //             divAlertaDestacadoRepetido.innerHTML = `
-    //             <h6 class="m-0">SE PUEDE DESTACAR UNA COMIDA A LA VEZ!!</h6>
-    //             `
-    //             setTimeout(() => {
-    //                 divAlertaDestacadoRepetido.innerHTML = "";
-    //             }, 1500);
-    //         }else {
-    //             arrayComidasAux[encontradoIndex].destacado = true;
-    //             localStorage.setItem("Comidas", JSON.stringify(arrayComidasAux));
-    //             location.reload();
-    //         }  
-    //     } else {
-    //         arrayComidasAux[encontradoIndex].destacado = false;
-    //         localStorage.setItem("Comidas", JSON.stringify(arrayComidasAux));
-    //         location.reload();
-    //     }
-
-    // }
 }
 
 const modificarIMGurl = (index) => {
