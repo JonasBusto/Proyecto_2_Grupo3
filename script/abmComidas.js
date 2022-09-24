@@ -270,7 +270,7 @@ const actualizarPagina = () => {
 
             <!-- MODAL MODIFICAR COMIDA -->
             <div>
-                <a class="clickable"><i class="fa-solid clickable fa-pen-to-square color-icono" data-bs-toggle="modal"
+                <a><i class="fa-solid fa-pen-to-square color-icono" data-bs-toggle="modal"
                         data-bs-target="#modalModificarComida${arrayComidas[i].id}"></i></a>
 
                 <div class="modal fade" data-bs-backdrop="static" id="modalModificarComida${arrayComidas[i].id}"
