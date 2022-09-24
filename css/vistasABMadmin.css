@@ -118,3 +118,7 @@ table>tbody a {
     max-height: 390px;
     overflow: auto;
 }
+
+.modal-content {
+    z-index: 10000 !important;
+}
