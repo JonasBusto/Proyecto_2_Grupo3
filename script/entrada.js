@@ -6,10 +6,10 @@ let localSTG = JSON.parse(localStorage.getItem("Comidas"));
 const inyectarComidaHeader = () => {
     divInyectarComidaHeader.innerHTML = 	`
     <div class="row m-0 flex-row">
-        <div class="d-flex justify-content-center col-12 col-md-5">
+        <div class="d-flex justify-content-center align-items-center col-12 col-md-5">
             <img src="${localSTG[captarID].url}" class="img-fluid w-75 mt-2" alt="plato1.png">
         </div>
-        <div class="d-flex col-12 col-md-7 flex-column text-center">
+        <div class="d-flex col-12 col-md-7 flex-column text-center justify-content-center">
             <div class="d-flex flex-column align-items-center px-5">
                 <h3>EL MEJOR PLATO</h3>
                 <h1>${localSTG[captarID].nombre}</h1>
