@@ -233,7 +233,7 @@ main>div {
 }
 
 .precio-info {
-    min-width: 296px;
+    min-width: 17rem;
     z-index: 1;
     margin-top: -10%;
 }

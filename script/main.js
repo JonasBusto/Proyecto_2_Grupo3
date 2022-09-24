@@ -32,7 +32,7 @@ if (JSON.parse(localStorage.getItem("Comidas")) === null) {
     arrayComidasInicial.push(new Comida(9, "Chocolate + Dulce de Leche", "desc2_postre", "Postre", 649.99, "https://res.cloudinary.com/dtccrvpzp/image/upload/v1663972878/RCS%20-%20Proyecto%202%20-%20Grupo%203-%202022/postre/postre2_xvedij.png", false));
     arrayComidasInicial.push(new Comida(10, "Frutilla + Anana", "desc3_postre", "Postre", 450.00, "https://res.cloudinary.com/dtccrvpzp/image/upload/v1663972878/RCS%20-%20Proyecto%202%20-%20Grupo%203-%202022/postre/postre3_vgajqy.png", false));
     arrayComidasInicial.push(new Comida(11, "Pastel de frutilla", "desc4_postre", "Postre", 274.99, "https://res.cloudinary.com/dtccrvpzp/image/upload/v1663972880/RCS%20-%20Proyecto%202%20-%20Grupo%203-%202022/postre/postre6_bkp0ff.png", false));
-    
+
     // PASTAS - FIDEOS
     arrayComidasInicial.push(new Comida(12, "Pasta con tallarines fettuccine", "desc1_pasta", "Pastas_fideos", 194.99, "https://res.cloudinary.com/dtccrvpzp/image/upload/v1663990910/RCS%20-%20Proyecto%202%20-%20Grupo%203-%202022/pastas/fideos_tallarines_fettuccine_bbtc9p.png", false));
     arrayComidasInicial.push(new Comida(13, "Pasta con albondigas", "desc2_pasta", "Pastas_fideos", 399.99, "https://res.cloudinary.com/dtccrvpzp/image/upload/v1663990910/RCS%20-%20Proyecto%202%20-%20Grupo%203-%202022/pastas/fideos_con_salsa_albondiga_l8fpm4.png", false));
@@ -86,9 +86,10 @@ const inyectarComidas = () => {
     for (let i = 0; i < localSTG.length; i++) {
 
         if (localSTG[i].categoria === "Pizza") {
-            divInyectarPizzas.innerHTML += `
-            <div
-                class="swiper-slide h-auto d-flex flex-column align-items-center justify-content-between text-center pb-3">
+            const div = document.createElement("div");
+            div.classList = "swiper-slide h-auto d-flex flex-column align-items-center justify-content-between text-center pb-3"
+
+            div.innerHTML = `
                 <div>
                     <img src="${localSTG[i].url}" class="img-fluid w-100"
                         alt="pizza_menu.png">
@@ -99,10 +100,17 @@ const inyectarComidas = () => {
                     </div>
                     <h4 class="nombre-item">${localSTG[i].nombre}</h4>
                     <p>${localSTG[i].descripcion}</p>
-                    <a href="/entradaBlog.html?id=${localSTG[i].id}" class="btn-ordenar-estilo">VER MAS</a>
+                    <a id="btn-ver-mas${localSTG[i].id}" class="btn-ordenar-estilo">VER MAS</a>
                 </div>
-            </div>
-        `
+            
+            `
+            divInyectarPizzas.appendChild(div);
+
+            // CREAR BOTONES PARA ACCEDER AL "VER MAS" YA QUE HAY UN BUG CON EL SWIPER SI USO "href"
+            let btnVerMasSwiper = document.getElementById("btn-ver-mas" + localSTG[i].id);
+            btnVerMasSwiper.addEventListener("click", () => {
+                location.href = "/entradaBlog.html?id=" + localSTG[i].id;
+            })
         }
     }
 
@@ -110,9 +118,10 @@ const inyectarComidas = () => {
     for (let i = 0; i < localSTG.length; i++) {
 
         if (localSTG[i].categoria === "Plato_especial") {
-            divInyectarPlatosEsp.innerHTML += `
-            <div
-                class="swiper-slide h-auto d-flex flex-column align-items-center justify-content-between text-center pb-3">
+            const div = document.createElement("div");
+            div.classList = "swiper-slide h-auto d-flex flex-column align-items-center justify-content-between text-center pb-3"
+
+            div.innerHTML = `
                 <div>
                     <img src="${localSTG[i].url}" class="img-fluid w-100"
                         alt="pizza_menu.png">
@@ -123,20 +132,28 @@ const inyectarComidas = () => {
                     </div>
                     <h4 class="nombre-item">${localSTG[i].nombre}</h4>
                     <p>${localSTG[i].descripcion}</p>
-                    <a href="/entradaBlog.html?id=${localSTG[i].id}" class="btn-ordenar-estilo">VER MAS</a>
+                    <a id="btn-ver-mas${localSTG[i].id}" class="btn-ordenar-estilo">VER MAS</a>
                 </div>
-            </div>
-        `
+            
+            `
+            divInyectarPlatosEsp.appendChild(div);
+
+            // CREAR BOTONES PARA ACCEDER AL "VER MAS" YA QUE HAY UN BUG CON EL SWIPER SI USO "href"
+            let btnVerMasSwiper = document.getElementById("btn-ver-mas" + localSTG[i].id);
+            btnVerMasSwiper.addEventListener("click", () => {
+                location.href = "/entradaBlog.html?id=" + localSTG[i].id;
+            })
         }
     }
-    
+
     // INYECTO POSTRES
     for (let i = 0; i < localSTG.length; i++) {
 
         if (localSTG[i].categoria === "Postre") {
-            divInyectarPostres.innerHTML += `
-            <div
-                class="swiper-slide h-auto d-flex flex-column align-items-center justify-content-between text-center pb-3">
+            const div = document.createElement("div");
+            div.classList = "swiper-slide h-auto d-flex flex-column align-items-center justify-content-between text-center pb-3"
+
+            div.innerHTML = `
                 <div>
                     <img src="${localSTG[i].url}" class="img-fluid w-100"
                         alt="pizza_menu.png">
@@ -147,20 +164,28 @@ const inyectarComidas = () => {
                     </div>
                     <h4 class="nombre-item">${localSTG[i].nombre}</h4>
                     <p>${localSTG[i].descripcion}</p>
-                    <a href="/entradaBlog.html?id=${localSTG[i].id}" class="btn-ordenar-estilo">VER MAS</a>
+                    <a id="btn-ver-mas${localSTG[i].id}" class="btn-ordenar-estilo">VER MAS</a>
                 </div>
-            </div>
-        `
+            
+            `
+            divInyectarPostres.appendChild(div);
+
+            // CREAR BOTONES PARA ACCEDER AL "VER MAS" YA QUE HAY UN BUG CON EL SWIPER SI USO "href"
+            let btnVerMasSwiper = document.getElementById("btn-ver-mas" + localSTG[i].id);
+            btnVerMasSwiper.addEventListener("click", () => {
+                location.href = "/entradaBlog.html?id=" + localSTG[i].id;
+            })
         }
     }
-    
+
     // INYECTO PASTAS/FIDEOS
     for (let i = 0; i < localSTG.length; i++) {
 
         if (localSTG[i].categoria === "Pastas_fideos") {
-            divInyectarPastasFideos.innerHTML += `
-            <div
-                class="swiper-slide h-auto d-flex flex-column align-items-center justify-content-between text-center pb-3">
+            const div = document.createElement("div");
+            div.classList = "swiper-slide h-auto d-flex flex-column align-items-center justify-content-between text-center pb-3"
+
+            div.innerHTML = `
                 <div>
                     <img src="${localSTG[i].url}" class="img-fluid w-100"
                         alt="pizza_menu.png">
@@ -171,10 +196,17 @@ const inyectarComidas = () => {
                     </div>
                     <h4 class="nombre-item">${localSTG[i].nombre}</h4>
                     <p>${localSTG[i].descripcion}</p>
-                    <a href="/entradaBlog.html?id=${localSTG[i].id}" class="btn-ordenar-estilo">VER MAS</a>
+                    <a id="btn-ver-mas${localSTG[i].id}" class="btn-ordenar-estilo">VER MAS</a>
                 </div>
-            </div>
-        `
+            
+            `
+            divInyectarPastasFideos.appendChild(div);
+
+            // CREAR BOTONES PARA ACCEDER AL "VER MAS" YA QUE HAY UN BUG CON EL SWIPER SI USO "href"
+            let btnVerMasSwiper = document.getElementById("btn-ver-mas" + localSTG[i].id);
+            btnVerMasSwiper.addEventListener("click", () => {
+                location.href = "/entradaBlog.html?id=" + localSTG[i].id;
+            })
         }
     }
 }
@@ -186,18 +218,21 @@ inyectarComidas();
 
 
 
+
+
+
+
+
 // CREO LOS SLIDER CON SWIPPER
 
 let swiper = new Swiper(".menu-disponible", {
     slidesPerView: 4,
     spaceBetween: 30,
-    slidesPerGroup: 1,
-    loop: true,
+    // loop: true,
     navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
     },
-    loopFillGroupWithBlank: true,
     pagination: {
         el: ".swiper-pagination",
         clickable: true,
@@ -267,9 +302,6 @@ let swiper3 = new Swiper(".menu-opciones", {
         },
         768: {
             slidesPerView: 3,
-        },
-        1400: {
-            slidesPerView: 4,
         }
     }
 });
