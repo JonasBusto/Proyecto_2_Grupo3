@@ -100,18 +100,18 @@ selecfila.innerHTML = listausuario.map((usuario) =>
                             </p>
                             <div class="d-flex flex-column">
                                 <div class="mb-3">
-                                    <label class="form-label fw-bold">Nombre de Usuario Actual:  <b>${usuario.usuario}</b></label>
-                                    <input type="text" class="form-control" id="modif_nombre_usuario">
+                                    <label class="form-label fw-bold">Nombre de Usuario</label>
+                                    <input type="text" class="form-control" id="modif_usuario${usuario.id}" value="${usuario.usuario}">
                                 </div>
                                 <div class="mb-3">
-                                    <label class="form-label fw-bold">Contraseña Actual: <b>${usuario.contraseña}</b></label>
-                                    <input type="text" class="form-control" id="modif_contraseña_usuario">
+                                    <label class="form-label fw-bold">Contraseña</label>
+                                    <input type="text" class="form-control" id="modif_contraseña${usuario.id}" value="${usuario.contraseña}">
                                 </div>
                                 <div class="d-flex flex-column mb-3 ">
-                                    <label class="form-label fw-bold">Rol Actual: <b>${usuario.role}</b></label>
-                                    <select id="${usuario.role}" class="form-select" aria-label="Default select example">
+                                    <label class="form-label fw-bold">Rol Actual: <b>${usuario.role}</label>
+                                    <select id="modif_role${usuario.id}" class="form-select" aria-label="Default select example">
                                         <option value="usuario">usuario</option>
-                                        <option value="administrador">administrador</option>
+                                        <option value="admin">administrador</option>
                                      </select>
                                 </div>
                             </div>
@@ -124,7 +124,7 @@ selecfila.innerHTML = listausuario.map((usuario) =>
                                 <button class="btn mx-4" data-bs-dismiss="modal">
                                     Cancelar
                                 </button>
-                                <button class="mx-4 btn" id="">
+                                <button class="mx-4 btn" onclick="modificarUsuario(${usuario.id})">
                                     Guardar Cambios
                                 </button>
                                  <p class="text-success d-none" id="">
@@ -155,3 +155,23 @@ const eliminarUsuario = (id) => {
     location.href = './usuariosABM.html'
 }
 
+// Función Modificar Usuario
+  const modificarUsuario = (id) => {
+    let usuario1 = document.getElementById(`modif_usuario${id}`).value
+    let constraseña1 = document.getElementById(`modif_contraseña${id}`).value
+    let role1 = document.getElementById(`modif_role${id}`).value
+    let array = []
+
+    for (let i = 0; i < listausuario.length; i++) {
+        const usuario = listausuario[i];
+        if (usuario.id === id) {
+            array.push({ id, usuario: usuario1, contraseña: constraseña1, role: role1, habilitado: true })
+        } else {
+            array.push(usuario)
+        }
+    }
+
+    localStorage.setItem('Usuarios', JSON.stringify(array))
+    location.href = './usuariosABM.html'
+
+}
