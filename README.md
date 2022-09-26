@@ -21,7 +21,7 @@ Por defecto, existen los siguientes usuarios, pre-cargados en localStorage, con 
 <b>NOTA 2: </b> El localStorage comienza con comidas pre-cargadas. Las mismas podran ser modificadas, eliminidas, o destacadas (Se puede destacar una comida, pero la misma no podra ser eliminada hasta dejar de ser destacada. Debe seleccionar otra como destacada).</br>
 <b>NOTA 3: </b> Se podran dar de alta, baja o modificar usuarios.</br>
 <b>NOTA 4: </b> Se podran dar de alta, baja o modificar comidas.</br>
-<b>NOTA 5: </b> Para agilizar la busqueda de imagenes de comida, dejamos a continuación un listado de links para las categorias de comidas consideradas, cuyas imagenes fueron normalizadas: </br></br>
+<b>NOTA 5: </b> En caso de realizar el alta de alguna comida, a continuación brindamos links sobre algunas comidas de las categorias consideradas, para agilizar la busqueda de imagenes. Las mismas estan normalizadas: </br></br>
 
 <h4>PASTAS</h4>
 
