@@ -11,8 +11,8 @@
 
         if (id === null) {
             location.href = './login.html'
-        } else if(usuarioExistente[0].role === 'usuario') {
-            location.href = './paginaUsuario.html'
+        } else if(usuarioExistente[0].role === 'admin') {
+            location.href = './usuariosABM.html'
         }
 
     }
@@ -20,5 +20,5 @@
 
 const logout = () => {
     localStorage.removeItem('id')
-    location.href = './login.html'
+    location.href = './index.html'
 }

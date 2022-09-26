@@ -292,7 +292,7 @@ let swiper3 = new Swiper(".menu-opciones", {
     slidesPerView: 3,
     spaceBetween: 30,
     slidesPerGroup: 1,
-    loop: true,
+    // loop: true,
     autoplay: {
         delay: 2500,
     },

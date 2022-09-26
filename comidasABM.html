@@ -50,7 +50,7 @@
                             <a class="nav-link active" aria-current="page" href="/nosotros.HTML">NOSOTROS</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="/login.html">CERRAR SESIÓN</a>
+                            <button class="nav-link active" aria-current="page" onclick="logout()">CERRAR SESIÓN</button>
                         </li>
                     </ul>
                 </div>
@@ -80,9 +80,13 @@
                                             <div class="mb-3">
                                                 <input type="text" class="form-control" id="input-nuevo-nombre" placeholder="Nombre">
                                             </div>
-                                            <div class="mb-3">
+                                            <div class="mb-3 d-flex flex-column">
                                                 <textarea class="form-control" id="textarea-nueva-desc"
                                                     placeholder="Descripción"></textarea>
+                                                <div class="d-flex justify-content-between div-limite-caracteres">
+                                                    <h6 class="text-danger" id="alerta-limite-superado"></h6>
+                                                    <h6 id="limite-caracteres-desc">0/100</h6>
+                                                </div>
                                             </div>
                                             <div class="mb-3">
                                                 <select class="form-select" aria-label="Default select example"
@@ -94,7 +98,7 @@
                                                 </select>
                                             </div>
                                             <div class="mb-3">
-                                                <input type="text" class="form-control" id="input-nuevo-precio" placeholder="Precio">
+                                                <input type="number" class="form-control" id="input-nuevo-precio" placeholder="Precio">
                                             </div>
                                             <div class="mb-3">
                                                 <input type="text" class="form-control" id="input-nueva-img-url" placeholder="url imagen">
@@ -217,6 +221,7 @@
         integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
         crossorigin="anonymous"></script>
     <script src="/script/abmComidas.js"></script>
+    <script src="/script/comidaValidacion.js"></script>
 </body>
 
 </html>
