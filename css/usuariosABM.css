@@ -12,3 +12,8 @@
     color: #faee9e;
     background-color: black;
 }
+
+.deshabilitado {
+    pointer-events: none;
+}
+
