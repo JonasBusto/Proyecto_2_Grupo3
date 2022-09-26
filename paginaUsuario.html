@@ -43,7 +43,7 @@
                     </ul>
                 </div>
             </div>
-        </nav>
+        </nav> 
 
         <div class="container-fluid p-0 div-general-contenido-plato">
             <div class="d-flex flex-row py-4 row p-0 m-0 contenido-plato">
@@ -78,10 +78,10 @@
                     <div class="row">
                         <div class="div-filtros-estilo col-12">
                             <h4>CATEGORIAS</h4>
-                            <p>PASTAS</p>
-                            <p>PIZZA</p>
-                            <p>POSTRES</p>
-                            <p>PLATOS ESPECIALES</p>
+                            <p id="pasta" onclick="buscarComidaCat('PASTAS')">PASTAS</p>
+                            <p id="pizza" onclick="buscarComidaCat('PIZZA')">PIZZA</p>
+                            <p id="postres" onclick="buscarComidaCat('POSTRES')">POSTRES</p>
+                            <p id="platosEsp" onclick="buscarComidaCat('PLATOS ESPECIALES')">PLATOS ESPECIALES</p>
                         </div>
                         <div class="div-filtros-estilo col-12">
                             <h4>PRECIO</h4>
@@ -100,254 +100,10 @@
                 </div>
                 <div class="col-12 col-md-9">
                     <div class="container-fluid pt-3 d-flex justify-content-center py-2 w-100 div-input-buscar">
-                        <input type="text" class="form-control" id="input-buscar-comida" placeholder="Buscar tu plato">
+                        <input type="text" class="form-control" id="buscar" placeholder="Buscar tu plato" oninput="buscarComida()">
                     </div>
-                    <div class="mx-auto">
-                        
-                        <!-- <div class="container text-center pt-4">
-                            <h3 class="titulos">CATEGORIAS</h3>
-                        </div> -->
-
+                    <div id="productos" class="row row-cols-1 row-cols-md-3 g-4"></div>
                     
-
-                        <div class="swiper menu-disponible mt-2">
-                            <h3 class="sub-titulos">PLATOS ESPECIALES</h3>
-                            <div class="swiper-wrapper m-0 justify-content-between">
-                                <div
-                                    class="swiper-slide h-auto d-flex flex-column align-items-center justify-content-between text-center pb-3">
-                                    <div>
-                                        <img src="/img/platos/plato1.png" class="img-fluid w-100" alt="pizza_menu.png">
-                                    </div>
-                                    <div>
-                                        <div class="precio-info d-flex justify-content-end">
-                                            <h3><i class="fa-solid fa-dollar-sign"></i> 130.00</h3>
-                                        </div>
-                                        <h4 class="nombre-item">PLATO 1</h4>
-                                        <p>Lorconseis officia! Malo vero ducimus. Maxime quod mollitia ea optio!</p>
-                                        <a class="btn-ordenar-estilo">VER MAS</a>
-                                    </div>
-                                </div>
-                                <div
-                                    class="swiper-slide h-auto d-flex flex-column align-items-center justify-content-between text-center pb-3">
-                                    <div>
-                                        <img src="/img/platos/plato2.png" class="img-fluid w-100" alt="pizza_menu.png">
-                                    </div>
-                                    <div>
-                                        <div class="precio-info d-flex justify-content-end">
-                                            <h3><i class="fa-solid fa-dollar-sign"></i> 130.00</h3>
-                                        </div>
-                                        <h4 class="nombre-item">PLATO 2</h4>
-                                        <p>Lorconseis officia! Malo vero ducimus. Maxime quod mollitia ea optio!</p>
-                                        <a class="btn-ordenar-estilo">VER MAS</a>
-                                    </div>
-                                </div>
-                                <div
-                                    class="swiper-slide h-auto d-flex flex-column align-items-center justify-content-between text-center pb-3">
-                                    <div>
-                                        <img src="/img/platos/plato3.png" class="img-fluid w-100" alt="pizza_menu.png">
-                                    </div>
-                                    <div>
-                                        <div class="precio-info d-flex justify-content-end">
-                                            <h3><i class="fa-solid fa-dollar-sign"></i> 130.00</h3>
-                                        </div>
-                                        <h4 class="nombre-item">PLATO 3</h4>
-                                        <p>Lorconseis officia! Malo vero ducimus. Maxime quod mollitia ea optio!</p>
-                                        <a class="btn-ordenar-estilo">VER MAS</a>
-                                    </div>
-                                </div>
-                                <div
-                                    class="swiper-slide h-auto d-flex flex-column align-items-center justify-content-between text-center pb-3">
-                                    <div>
-                                        <img src="/img/platos/plato7.png" class="img-fluid w-100" alt="pizza_menu.png">
-                                    </div>
-                                    <div>
-                                        <div class="precio-info d-flex justify-content-end">
-                                            <h3><i class="fa-solid fa-dollar-sign"></i> 130.00</h3>
-                                        </div>
-                                        <h4 class="nombre-item">PLATO 4</h4>
-                                        <p>Lorconseis officia! Malo vero ducimus. Maxime quod mollitia ea optio!</p>
-                                        <a class="btn-ordenar-estilo">VER MAS</a>
-                                    </div>
-                                </div>
-                                <div
-                                    class="swiper-slide h-auto d-flex flex-column align-items-center justify-content-between text-center pb-3">
-                                    <div>
-                                        <img src="/img/platos/plato5.png" class="img-fluid w-100" alt="pizza_menu.png">
-                                    </div>
-                                    <div>
-                                        <div class="precio-info d-flex justify-content-end">
-                                            <h3><i class="fa-solid fa-dollar-sign"></i> 130.00</h3>
-                                        </div>
-                                        <h4 class="nombre-item">PLATO 5</h4>
-                                        <p>Lorconseis officia! Malo vero ducimus. Maxime quod mollitia ea optio!</p>
-                                        <a class="btn-ordenar-estilo">VER MAS</a>
-                                    </div>
-                                </div>
-                                <div
-                                    class="swiper-slide h-auto d-flex flex-column align-items-center justify-content-between text-center pb-3">
-                                    <div>
-                                        <img src="/img/platos/plato6.png" class="img-fluid w-100" alt="pizza_menu.png">
-                                    </div>
-                                    <div>
-                                        <div class="precio-info d-flex justify-content-end">
-                                            <h3><i class="fa-solid fa-dollar-sign"></i> 130.00</h3>
-                                        </div>
-                                        <h4 class="nombre-item">PLATO 6</h4>
-                                        <p>Lorconseis officia! Malo vero ducimus. Maxime quod mollitia ea optio!</p>
-                                        <a class="btn-ordenar-estilo">VER MAS</a>
-                                    </div>
-                                </div>
-                                <div
-                                    class="swiper-slide h-auto d-flex flex-column align-items-center justify-content-between text-center pb-3">
-                                    <div>
-                                        <img src="/img/platos/plato8.png" class="img-fluid w-100" alt="pizza_menu.png">
-                                    </div>
-                                    <div>
-                                        <div class="precio-info d-flex justify-content-end">
-                                            <h3><i class="fa-solid fa-dollar-sign"></i> 130.00</h3>
-                                        </div>
-                                        <h4 class="nombre-item">PLATO 7</h4>
-                                        <p>Lorconseis officia! Malo vero ducimus. Maxime quod mollitia ea optio!</p>
-                                        <a class="btn-ordenar-estilo">VER MAS</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-button-prev"></div>
-                        </div>
-
-                        <div class="swiper menu-disponible mt-5">
-                            <h3 class="sub-titulos">POSTRES</h3>
-                            <div class="swiper-wrapper m-0 justify-content-between">
-                                <div
-                                    class="swiper-slide h-auto d-flex flex-column align-items-center justify-content-between text-center pb-3">
-                                    <div>
-                                        <img src="/img/postre/postre1.png" class="img-fluid w-100" alt="pizza_menu.png">
-                                    </div>
-                                    <div>
-                                        <div class="precio-info d-flex justify-content-end">
-                                            <h3><i class="fa-solid fa-dollar-sign"></i> 130.00</h3>
-                                        </div>
-                                        <h4 class="nombre-item">POSTRE 1</h4>
-                                        <p>Lorconseis officia! Malo vero ducimus. Maxime quod mollitia ea optio!</p>
-                                        <a class="btn-ordenar-estilo">VER MAS</a>
-                                    </div>
-                                </div>
-                                <div
-                                    class="swiper-slide h-auto d-flex flex-column align-items-center justify-content-between text-center pb-3">
-                                    <div>
-                                        <img src="/img/postre/postre2.png" class="img-fluid w-100" alt="pizza_menu.png">
-                                    </div>
-                                    <div>
-                                        <div class="precio-info d-flex justify-content-end">
-                                            <h3><i class="fa-solid fa-dollar-sign"></i> 130.00</h3>
-                                        </div>
-                                        <h4 class="nombre-item">POSTRE 2</h4>
-                                        <p>Lorconseis officia! Malo vero ducimus. Maxime quod mollitia ea optio!</p>
-                                        <a class="btn-ordenar-estilo">VER MAS</a>
-                                    </div>
-                                </div>
-                                <div
-                                    class="swiper-slide h-auto d-flex flex-column align-items-center justify-content-between text-center pb-3">
-                                    <div>
-                                        <img src="/img/postre/postre3.png" class="img-fluid w-100" alt="pizza_menu.png">
-                                    </div>
-                                    <div>
-                                        <div class="precio-info d-flex justify-content-end">
-                                            <h3><i class="fa-solid fa-dollar-sign"></i> 130.00</h3>
-                                        </div>
-                                        <h4 class="nombre-item">POSTRE 3</h4>
-                                        <p>Lorconseis officia! Malo vero ducimus. Maxime quod mollitia ea optio!</p>
-                                        <a class="btn-ordenar-estilo">VER MAS</a>
-                                    </div>
-                                </div>
-                                <div
-                                    class="swiper-slide h-auto d-flex flex-column align-items-center justify-content-between text-center pb-3">
-                                    <div>
-                                        <img src="/img/postre/postre4.png" class="img-fluid w-100" alt="pizza_menu.png">
-                                    </div>
-                                    <div>
-                                        <div class="precio-info d-flex justify-content-end">
-                                            <h3><i class="fa-solid fa-dollar-sign"></i> 130.00</h3>
-                                        </div>
-                                        <h4 class="nombre-item">POSTRE 4</h4>
-                                        <p>Lorconseis officia! Malo vero ducimus. Maxime quod mollitia ea optio!</p>
-                                        <a class="btn-ordenar-estilo">VER MAS</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-button-prev"></div>
-                        </div>
-
-                        <div class="swiper menu-disponible mt-5">
-                            <h3 class="sub-titulos">POLLO FRITO</h3>
-                            <div class="swiper-wrapper m-0 justify-content-between">
-                                <div
-                                    class="swiper-slide h-auto d-flex flex-column align-items-center justify-content-between text-center pb-3">
-                                    <div>
-                                        <img src="/img/pollo frito/pollo-frito-ensalada.png" class="img-fluid w-100"
-                                            alt="pizza_menu.png">
-                                    </div>
-                                    <div>
-                                        <div class="precio-info d-flex justify-content-end">
-                                            <h3><i class="fa-solid fa-dollar-sign"></i> 130.00</h3>
-                                        </div>
-                                        <h4 class="nombre-item">POLLO FRITO + ENSALDA DE VERDURAS</h4>
-                                        <p>Lorconseis officia! Malo vero ducimus. Maxime quod mollitia ea optio!</p>
-                                        <a class="btn-ordenar-estilo">VER MAS</a>
-                                    </div>
-                                </div>
-                                <div
-                                    class="swiper-slide h-auto d-flex flex-column align-items-center justify-content-between text-center pb-3">
-                                    <div>
-                                        <img src="/img/pollo frito/pollo-frito-papas-fritas.png" class="img-fluid w-100"
-                                            alt="pizza_menu.png">
-                                    </div>
-                                    <div>
-                                        <div class="precio-info d-flex justify-content-end">
-                                            <h3><i class="fa-solid fa-dollar-sign"></i> 130.00</h3>
-                                        </div>
-                                        <h4 class="nombre-item">POLLO FRITO + PAPAS FRITAS</h4>
-                                        <p>Lorconseis officia! Malo vero ducimus. Maxime quod mollitia ea optio!</p>
-                                        <a class="btn-ordenar-estilo">VER MAS</a>
-                                    </div>
-                                </div>
-                                <div
-                                    class="swiper-slide h-auto d-flex flex-column align-items-center justify-content-between text-center pb-3">
-                                    <div>
-                                        <img src="/img/pollo frito/pollo-frito-salsa.png" class="img-fluid w-100"
-                                            alt="pizza_menu.png">
-                                    </div>
-                                    <div>
-                                        <div class="precio-info d-flex justify-content-end">
-                                            <h3><i class="fa-solid fa-dollar-sign"></i> 130.00</h3>
-                                        </div>
-                                        <h4 class="nombre-item">POLLO FRITO + SALSA DE TOMATE</h4>
-                                        <p>Lorconseis officia! Malo vero ducimus. Maxime quod mollitia ea optio!</p>
-                                        <a class="btn-ordenar-estilo">VER MAS</a>
-                                    </div>
-                                </div>
-                                <div
-                                    class="swiper-slide h-auto d-flex flex-column align-items-center justify-content-between text-center pb-3">
-                                    <div>
-                                        <img src="/img/pollo frito/pollo-frito-solo.png" class="img-fluid w-100"
-                                            alt="pizza_menu.png">
-                                    </div>
-                                    <div>
-                                        <div class="precio-info d-flex justify-content-end">
-                                            <h3><i class="fa-solid fa-dollar-sign"></i> 130.00</h3>
-                                        </div>
-                                        <h4 class="nombre-item">POLLO FRITO SIN AGREGADOS</h4>
-                                        <p>Lorconseis officia! Malo vero ducimus. Maxime quod mollitia ea optio!</p>
-                                        <a class="btn-ordenar-estilo">VER MAS</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-button-prev"></div>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
