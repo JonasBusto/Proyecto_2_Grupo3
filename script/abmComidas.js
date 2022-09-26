@@ -7,6 +7,8 @@ const btnGuardar = document.getElementById("btn-guardar");
 const tBodyInyectar = document.getElementById("tbody-inyectar");
 const inputBuscar = document.getElementById("input-buscar");
 const divAlertaDestacadoRepetido = document.getElementById("div-alerta-destacado");
+const limiteCaracteres = document.getElementById("limite-caracteres-desc");
+const divAlertaCaracteres = document.getElementById("alerta-limite-superado");
 
 // Defino una clase del tipo Comida para simplificar la declaración de objetos del tipo Comida
 class Comida {
@@ -22,7 +24,7 @@ class Comida {
 }
 
 // Cargo comidas en el localStorage
-if(JSON.parse(localStorage.getItem("Comidas")) === null) {
+if (JSON.parse(localStorage.getItem("Comidas")) === null) {
     let arrayComidasInicial = [];
     arrayComidasInicial.push(new Comida(0, "pizza", "desc1", "pizza", "190", "url", true));
     localStorage.setItem("Comidas", JSON.stringify(arrayComidasInicial));
@@ -69,7 +71,7 @@ function modificarComida(index) {
     let encontradoIndex = funcionVerificarExistenciaAUX(index)[1];
 
     if (encontrado) {
-        if (inputModificadoNombre.value.trim() === "" || inputNuevoPrecio.value.trim() === "" || nuevaDesc.value.trim() === "") {
+        if (inputModificadoNombre.value.trim() === "" || inputNuevoPrecio.value.trim() === "" || nuevaDesc.value.trim() === "" || nuevaDesc.value.length > 100) {
             alerta.innerHTML = `
             <h6 class="text-danger">*VERIFIQUE LOS DATOS QUE INGRESA*</h6>
             `
@@ -95,7 +97,7 @@ function destacarComida(index) {
     for (let i = 0; i < arrayComidasAux.length; i++) {
         if (arrayComidasAux[i].id === index) {
             if (arrayComidasAux[i].destacado === true) {
-                
+
                 // Esto me sirve de forma que si hago click en el elemento ya destacado, detenga el "for" 
                 // y active la variable booleana para mostrar el mensaje de que la comida ya esta destacad y no
                 // recargue la pagina
@@ -109,14 +111,14 @@ function destacarComida(index) {
         }
     }
 
-    if(auxBoolMensajeDestacado){
+    if (auxBoolMensajeDestacado) {
         divAlertaDestacadoRepetido.innerHTML = `
                 <h6 class="m-0">COMIDA YA DESTACADA!!</h6>
                  `
-                setTimeout(() => {
-                    divAlertaDestacadoRepetido.innerHTML = "";
-                }, 1500);
-    }else {
+        setTimeout(() => {
+            divAlertaDestacadoRepetido.innerHTML = "";
+        }, 1500);
+    } else {
         localStorage.setItem("Comidas", JSON.stringify(arrayComidasAux));
         location.reload();
     }
@@ -322,9 +324,18 @@ const actualizarPagina = () => {
                                     </div>
                                     <div class="mb-3">
                                         <label class="form-label">Descripción</label>
-                                        <textarea class="form-control"
+
+                                        <div class="d-flex flex-column">
+                                            <textarea class="form-control"
                                             id="textarea-nueva-descripcion${arrayComidas[i].id}"
                                             rows="3">${arrayComidas[i].descripcion}</textarea>
+                                            <div class="d-flex justify-content-between div-limite-caracteres">
+                                                <h6 class="text-danger" id="alerta-limite-superado-nuevo${arrayComidas[i].id}"></h6>
+                                                <h6 id="limite-caracteres-desc-nuevo${arrayComidas[i].id}"></h6>
+                                            </div>
+                                        </div>
+
+                                        
                                     </div>
                                 </div>
                             </div>
@@ -409,7 +420,41 @@ const actualizarPagina = () => {
         tBodyInyectar.appendChild(tr);
 
 
+
+
         // DECLARO LAS VARIABLES PARA BOTONES E INPUTS PARA CADA ELEMENTO RECORRIDO DEL ARRAYCOMIDAS
+        const textAreaModificar = document.getElementById("textarea-nueva-descripcion" + arrayComidas[i].id);
+        const divAlertaLimiteNuevo = document.getElementById("alerta-limite-superado-nuevo" + arrayComidas[i].id)
+        const divLimitesNuevo = document.getElementById("limite-caracteres-desc-nuevo" + arrayComidas[i].id)
+        divLimitesNuevo.innerHTML = `
+            ${textAreaModificar.value.length}/100`
+        textAreaModificar.addEventListener("keyup", () => {
+            if (textAreaModificar.value.length > 100) {
+                console.log("apa");
+                divAlertaLimiteNuevo.innerHTML = `
+                Limite de caracteres superados!!
+                `
+                divLimitesNuevo.style.color = "red";
+                divLimitesNuevo.innerHTML = `
+                ${textAreaModificar.value.length}/100
+                `
+            } else if (textAreaModificar.value.length === 0) {
+                // console.log(
+                divAlertaLimiteNuevo.innerHTML = "";
+                divLimitesNuevo.style.color = "black";
+                divLimitesNuevo.innerHTML = `
+                0/100
+                `
+            } else {
+                console.log("tranca")
+                divAlertaLimiteNuevo.innerHTML = "";
+                divLimitesNuevo.style.color = "black";
+                divLimitesNuevo.innerHTML = `
+                ${textAreaModificar.value.length}/100
+                `
+            }
+        })
+
         const btnEliminar = document.getElementById("btnEliminar" + arrayComidas[i].id);
         btnEliminar.addEventListener("click", () => eliminarComida(arrayComidas[i].id));
 
@@ -441,10 +486,34 @@ inputNuevoNombre.addEventListener("keyup", () => {
     }
 })
 textareaNuevaDesc.addEventListener("keyup", () => {
-    if (inputNuevoNombre.value.trim() === "" || textareaNuevaDesc.value.trim() === "" || inputNuevoPrecio.value.trim() === "" || inputNuevaImgUrl.value.trim() === "") {
+
+    if (textareaNuevaDesc.value.length > 100) {
+        divAlertaCaracteres.innerHTML = `
+        Limite de caracteres superados!!
+        `
+        limiteCaracteres.style.color = "red";
+        limiteCaracteres.innerHTML = `
+        ${textareaNuevaDesc.value.length}/100
+        `
+        btnGuardar.disabled = true;
+    } else if (textareaNuevaDesc.value.length === 0) {
+        divAlertaCaracteres.innerHTML = "";
+        limiteCaracteres.style.color = "black";
+        limiteCaracteres.innerHTML = `
+        0/100
+        `
         btnGuardar.disabled = true;
     } else {
-        btnGuardar.disabled = false;
+        divAlertaCaracteres.innerHTML = "";
+        limiteCaracteres.style.color = "black";
+        limiteCaracteres.innerHTML = `
+        ${textareaNuevaDesc.value.length}/100
+        `
+        if (inputNuevoNombre.value.trim() === "" || inputNuevoPrecio.value.trim() === "" || inputNuevaImgUrl.value.trim() === "") {
+            btnGuardar.disabled = true;
+        } else {
+            btnGuardar.disabled = false;
+        }
     }
 })
 inputNuevoPrecio.addEventListener("keyup", () => {

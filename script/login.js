@@ -24,6 +24,7 @@ function login() {
                         localStorage.setItem('id', JSON.stringify(usuarioExistente[0].id));
                         location.href = '/usuariosABM.html';
                     } else {
+                        localStorage.setItem('id', JSON.stringify(usuarioExistente[0].id));
                         location.href = '/paginaUsuario.html';
                     }
                 } else {
