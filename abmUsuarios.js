@@ -1,17 +1,19 @@
 let listausuario = JSON.parse(localStorage.getItem("Usuarios"));
+listausuario.reverse()
 let selecfila = document.getElementById("filas");
 selecfila.innerHTML = listausuario.map((usuario) =>
-    `<tr>
+    `
+    <tr>
         <th scope="row">${usuario.id}</th>
         <td>${usuario.usuario}</td>
         <td>
             <div>
                 <div class="w-100 d-flex justify-content-center">
-                    <a class="mx-auto anchor-btn-habilitar desactivar" data-bs-toggle="modal"
-                    data-bs-target="#modalHabilitarUsuario1">HABILITAR</a>
+                    <a class="mx-auto anchor-btn-habilitar desactivar ${usuario.habilitado === false ? " " : this.class = "d-none"}" data-bs-toggle="modal"
+                    data-bs-target="#modalHabilitarUsuario${usuario.id}">HABILITAR</a>
                 </div>
 
-                <div class="modal fade" data-bs-backdrop="static" id="modalHabilitarUsuario1"
+                <div class="modal fade" data-bs-backdrop="static" id="modalHabilitarUsuario${usuario.id}"
                     tabindex="-1" aria-labelledby="modalHabilitarUsuario1Label" aria-hidden="true">
                     <div class="modal-dialog">
                         <div class="modal-content">
@@ -141,6 +143,9 @@ selecfila.innerHTML = listausuario.map((usuario) =>
    `
   ).join("");
 
+// Lista Reverse
+  listausuario.reverse()
+
 // Función Eliminar Usuario
 const eliminarUsuario = (id) => {
     let array = []
@@ -156,7 +161,7 @@ const eliminarUsuario = (id) => {
 }
 
 // Función Modificar Usuario
-  const modificarUsuario = (id) => {
+const modificarUsuario = (id) => {
     let usuario1 = document.getElementById(`modif_usuario${id}`).value
     let constraseña1 = document.getElementById(`modif_contraseña${id}`).value
     let role1 = document.getElementById(`modif_role${id}`).value

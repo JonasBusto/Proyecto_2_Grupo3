@@ -51,7 +51,8 @@
                             <a class="nav-link active" aria-current="page" href="/nosotros.HTML">NOSOTROS</a>
                         </li>
                         <li class="nav-item">
-                            <button class="nav-link active" aria-current="page" onclick="logout()">CERRAR SESIÓN</button>
+                            <button class="nav-link active" aria-current="page" onclick="logout()">CERRAR
+                                SESIÓN</button>
                         </li>
                     </ul>
                 </div>
@@ -100,158 +101,22 @@
                             </div>
                         </div>
                     </div>
-                    <div class="container pt-3 px-3 w-100">
-                        <input type="text" class="form-control" id="input-buscar-usuario" placeholder="Buscar usuario por su nombre">
-                    </div>
+                    <!-- <div class="container pt-3 px-3 w-100">
+                        <input type="text" class="form-control" id="input-buscar-usuario"
+                            placeholder="Buscar usuario por su nombre">
+                    </div> -->
                 </div>
                 <table class="table table-color mx-4 w-auto table-striped table-hover container mt-3 table-bordered">
                     <thead>
-                        <tr>
+                        <tr class="text-center">
                             <th scope="col">ID</th>
                             <th scope="col">Usuario</th>
                             <th scope="col">Habilitar</th>
                             <th scope="col">Opciones</th>
                         </tr>
                     </thead>
-                    <tbody>
-                        <tr>
-                            <th scope="row">1</th>
-                            <td>pepe</td>
-                            <td>
-                                <div>
-                                    <div class="w-100 d-flex justify-content-center">
-                                        <a class="mx-auto anchor-btn-habilitar" data-bs-toggle="modal"
-                                        data-bs-target="#modalHabilitarUsuario1">HABILITAR</a>
-                                    </div>
-
-                                    <div class="modal fade" data-bs-backdrop="static" id="modalHabilitarUsuario1"
-                                        tabindex="-1" aria-labelledby="modalHabilitarUsuario1Label" aria-hidden="true">
-                                        <div class="modal-dialog">
-                                            <div class="modal-content">
-                                                <div class="modal-header">
-                                                    <h5 class="modal-title" id="modalHabilitarUsuario1Label">Habilitar
-                                                        usuario</h5>
-                                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                                        aria-label="Close"></button>
-                                                </div>
-                                                <div class="modal-body container d-flex flex-column align-items-center">
-                                                    <p class="fw-bold">¿Esta seguro de dar de alta al usuario "pepe" - #2?
-                                                    </p>
-                                                    <div class="d-flex justify-content-center">
-                                                        <button type="button" class="btn mx-4"
-                                                            data-bs-dismiss="modal">Cancelar</button>
-                                                        <button type="button" class="mx-4 btn"
-                                                            id="btnDarAltaUsuario1">Habilitar</button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </td>
-                            <td class="td-col-opciones">
-
-                                <!-- MODAL ELIMINAR USUARIO -->
-                                <div>
-                                    <a><i class="fa-solid fa-trash-can color-icono" data-bs-toggle="modal"
-                                            data-bs-target="#modalEliminarUsuario1"></i></a>
-
-                                    <div class="modal fade" data-bs-backdrop="static" id="modalEliminarUsuario1"
-                                        tabindex="-1" aria-labelledby="modalEliminarUsuario1Label" aria-hidden="true">
-                                        <div class="modal-dialog">
-                                            <div class="modal-content">
-                                                <div class="modal-header">
-                                                    <h5 class="modal-title" id="modalEliminarUsuario1Label">Eliminar
-                                                        usuario</h5>
-                                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                                        aria-label="Close"></button>
-                                                </div>
-                                                <div class="modal-body container d-flex flex-column align-items-center">
-                                                    <p class="fw-bold">¿Esta seguro de eliminar al usuario "pepe" - #2?
-                                                    </p>
-                                                    <div class="d-flex justify-content-center">
-                                                        <button type="button" class="btn mx-4"
-                                                            data-bs-dismiss="modal">Cancelar</button>
-                                                        <button type="button" class="mx-4 btn"
-                                                            id="btnEliminarUsuario1">Eliminar</button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- MODAL MODIFICAR USUARIO -->
-                                <div>
-                                    <a><i class="fa-solid fa-pen-to-square color-icono" data-bs-toggle="modal"
-                                            data-bs-target="#modalModificarusuario1"></i></a>
-
-                                    <div class="modal fade" data-bs-backdrop="static"
-                                        id="modalModificarusuario1" tabindex="-1"
-                                        aria-labelledby="modalModificarusuario1Label"
-                                        aria-hidden="true">
-                                        <div class="modal-dialog">
-                                            <div class="modal-content">
-                                                <div class="modal-header">
-                                                    <h5 class="modal-title"
-                                                        id="modalModificarusuario1Label">
-                                                        Modificar comida</h5>
-                                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                                        aria-label="Close"></button>
-                                                </div>
-                                                <div class="modal-body d-flex flex-column">
-                                                    <p class="fw-bold">Usuario #1
-                                                    </p>
-                                                    <div class="d-flex flex-column">
-                                                        <div class="mb-3">
-                                                            <label class="form-label">Usuario</label>
-                                                            <input type="text" class="form-control"
-                                                                id="input-modificado-nombre${arrayComidas[i].id}"
-                                                                value="${arrayComidas[i].nombre}">
-                                                        </div>
-                                                        <div class="d-flex flex-column mb-3">
-                                                            <label class="form-label">Rol</label>
-                                                            <select id="select-modificar-comida${arrayComidas[i].id}"
-                                                                class="form-select" aria-label="Default select example">
-                                                                <option value="usuario">Usuario</option>
-                                                                <option value="administrados">Administrador</option>
-                                                            </select>
-                                                        </div>
-                                                        <div class="mb-3">
-                                                            <label class="form-label">Email</label>
-                                                            <input type="text" class="form-control"
-                                                                value="${arrayComidas[i].precio}"
-                                                                id="input-nuevo-precio${arrayComidas[i].id}">
-                                                        </div>
-                                                        <div class="mb-3">
-                                                            <label class="form-label">Teléfono</label>
-                                                            <input type="text" class="form-control"
-                                                                value="${arrayComidas[i].precio}"
-                                                                id="input-nuevo-precio${arrayComidas[i].id}">
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="modal-footer d-flex flex-column">
-                                                    <div id="inyectar-alerta${arrayComidas[i].id}">
-
-                                                    </div>
-                                                    <div class="d-flex justify-content-between w-100">
-                                                        <button class="btn mx-4"
-                                                            data-bs-dismiss="modal">Cancelar</button>
-                                                        <button class="mx-4 btn"
-                                                            id="btn-guardar-cambios${arrayComidas[i].id}">Guardar
-                                                            Cambios</button>
-                                                        <p class="text-success d-none"
-                                                            id="mensaje-cambio${arrayComidas[i].id}">Cambios Realizados!
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </td>
-                        </tr>
+                    <!-- AQUI INYECTO JAVASCRIPT ALTA, MODIFICAR Y ELIMINAR -->
+                    <tbody id="filas" class="table-group-divider">
 
                     </tbody>
                 </table>
@@ -336,6 +201,8 @@
         integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
         crossorigin="anonymous"></script>
     <script src="./script/adminValidacion.js"></script>
+    <script src="./script/abmUsuarios.js"></script>
+
 </body>
 
 </html>
