@@ -16,37 +16,43 @@
 <body>
 
     <header id="header-personalizado">
-        <nav class="navbar navbar-expand-lg navbar-color sticky-top">
-            <div class="container-fluid">
-                <a class="navbar-brand text-light" href="/index.html">
-                    <img src="/img/logosolo.png" class="img-fluid rounded-circle me-1" width="50vh" height="50vh"
-                        alt="Logo.png">
-                    <img src="/img/letraslogo.png" width="120vh" height="50vh" alt="Letras.png">
-                </a>
-                <button class="navbar-toggler btn-navbar-toggle" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                    <i class="fa-solid fa-burger"></i>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav w-100 justify-content-end mb-2 mb-lg-0 mx-md-2">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="/contacto.HTML">CONTACTO</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="/nosotros.HTML">NOSOTROS</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="/login.html">INICIAR SESIÓN</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="/register.html">REGISTRARSE</a>
-                        </li>
+        <nav class="navbar navbar-expand-lg navbar-color sticky-top" id="inyectar-navbar">
+            <!-- INYECTAR NAVBAR -->
+        </nav>
 
-                    </ul>
+        <!-- CARRITO - RESUMEN - INICIO -->
+        <div class="offcanvas offcanvas-end inyectar-carrito" data-bs-backdrop="static" tabindex="-1"
+            id="staticBackdrop" aria-labelledby="staticBackdropLabel">
+            <div class="offcanvas-header p-0 px-3 pt-2">
+                <div class="d-flex flex-column">
+                    <h5 class="offcanvas-title" id="staticBackdropLabel">Carrito de compras</h5>
+                    <h5 class="mt-3" id="total-a-pagar">Total a pagar: $0</h5>
+                </div>
+                <div class="d-flex h-100 align-items-start">
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                 </div>
             </div>
-        </nav>
+            <hr class="m-0">
+            <div class="offcanvas-body">
+                <div class="container-fluid p-0">
+                    <div class="row m-0" id="inyectar-carrito">
+
+
+
+
+
+                    </div>
+                </div>
+            </div>
+            <hr class="m-0">
+            <div class="offcanvas-bottom">
+                <div class="d-flex w-100 justify-content-center">
+                    <a href="/404.html" class="btn-pagar">Pagar</a>
+                </div>
+            </div>
+        </div>
+        <!-- CARRITO - RESUMEN - FINAL -->
+
         <div class="header-plato" id="inyectar-comida-header">
             <!-- INYECTAR HEADER -->
         </div>
@@ -54,7 +60,7 @@
 
     <main>
         <div class="container-fluid mt-3 div-ver-detalles" id="inyectar-detalles-comida">
-            
+
         </div>
     </main>
 
@@ -134,7 +140,8 @@
         integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
         crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@8.3.2/swiper-bundle.min.js"></script>
-    <script src="/script/entrada.js"></script>
+    <!-- <script src="/script/entrada.js"></script> -->
+    <script src="/script/entradablog.js"></script>
 </body>
 
 </html>
