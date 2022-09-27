@@ -22,19 +22,25 @@ header {
     box-shadow: 10px 10px 10px rgb(168, 168, 168);
     margin-top: 2rem;
 }
+
 .div-filtros-estilo:hover {
     box-shadow: 10px 10px 10px rgb(102, 102, 102);
 }
-.div-filtros-estilo h4, .div-filtros-estilo p {
+
+.div-filtros-estilo h4,
+.div-filtros-estilo p {
     font-family: 'Oswald', sans-serif;
 }
+
 .div-filtros-estilo p {
     margin: 0%;
     margin-bottom: 0.1rem;
 }
+
 .div-filtros-estilo h4 {
     color: rgb(105, 105, 105);
 }
+
 .div-filtros-estilo p:hover {
     cursor: pointer;
     color: grey;
@@ -47,13 +53,15 @@ main {
     /* background-color: #fcf0d2; */
     background-color: white;
     /* display: flex; */
+    margin-bottom: 2.5rem;
 }
 
 main>div {
     max-width: 1360px;
 }
 
-.swiper-button-next, .swiper-button-prev {
+.swiper-button-next,
+.swiper-button-prev {
     color: black;
     font-weight: bold;
     background-color: #faee9e;
@@ -64,7 +72,9 @@ main>div {
     box-shadow: 5px 5px 5px black;
     border-radius: 5px;
 }
-.swiper-button-next:hover, .swiper-button-prev:hover {
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
     color: #faee9e;
     background-color: black;
     box-shadow: 5px 5px 5px rgb(48, 47, 47);
@@ -188,11 +198,13 @@ main>div {
     font-size: 230%;
     /* background-color: rgba(255, 238, 0, 0.301); */
 }
+
 @media (max-width: 256px) {
     .titulos {
         font-size: 200%;
     }
 }
+
 @media (max-width: 225px) {
     .titulos {
         font-size: 180%;
@@ -212,15 +224,16 @@ main>div {
 .menu-disponible {
     margin-bottom: 3rem;
 }
+
 .menu-disponible img {
     margin-top: 9rem;
-    padding-left: 55px; 
+    padding-left: 55px;
     padding-right: 55px;
 }
 
 .menu-opciones img {
     margin-top: 80px;
-    padding-left: 55px; 
+    padding-left: 55px;
     padding-right: 55px;
 }
 
@@ -239,4 +252,58 @@ main>div {
 
 .container-detalles-restaurante>div {
     height: 250px;
+}
+
+#buscar {
+    border-radius: 0%;
+    border: 1px solid black;
+}
+
+.card {
+    border: 0px;
+}
+.card:hover {
+    box-shadow: 5px 5px 5px rgb(48, 47, 47);
+}
+
+.card-title {
+    text-align: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: 500;
+}
+
+.card-text {
+    text-align: center;
+}
+
+.precio-estilo {
+    text-align: center;
+    background-color: rgb(29, 29, 28) !important;
+    border-radius: 15px;
+    font-size: 130%;
+    /* padding: 0.5rem; */
+    color: white;
+    width: 7rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.card-footer {
+    border: 0px;
+}
+.div-btn-ver-mas-usuario {
+    display: flex;
+    justify-content: center;
+}
+.btn-ver-mas-usuario {
+    background-color: #faee9e;
+    border: 1px solid black;
+    border-radius: 0px;
+}
+
+.btn-ver-mas-usuario a {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
 }

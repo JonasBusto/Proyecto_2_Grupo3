@@ -42,15 +42,15 @@ if (JSON.parse(localStorage.getItem("Comidas")) === null) {
     localStorage.setItem("Comidas", JSON.stringify(arrayComidasInicial));
 }
 
-if(JSON.parse(localStorage.getItem("Usuarios")) === null) {
+if (JSON.parse(localStorage.getItem("Usuarios")) === null) {
     let arrayUsuariosInicial = [];
-    arrayUsuariosInicial.push({id: 1, usuario: "Administrador", contraseña: "admin", role: "admin", habilitado: true});
+    arrayUsuariosInicial.push({ id: 1, usuario: "Administrador", contraseña: "admin", role: "admin", habilitado: true });
 
     // USUARIO HABILITADO
-    arrayUsuariosInicial.push({id: 2, usuario: "Rolling", contraseña: "rolling2022", role: "usuario", habilitado: true});
-    
+    arrayUsuariosInicial.push({ id: 2, usuario: "Rolling", contraseña: "rolling2022", role: "usuario", habilitado: true });
+
     // USUARIO INHABILITADO
-    arrayUsuariosInicial.push({id: 3, usuario: "Grupo3", contraseña: "grupo3", role: "usuario", habilitado: false});
+    arrayUsuariosInicial.push({ id: 3, usuario: "Grupo3", contraseña: "grupo3", role: "usuario", habilitado: false });
 
     localStorage.setItem("Usuarios", JSON.stringify(arrayUsuariosInicial));
 }
@@ -63,7 +63,7 @@ const divInyectarPastasFideos = document.getElementById("inyectar-pastas-fideos"
 
 
 function inyectarDestacado() {
-    let localSTG = JSON.parse(localStorage.getItem("Comidas"));
+    let localSTG = JSON.parse(localStorage.getItem("Comidas")) || [];
     let indexDestacadoEncontrado = 0;
     for (let i = 0; i < localSTG.length; i++) {
         if (localSTG[i].destacado === true) {
@@ -72,24 +72,26 @@ function inyectarDestacado() {
         }
     }
 
-    divInyectarDestacado.innerHTML = `
-    <div class="col-12 col-md-6 d-flex flex-column justify-content-center text-center pb-3">
-        <h5 class="subtitulo-pregunta">¿Estas con Hambre?</h5>
-        <h4>NO ESPERES MAS!</h4>
-        <p class="subtitulo-ofertar-reserva">Comienza reservando este plato destacado de la casa</p>
-        <h5 class="destacado-nombre">${localSTG[indexDestacadoEncontrado].nombre}</h5>
-        <p class="desc-plato-destacado">${localSTG[indexDestacadoEncontrado].descripcion}</p>
-        <div class="d-flex justify-content-center">
-            <a href="/entradaBlog.html?id=${localSTG[indexDestacadoEncontrado].id}" class="a-ordenar-estilo-header">VER MAS DETALLES</a>
+    if (localSTG.length > 0 && divInyectarDestacado !== null) {
+        divInyectarDestacado.innerHTML = `
+        <div class="col-12 col-md-6 d-flex flex-column justify-content-center text-center pb-3">
+            <h5 class="subtitulo-pregunta">¿Estas con Hambre?</h5>
+            <h4>NO ESPERES MAS!</h4>
+            <p class="subtitulo-ofertar-reserva">Comienza reservando este plato destacado de la casa</p>
+            <h5 class="destacado-nombre">${localSTG[indexDestacadoEncontrado].nombre}</h5>
+            <p class="desc-plato-destacado">${localSTG[indexDestacadoEncontrado].descripcion}</p>
+            <div class="d-flex justify-content-center">
+                <a href="/entradaBlog.html?id=${localSTG[indexDestacadoEncontrado].id}" class="a-ordenar-estilo-header">VER MAS DETALLES</a>
+            </div>
         </div>
-    </div>
-    <div class="col-12 col-md-6 d-flex flex-column">
-        <img src="${localSTG[indexDestacadoEncontrado].url}" class="img-fluid w-100 mt-2" alt="plato1.png">
-        <div class="destacado d-flex justify-content-end">
-            <h3 class="w-75">DESTACADO DE LA SEMANA</h3>
+        <div class="col-12 col-md-6 d-flex flex-column">
+            <img src="${localSTG[indexDestacadoEncontrado].url}" class="img-fluid w-100 mt-2" alt="plato1.png">
+            <div class="destacado d-flex justify-content-end">
+                <h3 class="w-75">DESTACADO DE LA SEMANA</h3>
+            </div>
         </div>
-    </div>
-    `
+        `
+    }
 }
 
 const inyectarComidas = () => {
@@ -98,7 +100,7 @@ const inyectarComidas = () => {
     // INYECTO LAS PIZZAS
     for (let i = 0; i < localSTG.length; i++) {
 
-        if (localSTG[i].categoria === "Pizza") {
+        if (localSTG[i].categoria === "Pizza" && divInyectarPizzas !== null) {
             const div = document.createElement("div");
             div.classList = "swiper-slide h-auto d-flex flex-column align-items-center justify-content-between text-center pb-3"
 
@@ -130,7 +132,7 @@ const inyectarComidas = () => {
     // INYECTO PLATOS ESPECIALES
     for (let i = 0; i < localSTG.length; i++) {
 
-        if (localSTG[i].categoria === "Plato_especial") {
+        if (localSTG[i].categoria === "Plato_especial" && divInyectarPlatosEsp !== null) {
             const div = document.createElement("div");
             div.classList = "swiper-slide h-auto d-flex flex-column align-items-center justify-content-between text-center pb-3"
 
@@ -162,7 +164,7 @@ const inyectarComidas = () => {
     // INYECTO POSTRES
     for (let i = 0; i < localSTG.length; i++) {
 
-        if (localSTG[i].categoria === "Postre") {
+        if (localSTG[i].categoria === "Postre" && divInyectarPostres !== null) {
             const div = document.createElement("div");
             div.classList = "swiper-slide h-auto d-flex flex-column align-items-center justify-content-between text-center pb-3"
 
@@ -194,7 +196,7 @@ const inyectarComidas = () => {
     // INYECTO PASTAS/FIDEOS
     for (let i = 0; i < localSTG.length; i++) {
 
-        if (localSTG[i].categoria === "Pastas_fideos") {
+        if (localSTG[i].categoria === "Pastas_fideos" && divInyectarPastasFideos !== null) {
             const div = document.createElement("div");
             div.classList = "swiper-slide h-auto d-flex flex-column align-items-center justify-content-between text-center pb-3"
 
@@ -238,33 +240,47 @@ inyectarComidas();
 
 // CREO LOS SLIDER CON SWIPPER
 
-let swiper = new Swiper(".menu-disponible", {
-    slidesPerView: 4,
-    spaceBetween: 30,
-    // loop: true,
-    navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-    },
-    pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-    },
-    breakpoints: {
-        0: {
-            slidesPerView: 1,
+const divSinComida = document.getElementById("sin-comida");
+if (JSON.parse(localStorage.getItem("Comidas")).length !== 0) {
+    let swiper = new Swiper(".menu-disponible", {
+        slidesPerView: 4,
+        spaceBetween: 30,
+        // loop: true,
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
         },
-        520: {
-            slidesPerView: 2,
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
         },
-        768: {
-            slidesPerView: 3,
-        },
-        992: {
-            slidesPerView: 4,
+        breakpoints: {
+            0: {
+                slidesPerView: 1,
+            },
+            520: {
+                slidesPerView: 2,
+            },
+            768: {
+                slidesPerView: 3,
+            },
+            992: {
+                slidesPerView: 4,
+            }
         }
-    }
-});
+    });
+} else {
+    let divQuitarBtnSwiper = document.querySelectorAll(".menu-disponible");
+    divQuitarBtnSwiper.forEach(divMenu => {
+        divMenu.innerHTML = "";
+    })
+
+    divSinComida.innerHTML = `NO HAY COMIDAS AGREGADAS. GRACIAS, VUELVA PRONTO!`;
+}
+
+
+
+
 
 var swiper2 = new Swiper(".carousel-presentacion", {
     effect: "coverflow",
@@ -287,6 +303,7 @@ var swiper2 = new Swiper(".carousel-presentacion", {
         el: ".swiper-pagination2",
     },
 });
+
 
 let swiper3 = new Swiper(".menu-opciones", {
     slidesPerView: 3,
@@ -318,4 +335,3 @@ let swiper3 = new Swiper(".menu-opciones", {
         }
     }
 });
-

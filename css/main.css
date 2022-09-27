@@ -188,7 +188,7 @@ main>div {
 }
 
 .btn-ordenar-estilo {
-    border: 0px;
+    border: 1px solid black;
     background-color: #faee9e;
     color: black;
     font-weight: bold;
@@ -199,6 +199,7 @@ main>div {
     font-family: 'Roboto', sans-serif;
     font-size: 96%;
     text-decoration: none;
+    border-radius: 0px;
 }
 
 .btn-ordenar-estilo:hover {
@@ -209,7 +210,8 @@ main>div {
 }
 
 .btn-verMas-estilo {
-    border: 0px;
+    border: 1px solid black;
+    border-radius: 0px !important;
     background-color: #faee9e;
     color: black;
     font-weight: bold;
@@ -238,12 +240,14 @@ main>div {
 
 .precio-info {
     min-width: 17rem;
+    margin-right: 3rem;
     z-index: 1;
     margin-top: -10%;
 }
 
 .a-ordenar-estilo-header {
-    border: 0px;
+    border: 1px solid black;
+    border-radius: 0px !important;
     background-color: #faee9e;
     color: black;
     font-weight: bold;

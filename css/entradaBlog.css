@@ -154,7 +154,8 @@ main>div {
 }
 
 #btn-comentar {
-    border: 0px;
+    border: 1px solid black;
+    border-radius: 0px !important;
     background-color: #faee9e;
     color: black;
     font-weight: bold;
@@ -231,7 +232,8 @@ main>div {
 /* swiper */
 
 
-.div-btn-ordenar-comida button {
+.div-btn-ordenar-comida button, .div-btn-ordenar-comida a {
+    text-decoration: none;
     margin: 10px;
     border-radius: 0px;
     padding: 10px;
@@ -241,7 +243,7 @@ main>div {
     /* font-weight: 600; */
     border: 1px solid black;
 }
-.div-btn-ordenar-comida button:hover {
+.div-btn-ordenar-comida button:hover, .div-btn-ordenar-comida a:hover {
     color: #faee9e;
     background-color: black;
 }

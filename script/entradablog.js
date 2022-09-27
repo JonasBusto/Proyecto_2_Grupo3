@@ -120,7 +120,40 @@ let id = window.location.search.split('=').pop();
 let producto = localSTG.filter(producto => producto.id === Number(id))
 
 // Inyecto header de comida
-divInyectarComidaHeader.innerHTML = `
+
+if(idEnLocalSTG === null || usuarioExistente[0].role === "usuario") {
+    divInyectarComidaHeader.innerHTML = `
+        <div class="row m-0 flex-row">
+            <div class="d-flex justify-content-center align-items-center col-12 col-md-5">
+                <img src="${producto[0].url}" class="img-fluid w-75 mt-2" alt="plato1.png">
+            </div>
+            <div class="d-flex col-12 col-md-7 flex-column text-center justify-content-center">
+                <div class="d-flex flex-column align-items-center px-5">
+                    <h3>EL MEJOR PLATO</h3>
+                    <h1>${producto[0].nombre}</h1>
+                </div>
+                <h4>VALORACIÓN DEL PLATO</h4>
+    
+                <div class="d-flex justify-content-center">
+                    <div class="d-flex flex-row justify-content-center valoracion-plato-destacado">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                    <div class="d-flex align-items-center">
+                        <h3 class="m-0">4 / 5</h3>
+                    </div>
+                </div>
+                <div class="d-flex mt-3 justify-content-center div-btn-ordenar-comida">
+                    <a href="/404.html" class="my-1">COMPRAR</a>
+                </div>
+            </div>
+        </div>
+        `
+} else {
+    divInyectarComidaHeader.innerHTML = `
         <div class="row m-0 flex-row">
             <div class="d-flex justify-content-center align-items-center col-12 col-md-5">
                 <img src="${producto[0].url}" class="img-fluid w-75 mt-2" alt="plato1.png">
@@ -153,6 +186,9 @@ divInyectarComidaHeader.innerHTML = `
         `
         const btnOrdenarComida = document.getElementById("btn-ordenar" + localSTG[captarID].id);
         btnOrdenarComida.addEventListener("click", () => agregarAlCarrito(localSTG[captarID]));
+
+}
+
 
 // Inyecto detalle de comida
 divInyectarDetallesComida.innerHTML = `

@@ -299,11 +299,11 @@ const actualizarPagina = () => {
                                         <label class="form-label">Categoria</label>
                                         <select id="select-modificar-comida${arrayComidas[i].id}" class="form-select"
                                             aria-label="Default select example">
-                                            <option selected>${arrayComidas[i].categoria}</option>
-                                            <option value="categoria1">Categoria 1</option>
-                                            <option value="categoria2">Categoria 2</option>
-                                            <option value="categoria3">Categoria 3</option>
-                                            <option value="otro">Otro</option>
+                                            <option selected>${arrayComidas[i].categoria} (Actual)</option>
+                                            <option value="Pizza">Pizza</option>
+                                            <option value="Postre">Postre</option>
+                                            <option value="Plato_especial">Plato especial</option>
+                                            <option value="Pastas">Pastas</option>
                                         </select>
                                     </div>
                                     <div class="mb-3">

@@ -16,43 +16,8 @@
 <body class="min-vh-100 d-flex flex-column">
 
     <header id="header-personalizado">
-        <nav class="navbar navbar-expand-lg navbar-color">
-            <div class="container-fluid">
-                <a class="navbar-brand text-light" href="/index.html">
-                    <img src="/img/logosolo.png" class="img-fluid rounded-circle me-1" width="50vh" height="50vh"
-                        alt="Logo.png">
-                    <img src="/img/letraslogo.png" width="120vh" height="50vh" alt="Letras.png">
-                </a>
-                <button class="navbar-toggler btn-navbar-toggle" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                    <i class="fa-solid fa-burger"></i>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav w-100 justify-content-end mb-2 mb-lg-0 mx-md-2">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="/usuariosABM.html">ADMIN (Auxiliar)</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="/paginaUsuario.html">USUARIO
-                                (Auxiliar)</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="/contacto.HTML">CONTACTO</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="/nosotros.HTML">NOSOTROS</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="/login.html">INICIAR SESIÓN</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="/register.html">REGISTRARSE</a>
-                        </li>
-
-                    </ul>
-                </div>
-            </div>
+        <nav class="navbar navbar-expand-lg navbar-color" id="inyectar-nav">
+            
         </nav>
 
         <div class="container-fluid p-0 div-general-contenido-plato">
@@ -138,6 +103,10 @@
             </div>
             <div class="container text-center pt-4">
                 <h3 class="titulos">CATEGORIAS</h3>
+            </div>
+
+            <div class="">
+                <h3 class="sub-titulos" id="sin-comida"></h3>
             </div>
 
             <div class="swiper menu-disponible mt-0">
@@ -314,6 +283,7 @@
         crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@8.3.2/swiper-bundle.min.js"></script>
     <script src="/script/main.js"></script>
+    <script src="/script/validarContenidoMain.js"></script>
 </body>
 
 </html>
