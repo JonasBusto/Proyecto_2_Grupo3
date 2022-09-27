@@ -34,7 +34,8 @@ function validarRegistro() {
         console.log(usuarioExistente)
         if (usuarioExistente.length === 0  && usuario.toLowerCase().trim() !== "admin") {
             if (contraseña === validarContraseña) {
-                array.push({ id: localSTG.length + 1, usuario: usuario.trim(), contraseña: contraseña.trim(), role: 'usuario', habilitado: false })
+                let nuevoid = localSTG.length+1;
+                array.push({ id: nuevoid+1, usuario: usuario.trim(), contraseña: contraseña.trim(), role: 'usuario', habilitado: false })
                 localStorage.setItem('Usuarios', JSON.stringify(array))
                 console.log(array)
                 Swal.fire({
