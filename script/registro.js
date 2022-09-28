@@ -15,7 +15,7 @@ function validarRegistro() {
 
     if (usuario.trim() === '' || contraseña.trim() === '' || validarContraseña.trim() === '') {
         Swal.fire({
-            title: 'CAMPOS INCOMPLETO',
+            title: 'CAMPOS INCOMPLETOS',
             icon: 'warning',
             confirmButtonText: 'ACEPTAR'
         })
