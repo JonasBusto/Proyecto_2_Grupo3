@@ -11,7 +11,7 @@ const inyectarNavbar = () => {
             <a class="navbar-brand text-light" href="/index.html">
                 <img src="/img/logosolo.png" class="img-fluid rounded-circle me-1" width="50vh" height="50vh"
                 alt="Logo.png">
-                <img src="/img/letraslogo.png" width="120vh" height="50vh" alt="Letras.png">
+                <img src="/img/letraslogo.png" id="logo-letra-nav" width="120vh" height="50vh" alt="Letras.png">
             </a>
             <button class="navbar-toggler btn-navbar-toggle" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
@@ -43,7 +43,7 @@ const inyectarNavbar = () => {
                 <a class="navbar-brand text-light" href="/index.html">
                     <img src="/img/logosolo.png" class="img-fluid rounded-circle me-1" width="50vh" height="50vh"
                         alt="Logo.png">
-                    <img src="/img/letraslogo.png" width="120vh" height="50vh" alt="Letras.png">
+                    <img src="/img/letraslogo.png" id="logo-letra-nav" width="120vh" height="50vh" alt="Letras.png">
                 </a>
                 <button class="navbar-toggler btn-navbar-toggle" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
@@ -77,7 +77,7 @@ const inyectarNavbar = () => {
                 <a class="navbar-brand text-light" href="/paginaUsuario.html">
                     <img src="/img/logosolo.png" class="img-fluid rounded-circle me-1" width="50vh" height="50vh"
                         alt="Logo.png">
-                    <img src="/img/letraslogo.png" width="120vh" height="50vh" alt="Letras.png">
+                    <img src="/img/letraslogo.png" id="logo-letra-nav" width="120vh" height="50vh" alt="Letras.png">
                 </a>
                 <button class="navbar-toggler btn-navbar-toggle" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"

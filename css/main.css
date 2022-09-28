@@ -29,6 +29,12 @@ nav>div {
     max-width: 1320px;
 }
 
+@media (max-width: 282px) {
+    #logo-letra-nav {
+        display: none;
+    }
+}
+
 .btn-navbar-toggle {
     color: white;
     font-size: 2rem;

@@ -14,7 +14,7 @@ const inyectarNavbar = () => {
             <a class="navbar-brand text-light" href="/index.html">
                 <img src="/img/logosolo.png" class="img-fluid rounded-circle me-1" width="50vh" height="50vh"
                 alt="Logo.png">
-                <img src="/img/letraslogo.png" width="120vh" height="50vh" alt="Letras.png">
+                <img src="/img/letraslogo.png" id="logo-letra-nav" width="120vh" height="50vh" alt="Letras.png">
             </a>
             <button class="navbar-toggler btn-navbar-toggle" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
@@ -46,7 +46,7 @@ const inyectarNavbar = () => {
                 <a class="navbar-brand text-light" href="/index.html">
                     <img src="/img/logosolo.png" class="img-fluid rounded-circle me-1" width="50vh" height="50vh"
                         alt="Logo.png">
-                    <img src="/img/letraslogo.png" width="120vh" height="50vh" alt="Letras.png">
+                    <img src="/img/letraslogo.png" id="logo-letra-nav" width="120vh" height="50vh" alt="Letras.png">
                 </a>
                 <button class="navbar-toggler btn-navbar-toggle" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
@@ -80,7 +80,7 @@ const inyectarNavbar = () => {
                 <a class="navbar-brand text-light" href="/index.html">
                     <img src="/img/logosolo.png" class="img-fluid rounded-circle me-1" width="50vh" height="50vh"
                         alt="Logo.png">
-                    <img src="/img/letraslogo.png" width="120vh" height="50vh" alt="Letras.png">
+                    <img src="/img/letraslogo.png" id="logo-letra-nav" width="120vh" height="50vh" alt="Letras.png">
                 </a>
                 <button class="navbar-toggler btn-navbar-toggle" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
@@ -130,8 +130,8 @@ if (idEnLocalSTG === null || usuarioExistente[0].role === "usuario") {
             </div>
             <div class="d-flex col-12 col-md-7 flex-column text-center justify-content-center">
                 <div class="d-flex flex-column align-items-center px-5">
-                    <h3>EL MEJOR PLATO</h3>
-                    <h1>${producto[0].nombre}</h1>
+                    <h3 class="text-white">EL MEJOR PLATO</h3>
+                    <h2 class="text-white">${producto[0].nombre}</h2>
                 </div>
                 <h4>VALORACIÓN DEL PLATO</h4>
     
@@ -161,8 +161,8 @@ if (idEnLocalSTG === null || usuarioExistente[0].role === "usuario") {
             </div>
             <div class="d-flex col-12 col-md-7 flex-column text-center justify-content-center">
                 <div class="d-flex flex-column align-items-center px-5">
-                    <h3>EL MEJOR PLATO</h3>
-                    <h1>${producto[0].nombre}</h1>
+                    <h3 class="text-white">EL MEJOR PLATO</h3>
+                    <h2 class="text-white">${producto[0].nombre}</h2>
                 </div>
                 <h4>VALORACIÓN DEL PLATO</h4>
     
@@ -229,15 +229,15 @@ divInyectarDetallesComida.innerHTML = `
                     </div>
                     
                     <div class="col-12 mt-3 d-flex flex-column div-reseñas">
-            <h4 class="sub-titulos">RESEÑAS</h4>
+            <h4 class="sub-titulos">RESEÑAS (PROXIMAMENTE)</h4>
             <div class="d-flex flex-column">
                 <div class="d-flex flex-row">
                     <div class="d-flex flex-column w-auto mx-3 div-img-perfil">
-                        <img src="/img/pizza/pizza-4-quesos-salame.png" class="img-fluid" alt="">
+                        <img src="https://pbs.twimg.com/profile_images/1103170022636163072/Ynuhv_Pt_400x400.png" class="img-fluid" alt="">
                     </div>
                     <div class="d-flex flex-column">
                         <div>
-                            <h6>Pepe</h6>
+                            <h6>Rolling Code</h6>
                             <div class="d-flex flex-row valoracion">
                                 <i class="fa-solid fa-star"></i>
                                 <i class="fa-solid fa-star"></i>
@@ -246,12 +246,12 @@ divInyectarDetallesComida.innerHTML = `
                                 <i class="fa-solid fa-star"></i>
                             </div>
                         </div>
-                        <p class="mb-1">"Buen lugar mucha <b>variedad</b> y <b>buenos precios</b>"</p>
+                        <p class="mb-1">"Buen lugar, mucha <b>variedad</b> y <b>buenos precios</b>"</p>
                         <div class="d-flex flex-row div-likes">
                             <p class="text-dark">¿Te gusta?</p>
                             <div class="mx-2 d-flex flex-row justify-content-between w-25">
-                                <i class="fa-regular fa-thumbs-up"></i>
-                                <i class="fa-regular fa-thumbs-down"></i>
+                                <i class="fa-regular fa-thumbs-up text-success"></i>
+                                <i class="fa-regular fa-thumbs-down text-danger"></i>
                             </div>
                         </div>
                     </div>
@@ -260,8 +260,8 @@ divInyectarDetallesComida.innerHTML = `
             <div class="my-3">
                 <label for="exampleFormControlTextarea1" class="form-label label-comentario">REALIZAR
                     COMENTARIO (PROXIMAMENTE)</label>
-                <h6>TU USUARIO: <b>Pepe</b></h6>
-                <textarea class="form-control w-50" id="exampleFormControlTextarea1" rows="2"></textarea>
+                <h6>TU USUARIO: <b> GRUPO 3</b></h6>
+                <textarea disabled class="form-control w-50" id="exampleFormControlTextarea1" rows="2"></textarea>
                 <button id="btn-comentar" class="my-1">COMENTAR</button>
             </div>
         </div>`
