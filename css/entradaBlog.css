@@ -71,6 +71,24 @@ nav a:hover,
     color: rgb(143, 142, 142) !important;
 }
 
+@media (max-width: 282px) {
+    #logo-letra-nav {
+        display: none;
+    }
+}
+
+.btn-navbar-toggle {
+    color: white;
+    font-size: 2rem;
+    border: 4px solid rgba(255, 255, 255, 0.123);
+    background-color: rgba(255, 255, 255, 0.027);
+}
+
+.btn-navbar-toggle:hover {
+    color: rgb(143, 142, 142) !important;
+    border: 4px solid rgba(255, 255, 255, 0.315);
+}
+
 .header-plato {
     padding-top: 5.3rem;
     padding-bottom: 1%;
