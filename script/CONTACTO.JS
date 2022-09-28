@@ -122,6 +122,7 @@ const inputNombre = document.getElementById("contactoNombre");
 const inputEmail = document.getElementById("contactoEmail");
 const inputComentario = document.getElementById("contactoComentario");
 const btnContacto = document.getElementById("contactoBoton");
+const divAlertaEmail = document.getElementById("alerta-email-erroneo");
 
 if (inputNombre.value.trim() === "" || inputEmail.value.trim() === "" || inputComentario.value.trim() === "") {
     btnContacto.disabled = true;
@@ -171,31 +172,23 @@ function validarContacto() {
     let array = []
 
     if (contactoNombre.trim() === "") {
-        //alert("Falta completar nombre")
         document.getElementById("contactoNombre").className = "form-control is-invalid"
     }
     else {
         document.getElementById("contactoNombre").className = "form-control is-valid"
     }
     if (contactoEmail.trim() === "") {
-        //alert("Falta completar nombre")
         document.getElementById("contactoEmail").className = "form-control is-invalid"
     }
     else {
         document.getElementById("contactoEmail").className = "form-control is-valid"
     }
     if (contactoComentario.trim() === "") {
-        //alert("Falta completar nombre")
         document.getElementById("contactoComentario").className = "form-control is-invalid"
     }
     else {
         document.getElementById("contactoComentario").className = "form-control is-valid"
     }
 
-    // if (contactoNombre.trim() !== "" && contactoEmail.trim() !== "" && contactoComentario.trim() !== "") {
-    //     document.getElementById("contactoNombre").value = "";
-    //     document.getElementById("contactoEmail").value = "";
-    //     document.getElementById("contactoComentario").value = "";
-    // }
+
 }
-//falta agregar el de submit y e inicializar formulario

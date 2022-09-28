@@ -69,6 +69,7 @@ function modificarComida(index) {
     const inputModificadoNombre = document.getElementById("input-modificado-nombre" + index);
     const inputNuevoPrecio = document.getElementById("input-nuevo-precio" + index);
     const nuevaDesc = document.getElementById("textarea-nueva-descripcion" + index);
+    const nuevaCategoria = document.getElementById("select-modificar-comida" + index)
     const alerta = document.getElementById("inyectar-alerta" + index);
     let encontrado = funcionVerificarExistenciaAUX(index)[0];
     let encontradoIndex = funcionVerificarExistenciaAUX(index)[1];
@@ -85,6 +86,7 @@ function modificarComida(index) {
             arrayComidasAux[encontradoIndex].nombre = inputModificadoNombre.value;
             arrayComidasAux[encontradoIndex].precio = inputNuevoPrecio.value;
             arrayComidasAux[encontradoIndex].descripcion = nuevaDesc.value;
+            arrayComidasAux[encontradoIndex].categoria = nuevaCategoria.value;
             localStorage.setItem("Comidas", JSON.stringify(arrayComidasAux));
             location.reload();
         }

@@ -32,7 +32,13 @@ body {
     -webkit-transition: all 0.3s ease-in;
     -moz-transition: all 0.3s ease-in;
     color: white;
+    height: 30rem;
+}
 
+@media (max-width: 767px) {
+    .card-nosotros {
+        height: auto;
+    }
 }
 
 .card-nosotros:hover {
@@ -42,8 +48,6 @@ body {
     border-radius: 5px;
     border: none;
     box-shadow: 8px 8px 8px rgb(53, 53, 53);
-
-
 }
 
 main {

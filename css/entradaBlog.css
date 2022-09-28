@@ -365,6 +365,19 @@ main>div {
     padding: 0px;
 }
 
+@media (max-width: 290px) {
+    .div-detalles-compra-carrito {
+        width: 9.3rem;
+    }
+    .div-subtot-comida p{
+        font-size: 0.6rem;
+        padding-left: 1.7rem;
+    }
+    .div-cantidad-mostrar input {
+        width: 2rem;
+    }
+}
+
 
 /* FOOTER */
 

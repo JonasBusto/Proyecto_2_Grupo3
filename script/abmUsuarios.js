@@ -180,16 +180,16 @@ const modificarUsuario = (id) => {
                 setTimeout(() => {
                     alerta.innerHTML = "";
                 }, 1500);
-            } else if (usuario1.trim().length > 20) {
+            } else if (usuario1.trim().length > 15) {
                 alerta.innerHTML = `
-                <h6 class="text-danger">*EL NOMBRE DE USUARIO NO DEBE SUPERAR 20 CARACTERES*</h6>
+                <h6 class="text-danger">*EL NOMBRE DE USUARIO NO DEBE SUPERAR 15 CARACTERES*</h6>
                 `
                 setTimeout(() => {
                     alerta.innerHTML = "";
                 }, 1500);
-            } else if (constraseña1.trim().length > 20) {
+            } else if (constraseña1.length < 3 || constraseña1.length>11) {
                 alerta.innerHTML = `
-                <h6 class="text-danger">*LA CONTRASEÑA NO DEBE SUPERAR 20 CARACTERES*</h6>
+                <h6 class="text-danger">*LA CONTRASEÑA DEBE TENER ENTRE 3 Y 11 CARACTERES*</h6>
                 `
                 setTimeout(() => {
                     alerta.innerHTML = "";

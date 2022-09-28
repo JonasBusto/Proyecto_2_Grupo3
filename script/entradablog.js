@@ -298,7 +298,7 @@ function inyectarCarrito() {
                     <p>${arrayCarrito[i].precio} $/u</p>
                 </div>
             </div>
-            <div class="col-8 p-0 d-flex flex-column justify-content-center">
+            <div class="col-8 p-0 d-flex div-detalles-compra-carrito flex-column justify-content-center">
                 <div class="row m-0">
                     <div class="col-9">
                         <p class="titulo-comida-carrito">${arrayCarrito[i].nombre}</p>
@@ -311,7 +311,7 @@ function inyectarCarrito() {
                 <div class="row m-0 justify-content-center div-btn-carrito2">
                     <div class="col-8 d-flex">
                         <button class="" id="btn-quitar${arrayCarrito[i].id}">-</button>
-                        <div class="d-flex flex-column">
+                        <div class="d-flex div-cantidad-mostrar flex-column">
                             <input type="text" disabled value="${arrayCarrito[i].cantidad}">
                         </div>
                         <button class="" id="btn-agregar${arrayCarrito[i].id}">+</button>
