@@ -1,10 +1,14 @@
+// Declaración de las variables necesarias para inyectar el NAVBAR en función del usuario autenticado o no
+
 const divInyectarNavbar = document.getElementById("inyectar-navbar");
 let id = localStorage.getItem('id');
 let localSTG = JSON.parse(localStorage.getItem('Usuarios')) || [];
 let usuarioExistente = localSTG.filter(local => local.id === Number(id))
 
+// Función de inyección del NAVBAR
 const inyectarNavbar = () => {
 
+    // Inyecta el NAVBAR considerando que ningun usuario se autentico (sea administrador o usuario común)
     if (id === null) {
         divInyectarNavbar.innerHTML = `
         <div class="container-fluid">
@@ -37,7 +41,8 @@ const inyectarNavbar = () => {
             </div>
         </div>
       `
-    } else if(usuarioExistente[0].role === "admin"){
+        //   Inyecta el NAVBAR con las opciones extras del Administrador
+    } else if (usuarioExistente[0].role === "admin") {
         divInyectarNavbar.innerHTML = `
         <div class="container-fluid">
                 <a class="navbar-brand text-light" href="/index.html">
@@ -71,6 +76,7 @@ const inyectarNavbar = () => {
                 </div>
             </div>
         `
+        // Inyectar el NAVBAR del usuarios no Administradores
     } else {
         divInyectarNavbar.innerHTML = `
         <div class="container-fluid">
@@ -102,8 +108,10 @@ const inyectarNavbar = () => {
     }
 }
 
+// Llamada de la función de inyectar NAVBAR
 inyectarNavbar();
 
+// Función para vaciar el localStorage referido al usuario autenticado
 const logout = () => {
     localStorage.removeItem('id')
     location.href = './contacto.html'
@@ -115,17 +123,6 @@ function validarContacto() {
     let contactoComentario = document.getElementById("contactoComentario").value;
     let array = []
 
-    //if (contactoNombre === ""|| contactoEmail === ""||contactoComentario === ""){
-    // document.getElementById("contactoNombre").className = "form-control is invalid"
-    //document.getElementById("contactoEmail").className = "form-control is-invalid"
-    //document.getElementById("contactoComentario").className = "form-control is-invalid"
-    //}
-    //else {
-    //document.getElementById("contactoNombre").className = "form-control is valid"
-    //document.getElementById("contactoEmail").className = "form-control is-valid"
-    //document.getElementById("contactoComentario").className = "form-control is-valid"
-    //}
-    //}
     if (contactoNombre === "") {
         //alert("Falta completar nombre")
         document.getElementById("contactoNombre").className = "form-control is-invalid"

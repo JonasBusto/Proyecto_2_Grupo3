@@ -20,7 +20,7 @@ function login() {
         if (usuarioExistente.length > 0) {
             if (usuarioExistente[0].contraseña === contraseña) {
                 if (usuarioExistente[0].habilitado === true) {
-                    if(usuarioExistente[0].role === 'admin') {
+                    if (usuarioExistente[0].role === 'admin') {
                         localStorage.setItem('id', JSON.stringify(usuarioExistente[0].id));
                         location.href = '/usuariosABM.html';
                     } else {

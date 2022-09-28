@@ -61,7 +61,6 @@ const buscarComida = () => {
             .toUpperCase()
             .includes(buscar.value.toUpperCase())
     );
-    console.log(comidasFiltradas)
     renderComidas();
 };
 

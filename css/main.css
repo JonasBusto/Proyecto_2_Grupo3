@@ -2,11 +2,9 @@
 
 
 header {
-    /* background-image: url(/img/img-header.jpg); */
     background-image: url(/img/dddd.jpeg);
     background-size: cover;
     background-position: top;
-    /* z-index: 1; */
 }
 
 #header-personalizado {
@@ -17,6 +15,7 @@ header {
     display: flex;
     justify-content: center;
 }
+
 #header-personalizado>div>div {
     max-width: 1900px;
 }
@@ -25,8 +24,9 @@ nav {
     background-color: rgba(0, 0, 0, 0.95);
     z-index: 1001;
 }
+
 nav>div {
-    max-width: 1320px; 
+    max-width: 1320px;
 }
 
 .btn-navbar-toggle {
@@ -45,26 +45,29 @@ nav>div {
     position: fixed;
     width: 100%;
 }
+
 .navbar-color li {
     margin-left: 3.5%;
 }
 
-.navbar-color li>a, .navbar-color li>button {
+.navbar-color li>a,
+.navbar-color li>button {
     color: rgb(255, 255, 255) !important;
 }
+
 .navbar-color li>button {
     background-color: #1da0f200;
     border: 0px;
 }
 
-nav a:hover, .navbar-color li>button:hover {
+nav a:hover,
+.navbar-color li>button:hover {
     color: rgb(143, 142, 142) !important;
 }
 
 .div-general-contenido-plato {
     padding-top: 5.3rem !important;
     background-color: rgba(0, 0, 0, 0.5);
-    /* border-radius: 2%; */
     padding: 2%;
     color: rgb(255, 255, 255);
 }
@@ -72,7 +75,6 @@ nav a:hover, .navbar-color li>button:hover {
 .subtitulo-pregunta {
     font-family: 'Lobster', cursive;
     color: black;
-    /* text-shadow: 2px yellow; */
     -webkit-text-stroke: 1px rgb(255, 255, 255);
     font-size: 40px;
 }
@@ -81,6 +83,7 @@ nav a:hover, .navbar-color li>button:hover {
     font-size: 40px;
     font-family: 'Fredericka the Great', cursive;
 }
+
 @media (max-width: 256px) {
     .contenido-plato h4 {
         font-size: 40px;
@@ -90,7 +93,6 @@ nav a:hover, .navbar-color li>button:hover {
 .destacado-nombre {
     color: #faee9e;
     font-size: 130%;
-    /* text-shadow: 2px black; */
     -webkit-text-stroke: 0.5px black;
 }
 
@@ -103,13 +105,10 @@ nav a:hover, .navbar-color li>button:hover {
 }
 
 .destacado {
-    /* margin: -5%; */
     z-index: 1000;
-    /* height: 150%; */
 }
 
 .destacado>h3 {
-    /* transform: rotate(-10deg); */
     background-color: rgb(10, 143, 61);
     width: 61%;
     padding: 1%;
@@ -117,7 +116,6 @@ nav a:hover, .navbar-color li>button:hover {
 }
 
 .destacado2 {
-    /* transform: rotate(30deg); */
     background-color: red;
     width: 65% !important;
     padding: 1%;
@@ -129,17 +127,15 @@ nav a:hover, .navbar-color li>button:hover {
 /* MAIN */
 
 main {
-    /* z-index: 5; */
-    /* background-color: #fcf0d2; */
     background-color: white;
-    /* display: flex; */
 }
 
 main>div {
     max-width: 1360px;
 }
 
-.swiper-button-next, .swiper-button-prev {
+.swiper-button-next,
+.swiper-button-prev {
     color: black;
     font-weight: bold;
     background-color: #faee9e;
@@ -150,32 +146,13 @@ main>div {
     box-shadow: 5px 5px 5px black;
     border-radius: 5px;
 }
-.swiper-button-next:hover, .swiper-button-prev:hover {
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
     color: #faee9e;
     background-color: black;
     box-shadow: 5px 5px 5px rgb(48, 47, 47);
 }
-
-/* .div-tipos-comida>div {
-    background-position: center;
-    background-size: cover;
-    height: 450px;
-    width: 300px;
-    margin: 0.5%;
-}
-
-.div-comidas-destacadas1 {
-    background-image: url(/img/img-desayuno.jpg);
-}
-.div-comidas-destacadas2 {
-    background-image: url(/img/img-ensalada.jpg);
-}
-.div-comidas-destacadas3 {
-    background-image: url(/img/img-pizza.jpg);
-}
-.div-comidas-destacadas4 {
-    background-image: url(/img/img-postres.jpg);
-} */
 
 .swiper-slide {
     background-position: center;
@@ -277,19 +254,19 @@ main>div {
 .titulos {
     font-family: 'Fredericka the Great', cursive;
     font-size: 230%;
-    /* background-color: rgba(255, 238, 0, 0.301); */
 }
+
 @media (max-width: 256px) {
     .titulos {
         font-size: 200%;
     }
 }
+
 @media (max-width: 225px) {
     .titulos {
         font-size: 180%;
     }
 }
-
 
 .sub-titulos {
     margin-top: 5%;
@@ -302,13 +279,13 @@ main>div {
 
 .menu-disponible img {
     margin-top: 80px;
-    padding-left: 55px; 
+    padding-left: 55px;
     padding-right: 55px;
 }
 
 .menu-opciones img {
     margin-top: 80px;
-    padding-left: 55px; 
+    padding-left: 55px;
     padding-right: 55px;
 }
 
@@ -335,13 +312,14 @@ footer {
     background-image: url(/img/img-footer.jpg);
     background-size: cover;
     background-position: top;
-} 
+}
 
 footer>div {
     background-color: rgba(17, 17, 17, 0.829);
     display: flex;
     justify-content: center;
 }
+
 .footer-contenido {
     max-width: 1320px;
 }
@@ -361,52 +339,61 @@ footer>div {
 @media (max-width: 1160px) {
     .div-btn-redes {
         width: 135px;
-    } 
+    }
 }
+
 @media (max-width: 1079px) {
     .div-btn-redes {
         width: 125px;
-    } 
+    }
 }
+
 @media (max-width: 1000px) {
     .div-btn-redes {
         width: 110px;
-    } 
+    }
 }
+
 @media (max-width: 880px) {
     .div-btn-redes {
         width: 100px;
-    } 
+    }
 }
+
 @media (max-width: 800px) {
     .div-btn-redes {
         width: 90px;
-    } 
+    }
 }
+
 @media (max-width: 575px) {
     .div-btn-redes {
         width: 145px;
-    } 
+    }
 }
+
 @media (max-width: 386px) {
     .div-btn-redes {
         width: 130px;
-    } 
+    }
 }
+
 @media (max-width: 346px) {
     .div-btn-redes {
         width: 115px;
-    } 
+    }
 }
+
 @media (max-width: 306px) {
     .div-btn-redes {
         width: 110px;
-    } 
+    }
 }
+
 @media (max-width: 293px) {
     .div-btn-redes {
         width: 100px;
-    } 
+    }
 }
 
 /* FIN MEDIA QUERIS DE LOS BOTONES DE REDES */
@@ -424,14 +411,17 @@ footer>div {
     transition: 1s;
     color: #1DA1F2;
 }
+
 #btn-red-facebook i:hover {
     transition: 1s;
     color: #4267B2;
 }
+
 #btn-red-whatsapp i:hover {
     transition: 1s;
     color: #25D366;
 }
+
 #btn-red-instagram i:hover {
     transition: 1s;
     color: #E1306C
@@ -444,9 +434,9 @@ footer>div {
     border-radius: 5px;
     width: 100%;
     background-color: rgb(255, 255, 255);
-    /* background-color: rgba(7, 7, 7, 0.562); */
     color: black;
 }
+
 .div-suscribirse button {
     margin-left: 3%;
     font-size: 20px;
@@ -464,15 +454,6 @@ footer>div {
     color: #faee9e;
     transition: .8s;
 }
-
-/* @media (min-width: 992px) {
-    .div-suscribirse input {
-        width: 100%;
-    }
-    .div-suscribirse button {
-        width: 100%;
-    }
-} */
 
 .div-logo img {
     width: 30%;
@@ -505,10 +486,12 @@ footer>div {
     font-weight: 600 !important;
     border: 1px solid black !important;
 }
+
 .swal2-styled:hover {
     color: #faee9e !important;
     background-color: black !important;
 }
+
 .swal2-container>div {
     color: black !important;
 }

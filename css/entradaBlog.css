@@ -1,13 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=IBM+Plex+Sans:wght@600&family=Lobster&family=Oswald:wght@500&family=Raleway&family=Roboto:wght@400;900&display=swap');
 
-/* body {
-    min-height: 100vh;
-    margin: 0;
-    display: grid;
-    grid-template-rows: auto 1fr auto;
-} */
-
-
 /* HEADER */
 
 header {
@@ -57,6 +49,7 @@ nav>div {
     position: fixed;
     width: 100%;
 }
+
 .navbar-color li {
     margin-left: 3.5%;
 }
@@ -64,6 +57,7 @@ nav>div {
 .navbar-color li>a {
     color: rgb(255, 255, 255) !important;
 }
+
 .navbar-color .nav-item>button {
     background-color: rgba(255, 255, 255, 0);
     color: white !important;
@@ -72,7 +66,8 @@ nav>div {
     text-align: start;
 }
 
-nav a:hover, .navbar-color button:hover {
+nav a:hover,
+.navbar-color button:hover {
     color: rgb(143, 142, 142) !important;
 }
 
@@ -113,14 +108,6 @@ nav a:hover, .navbar-color button:hover {
 }
 
 /* MAIN */
-
-/* main {
-    
-    background-image:linear-gradient(rgba(245, 0, 0, 0.034),rgba(255, 255, 255, 0.1)),url(https://tukurtukurfoundation.com/wp-content/uploads/2019/11/bg.jpg);
-    background-size:120%;
-    background-position: center;
-    background-repeat: no-repeat;
-} */
 
 main>div {
     max-width: 1360px;
@@ -179,7 +166,8 @@ main>div {
 
 
 /* swiper */
-.swiper-button-next, .swiper-button-prev {
+.swiper-button-next,
+.swiper-button-prev {
     color: black;
     font-weight: bold;
     background-color: #faee9e;
@@ -190,7 +178,9 @@ main>div {
     box-shadow: 5px 5px 5px black;
     border-radius: 5px;
 }
-.swiper-button-next:hover, .swiper-button-prev:hover {
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
     color: #faee9e;
     background-color: black;
     box-shadow: 5px 5px 5px rgb(48, 47, 47);
@@ -208,7 +198,7 @@ main>div {
     .div-1er-swipper {
         max-width: 650px;
         max-height: 650px;
-    }  
+    }
 }
 
 .mySwiper {
@@ -232,7 +222,8 @@ main>div {
 /* swiper */
 
 
-.div-btn-ordenar-comida button, .div-btn-ordenar-comida a {
+.div-btn-ordenar-comida button,
+.div-btn-ordenar-comida a {
     text-decoration: none;
     margin: 10px;
     border-radius: 0px;
@@ -243,7 +234,9 @@ main>div {
     /* font-weight: 600; */
     border: 1px solid black;
 }
-.div-btn-ordenar-comida button:hover, .div-btn-ordenar-comida a:hover {
+
+.div-btn-ordenar-comida button:hover,
+.div-btn-ordenar-comida a:hover {
     color: #faee9e;
     background-color: black;
 }
@@ -270,7 +263,6 @@ main>div {
 .div-img {
     height: 100%;
     width: 100%;
-    /* padding: 0.5rem; */
 }
 
 .div-img img {
@@ -303,6 +295,7 @@ main>div {
     text-decoration: none;
     color: black;
 }
+
 .btn-pagar:hover {
     background-color: black;
     color: #faee9e;
@@ -384,52 +377,61 @@ footer>div {
 @media (max-width: 1160px) {
     .div-btn-redes {
         width: 135px;
-    } 
+    }
 }
+
 @media (max-width: 1079px) {
     .div-btn-redes {
         width: 125px;
-    } 
+    }
 }
+
 @media (max-width: 1000px) {
     .div-btn-redes {
         width: 110px;
-    } 
+    }
 }
+
 @media (max-width: 880px) {
     .div-btn-redes {
         width: 100px;
-    } 
+    }
 }
+
 @media (max-width: 800px) {
     .div-btn-redes {
         width: 90px;
-    } 
+    }
 }
+
 @media (max-width: 575px) {
     .div-btn-redes {
         width: 145px;
-    } 
+    }
 }
+
 @media (max-width: 386px) {
     .div-btn-redes {
         width: 130px;
-    } 
+    }
 }
+
 @media (max-width: 346px) {
     .div-btn-redes {
         width: 115px;
-    } 
+    }
 }
+
 @media (max-width: 306px) {
     .div-btn-redes {
         width: 110px;
-    } 
+    }
 }
+
 @media (max-width: 293px) {
     .div-btn-redes {
         width: 100px;
-    } 
+    }
 }
 
 /* FIN MEDIA QUERIS DE LOS BOTONES DE REDES */
@@ -449,9 +451,9 @@ footer>div {
     border-radius: 5px;
     width: 100%;
     background-color: rgb(255, 255, 255);
-    /* background-color: rgba(7, 7, 7, 0.562); */
     color: black;
 }
+
 .div-suscribirse button {
     margin-left: 3%;
     font-size: 20px;

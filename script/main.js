@@ -278,10 +278,6 @@ if (JSON.parse(localStorage.getItem("Comidas")).length !== 0) {
     divSinComida.innerHTML = `NO HAY COMIDAS AGREGADAS. GRACIAS, VUELVA PRONTO!`;
 }
 
-
-
-
-
 var swiper2 = new Swiper(".carousel-presentacion", {
     effect: "coverflow",
     grabCursor: true,

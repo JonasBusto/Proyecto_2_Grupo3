@@ -8,6 +8,7 @@
     text-decoration: none;
     border: 1px solid black;
 }
+
 .anchor-btn-habilitar:hover {
     color: #faee9e;
     background-color: black;
@@ -17,3 +18,10 @@
     pointer-events: none;
 }
 
+.color-icono:hover {
+    color: rgb(29, 29, 29);
+}
+
+table {
+    width: 95% !important;
+}

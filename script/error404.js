@@ -1,8 +1,10 @@
+// Declaro las variables necesarias para inyectar el NAVBAR en función del usuario autenticado o no
 const divInyectarNavbar = document.getElementById("inyectar-navbar");
 let id = localStorage.getItem('id');
 let localSTG = JSON.parse(localStorage.getItem('Usuarios')) || [];
 let usuarioExistente = localSTG.filter(local => local.id === Number(id))
 
+// Función que inyecta el NAVBAR
 const inyectarNavbar = () => {
 
     if (id === null) {
@@ -37,7 +39,7 @@ const inyectarNavbar = () => {
             </div>
         </div>
       `
-    } else if(usuarioExistente[0].role === "admin"){
+    } else if (usuarioExistente[0].role === "admin") {
         divInyectarNavbar.innerHTML = `
         <div class="container-fluid">
                 <a class="navbar-brand text-light" href="/index.html">

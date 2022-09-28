@@ -37,7 +37,7 @@ const inyectarNavbar = () => {
             </div>
         </div>
       `
-    } else if(usuarioExistente[0].role === "admin"){
+    } else if (usuarioExistente[0].role === "admin") {
         divInyectarNavbar.innerHTML = `
         <div class="container-fluid">
                 <a class="navbar-brand text-light" href="/index.html">

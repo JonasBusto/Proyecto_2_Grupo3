@@ -32,9 +32,9 @@ function validarRegistro() {
 
         //crear usuario
         console.log(usuarioExistente)
-        if (usuarioExistente.length === 0  && usuario.toLowerCase().trim() !== "admin") {
+        if (usuarioExistente.length === 0 && usuario.toLowerCase().trim() !== "admin") {
             if (contraseña === validarContraseña) {
-                array.push({ id: localSTG.length + 1, usuario: usuario.trim(), contraseña: contraseña.trim(), role: 'usuario', habilitado: false })
+                array.push({ id: localSTG[localSTG.length - 1].id + 1, usuario: usuario.trim(), contraseña: contraseña.trim(), role: 'usuario', habilitado: false })
                 localStorage.setItem('Usuarios', JSON.stringify(array))
                 console.log(array)
                 Swal.fire({
@@ -78,6 +78,9 @@ function validarRegistro() {
     }
 }
 
+
+// Declaración de las variables necesarias para verificar el tipo de input y en función de eso
+// permite la visualización de la contraseña o no, al hacer click en el icono del 'Candado'
 const contraseña = document.getElementById('contraseña');
 const validarContraseña = document.getElementById('validarContraseña');
 const iconoPrimerCandado = document.getElementById("1er-icono-candado");
@@ -85,20 +88,20 @@ const iconoSegundoCandado = document.getElementById("2do-icono-candado");
 const divPrimerCandado = document.getElementById("div-primer-candado");
 const divSegundoCandado = document.getElementById("div-segundo-candado");
 
-divPrimerCandado.addEventListener("click", ()=> {
-    if(contraseña.type === "password") {
+divPrimerCandado.addEventListener("click", () => {
+    if (contraseña.type === "password") {
         contraseña.type = "text";
-    }else {
+    } else {
         contraseña.type = "password";
     }
     iconoPrimerCandado.classList.toggle("fa-lock");
     iconoPrimerCandado.classList.toggle("fa-lock-open");
 })
 
-divSegundoCandado.addEventListener("click", ()=> {
-    if(validarContraseña.type === "password") {
+divSegundoCandado.addEventListener("click", () => {
+    if (validarContraseña.type === "password") {
         validarContraseña.type = "text";
-    }else {
+    } else {
         validarContraseña.type = "password";
     }
     iconoSegundoCandado.classList.toggle("fa-lock");

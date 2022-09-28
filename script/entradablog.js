@@ -1,5 +1,6 @@
 // INYECTO NAVBAR EN FUNCION DEL USUARIO AUTENTICADO O NO
 
+// Declaro las variables necesarias para la inyección del NAVBAR
 const divInyectarNavbar = document.getElementById("inyectar-navbar");
 let idEnLocalSTG = localStorage.getItem('id');
 let localSTGusuarios = JSON.parse(localStorage.getItem('Usuarios')) || [];
@@ -121,7 +122,7 @@ let producto = localSTG.filter(producto => producto.id === Number(id))
 
 // Inyecto header de comida
 
-if(idEnLocalSTG === null || usuarioExistente[0].role === "usuario") {
+if (idEnLocalSTG === null || usuarioExistente[0].role === "usuario") {
     divInyectarComidaHeader.innerHTML = `
         <div class="row m-0 flex-row">
             <div class="d-flex justify-content-center align-items-center col-12 col-md-5">
@@ -184,8 +185,8 @@ if(idEnLocalSTG === null || usuarioExistente[0].role === "usuario") {
             </div>
         </div>
         `
-        const btnOrdenarComida = document.getElementById("btn-ordenar" + localSTG[captarID].id);
-        btnOrdenarComida.addEventListener("click", () => agregarAlCarrito(localSTG[captarID]));
+    const btnOrdenarComida = document.getElementById("btn-ordenar" + localSTG[captarID].id);
+    btnOrdenarComida.addEventListener("click", () => agregarAlCarrito(localSTG[captarID]));
 
 }
 
@@ -265,7 +266,7 @@ divInyectarDetallesComida.innerHTML = `
             </div>
         </div>`
 
-        
+
 const logout = () => {
     localStorage.removeItem('id')
     location.href = './entradaBlog.html?id=' + captarID;
@@ -335,8 +336,10 @@ function inyectarCarrito() {
     }
 }
 
+// INYECTO CARRITO
 inyectarCarrito();
 
+// Permite agregar en una unidad el producto en carrito
 function agregarUnidadCarrito(comida) {
     comida.cantidad++;
     localStorage.setItem("Carrito", JSON.stringify(arrayCarrito));
@@ -344,6 +347,7 @@ function agregarUnidadCarrito(comida) {
     inyectarCarrito();
 }
 
+// Permite quitar en una unidad el producto en carrito
 function quitarUnidadCarrito(comida) {
     if (comida.cantidad === 1) {
         arrayCarrito = arrayCarrito.filter(comidaEnArray => comidaEnArray.id !== comida.id);
@@ -358,6 +362,7 @@ function quitarUnidadCarrito(comida) {
     inyectarCarrito();
 }
 
+// Permite eliminar directamente el producto en carrito sin importar la cantidad de unidades, siempre mayor a 0
 function eliminarComida(comida) {
     arrayCarrito = arrayCarrito.filter(comidaEnArray => comidaEnArray.id !== comida.id);
 
@@ -366,6 +371,7 @@ function eliminarComida(comida) {
     inyectarCarrito();
 }
 
+// Agrega el producto al carrito
 const agregarAlCarrito = (comida) => {
     let encontrado = false;
     let indexEncontrado = 0;
@@ -392,6 +398,7 @@ const agregarAlCarrito = (comida) => {
     inyectarCarrito();
 }
 
+// Verifica el dinero total gastado
 const verificarTotalCarrito = () => {
     let total = 0;
     for (let i = 0; i < arrayCarrito.length; i++) {

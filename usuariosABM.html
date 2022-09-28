@@ -66,8 +66,6 @@
                 <div class="d-flex flex-column align-items-center">
                     <h3 class="text-center py-2 titulo-admin">ADMINISTRAR USUARIO</h3>
                     <div class="container pt-2 p-0 btn-admin-nuevo">
-                        <!-- <button data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">AÑADIR
-                            USUARIO</button> -->
                         <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
                             aria-hidden="true">
                             <div class="modal-dialog">
@@ -102,20 +100,22 @@
                         </div>
                     </div>
                 </div>
-                <table class="table table-color mx-4 w-auto table-striped table-hover container mt-3 table-bordered">
-                    <thead>
-                        <tr>
-                            <th scope="col">ID</th>
-                            <th scope="col">Usuario</th>
-                            <th scope="col">Habilitar</th>
-                            <th scope="col">Opciones</th>
-                        </tr>
-                    </thead>
-                    <!-- AQUI INYECTO JAVASCRIPT ALTA, MODIFICAR Y ELIMINAR -->
-                    <tbody id="filas" class="table-group-divider">
+                <div class="table-responsive">
+                    <table class="table table-color mx-auto table-striped table-hover container mt-3 table-bordered">
+                        <thead>
+                            <tr>
+                                <th scope="col">ID</th>
+                                <th scope="col">Usuario</th>
+                                <th scope="col">Habilitar</th>
+                                <th scope="col">Opciones</th>
+                            </tr>
+                        </thead>
+                        <!-- AQUI INYECTO JAVASCRIPT ALTA, MODIFICAR Y ELIMINAR -->
+                        <tbody id="filas" class="table-group-divider">
 
-                    </tbody>
-                </table>
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </div>
     </main>

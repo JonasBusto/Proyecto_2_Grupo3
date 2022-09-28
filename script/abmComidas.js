@@ -1,3 +1,4 @@
+// Declaración de las variables necesarias para realizar el ABM comidas
 const inputNuevoNombre = document.getElementById("input-nuevo-nombre");
 const textareaNuevaDesc = document.getElementById("textarea-nueva-desc");
 const selectNuevoCat = document.getElementById("select-nuevo-cat");
@@ -37,7 +38,7 @@ let arrayComidasAux = JSON.parse(localStorage.getItem("Comidas")) || [];
 let arrayComidas = arrayComidasAux;
 
 
-
+// Funcion auxiliar que utilizo para verificar la existencia de una comida en el localStorage
 function funcionVerificarExistenciaAUX(index) {
     let encontrado = false;
     let encontradoIndex = 0;
@@ -55,12 +56,14 @@ function funcionVerificarExistenciaAUX(index) {
     return [encontrado, encontradoIndex];
 }
 
+// Funcion que elimina la comida en función del id de la misma, que se recibe por parametros
 function eliminarComida(index) {
     arrayComidas = JSON.parse(localStorage.getItem("Comidas")).filter(comida => comida.id !== index);
     localStorage.setItem("Comidas", JSON.stringify(arrayComidas));
     location.reload();
 }
 
+// Funcion que modifica la comida en función del id de la misma, que se recibe por parametros
 function modificarComida(index) {
     const inputModificadoNombre = document.getElementById("input-modificado-nombre" + index);
     const inputNuevoPrecio = document.getElementById("input-nuevo-precio" + index);
@@ -111,6 +114,7 @@ function destacarComida(index) {
         }
     }
 
+    // Muestre un alerta y añado un setTimeOut para quitar dicha alerta la cabo de 1.5 seg.
     if (auxBoolMensajeDestacado) {
         divAlertaDestacadoRepetido.innerHTML = `
                 <h6 class="m-0">COMIDA YA DESTACADA!!</h6>
@@ -125,6 +129,8 @@ function destacarComida(index) {
 
 }
 
+// Función que modifica la URL de la Imagen verificando si la input asociada a la URL no esta vacia
+// Caso contrario, muestra un alerta inyectada en el modal de modificar Imagen
 const modificarIMGurl = (index) => {
     const inputModificarUrl = document.getElementById("input-modificar-url" + index);
     const alerta = document.getElementById("inyectar-alerta-url" + index);
@@ -148,6 +154,7 @@ const modificarIMGurl = (index) => {
 
 }
 
+// Función que actualiza la tabla de comidas imprimiendolas en pantalla
 const actualizarPagina = () => {
     tBodyInyectar.innerHTML = "";
     for (let i = 0; i < arrayComidas.length; i++) {
@@ -241,7 +248,7 @@ const actualizarPagina = () => {
         <td class="td-col-opciones-comida py-3">
             <!-- MODAL ELIMINAR COMIDA -->
             <div>
-                <a><i class="fa-solid fa-trash-can color-icono ${arrayComidas[i].destacado ? "btn-eliminar-desactivado" : ""}" data-bs-toggle="modal"
+                <a><i class="fa-solid fa-trash color-icono ${arrayComidas[i].destacado ? "btn-eliminar-desactivado" : ""}" data-bs-toggle="modal"
                         data-bs-target="#modalEliminarComida${arrayComidas[i].id}"></i></a>
 
                 <div class="modal fade" data-bs-backdrop="static" id="modalEliminarComida${arrayComidas[i].id}"
@@ -552,9 +559,7 @@ btnGuardar.addEventListener("click", () => {
     btnGuardar.disabled = true;
 })
 
-// BUSCAR 
-
-
+// BUSCAR COMIDA VERIFICANDO CADA CARACTER EN LA INPUT CORRESPONDIENTE
 inputBuscar.addEventListener("keyup", () => {
     arrayComidas = arrayComidasAux.filter(comida => comida.nombre.toLowerCase().includes(inputBuscar.value.toLowerCase()))
     actualizarPagina();

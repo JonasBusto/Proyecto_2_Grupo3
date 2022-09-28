@@ -8,11 +8,7 @@ body {
 }
 
 
-/* HEADER */
-
-
 /* MAIN */
-
 main {
     background: url('../img/fondo-login.png') no-repeat center center/cover;
     padding: 0;
@@ -67,7 +63,8 @@ main {
     /* color: black; */
 }
 
-.div-input>div:hover, .div-textarea>div:hover {
+.div-input>div:hover,
+.div-textarea>div:hover {
     color: #faee9e;
     background-color: black;
 }
