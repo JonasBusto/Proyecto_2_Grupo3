@@ -1,3 +1,5 @@
+//Funcion autoejecutable que evalua al usuario autenticado, y en función de eso re-dirige o 
+// no a la pagina correspondiente
 (
     function validarDato() {
         let id = localStorage.getItem('id')
