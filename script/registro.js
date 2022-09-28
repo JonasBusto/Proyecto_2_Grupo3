@@ -28,7 +28,7 @@ function validarRegistro() {
         //ver si hay mismos usuarios
         let usuarioExistente = localSTG.filter(local => local.usuario.toLowerCase().trim() === usuario.toLowerCase().trim())
 
-        //preguntar si agrego sweetalert 'usuario ya existe' o alert, console log
+    
 
         //crear usuario
         console.log(usuarioExistente)
