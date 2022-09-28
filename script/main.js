@@ -76,7 +76,7 @@ function inyectarDestacado() {
         divInyectarDestacado.innerHTML = `
         <div class="col-12 col-md-6 d-flex flex-column justify-content-center text-center pb-3">
             <h5 class="subtitulo-pregunta">¿Estas con Hambre?</h5>
-            <h4>NO ESPERES MAS!</h4>
+            <h4 class="animate__animated animate__heartBeat">NO ESPERES MAS!</h4>
             <p class="subtitulo-ofertar-reserva">Comienza reservando este plato destacado de la casa</p>
             <h5 class="destacado-nombre">${localSTG[indexDestacadoEncontrado].nombre}</h5>
             <p class="desc-plato-destacado">${localSTG[indexDestacadoEncontrado].descripcion}</p>
@@ -85,7 +85,7 @@ function inyectarDestacado() {
             </div>
         </div>
         <div class="col-12 col-md-6 d-flex flex-column">
-            <img src="${localSTG[indexDestacadoEncontrado].url}" class="img-fluid w-100 mt-2" alt="plato1.png">
+            <img src="${localSTG[indexDestacadoEncontrado].url}" class="img-fluid w-100 mt-2 animate__animated animate__zoomInDown"" alt="plato1.png">
             <div class="destacado d-flex justify-content-end">
                 <h3 class="w-75">DESTACADO DE LA SEMANA</h3>
             </div>

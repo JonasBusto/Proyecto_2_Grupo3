@@ -15,7 +15,7 @@ function validarRegistro() {
 
     if (usuario.trim() === '' || contraseña.trim() === '' || validarContraseña.trim() === '') {
         Swal.fire({
-            title: 'CAMPOS INCOMPLETO',
+            title: 'CAMPOS INCOMPLETOS',
             icon: 'warning',
             confirmButtonText: 'ACEPTAR'
         })
@@ -28,11 +28,28 @@ function validarRegistro() {
         //ver si hay mismos usuarios
         let usuarioExistente = localSTG.filter(local => local.usuario.toLowerCase().trim() === usuario.toLowerCase().trim())
 
-        //preguntar si agrego sweetalert 'usuario ya existe' o alert, console log
+    
 
         //crear usuario
         console.log(usuarioExistente)
         if (usuarioExistente.length === 0 && usuario.toLowerCase().trim() !== "admin") {
+            /*contraseña.addEventListener("keyup", () => {
+                    if (contraseña.value.length > 11) {
+                        Swal.fire({
+                            title: 'máximo de caracteres superados',
+                            text: 'introduce hasta 10 caracteres permitido',
+                            icon: 'warning',
+                            confirmButtonText: 'ACEPTAR',
+                        })}
+                    else if (contraseña.value.length <3){
+                            Swal.fire({
+                            title: 'contraseña demasiado corta',
+                            icon: 'warning',
+                            confirmButtonText: 'ACEPTAR',
+                        })
+                    }    
+    
+                    })*/
             if (contraseña === validarContraseña) {
                 array.push({ id: localSTG[localSTG.length - 1].id + 1, usuario: usuario.trim(), contraseña: contraseña.trim(), role: 'usuario', habilitado: false })
                 localStorage.setItem('Usuarios', JSON.stringify(array))
