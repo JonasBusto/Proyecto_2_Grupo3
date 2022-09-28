@@ -77,7 +77,7 @@ const inyectarNavbar = () => {
     } else {
         divInyectarNavbar.innerHTML = `
         <div class="container-fluid">
-                <a class="navbar-brand text-light" href="/index.html">
+                <a class="navbar-brand text-light" href="/paginaUsuario.html">
                     <img src="/img/logosolo.png" class="img-fluid rounded-circle me-1" width="50vh" height="50vh"
                         alt="Logo.png">
                     <img src="/img/letraslogo.png" id="logo-letra-nav" width="120vh" height="50vh" alt="Letras.png">
