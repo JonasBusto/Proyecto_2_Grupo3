@@ -199,14 +199,15 @@ form a:hover {
     font-weight: 450;
 }
 
-.modal-footer button {
+.modal-footer button, .modal-footer a {
     background-color: #faee9e;
     font-weight: bold;
     border: 1.5px solid black;
+    font-style: normal;
 }
 
-.modal-footer button:hover {
-    color: #faee9e;
+.modal-footer button:hover, .modal-footer a:hover {
+    color: #faee9e !important;
     background-color: black;
     font-weight: bold;
 }
