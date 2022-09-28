@@ -10,7 +10,7 @@ function login() {
 
     if (usuario.trim() === '' || contraseña.trim() === '') {
         Swal.fire({
-            title: 'CAMPOS INCOMPLETO',
+            title: 'CAMPOS INCOMPLETOS',
             icon: 'warning',
             confirmButtonText: 'ACEPTAR'
         })
