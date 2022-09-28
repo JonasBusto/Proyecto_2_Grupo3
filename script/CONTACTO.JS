@@ -117,32 +117,85 @@ const logout = () => {
     location.href = './contacto.html'
 }
 
+
+const inputNombre = document.getElementById("contactoNombre");
+const inputEmail = document.getElementById("contactoEmail");
+const inputComentario = document.getElementById("contactoComentario");
+const btnContacto = document.getElementById("contactoBoton");
+
+if (inputNombre.value.trim() === "" || inputEmail.value.trim() === "" || inputComentario.value.trim() === "") {
+    btnContacto.disabled = true;
+    btnContacto.classList.add("btn-contacto-desactivado");
+} else {
+    btnContacto.disabled = false;
+    btnContacto.classList.remove("btn-contacto-desactivado");
+}
+
+inputNombre.addEventListener("keyup", () => {
+    if (inputNombre.value.trim() === "" || inputEmail.value.trim() === "" || inputComentario.value.trim() === "") {
+        btnContacto.disabled = true;
+        btnContacto.classList.add("btn-contacto-desactivado");
+    } else {
+        btnContacto.disabled = false;
+        btnContacto.classList.remove("btn-contacto-desactivado");
+    }
+})
+
+inputEmail.addEventListener("keyup", () => {
+    if (inputNombre.value.trim() === "" || inputEmail.value.trim() === "" || inputComentario.value.trim() === "") {
+        btnContacto.disabled = true;
+        btnContacto.classList.add("btn-contacto-desactivado");
+    } else {
+        btnContacto.disabled = false;
+        btnContacto.classList.remove("btn-contacto-desactivado");
+    }
+})
+
+inputComentario.addEventListener("keyup", () => {
+    if (inputNombre.value.trim() === "" || inputEmail.value.trim() === "" || inputComentario.value.trim() === "") {
+        btnContacto.disabled = true;
+        btnContacto.classList.add("btn-contacto-desactivado");
+    } else {
+        btnContacto.disabled = false;
+        btnContacto.classList.remove("btn-contacto-desactivado");
+    }
+})
+
+
+
+
 function validarContacto() {
     let contactoNombre = document.getElementById("contactoNombre").value;
     let contactoEmail = document.getElementById("contactoEmail").value;
     let contactoComentario = document.getElementById("contactoComentario").value;
     let array = []
 
-    if (contactoNombre === "") {
+    if (contactoNombre.trim() === "") {
         //alert("Falta completar nombre")
         document.getElementById("contactoNombre").className = "form-control is-invalid"
     }
     else {
         document.getElementById("contactoNombre").className = "form-control is-valid"
     }
-    if (contactoEmail === "") {
+    if (contactoEmail.trim() === "") {
         //alert("Falta completar nombre")
         document.getElementById("contactoEmail").className = "form-control is-invalid"
     }
     else {
         document.getElementById("contactoEmail").className = "form-control is-valid"
     }
-    if (contactoComentario === "") {
+    if (contactoComentario.trim() === "") {
         //alert("Falta completar nombre")
         document.getElementById("contactoComentario").className = "form-control is-invalid"
     }
     else {
         document.getElementById("contactoComentario").className = "form-control is-valid"
     }
+
+    // if (contactoNombre.trim() !== "" && contactoEmail.trim() !== "" && contactoComentario.trim() !== "") {
+    //     document.getElementById("contactoNombre").value = "";
+    //     document.getElementById("contactoEmail").value = "";
+    //     document.getElementById("contactoComentario").value = "";
+    // }
 }
 //falta agregar el de submit y e inicializar formulario

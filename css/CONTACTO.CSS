@@ -101,6 +101,12 @@ form button:hover {
     padding-right: 5%;
 }
 
+.btn-contacto-desactivado {
+    pointer-events: none;
+    color: rgb(44, 44, 44);
+    background-color: #aaaaaa;
+}
+
 .btn-contacto:hover {
     background-color: black;
     color: #faee93;
