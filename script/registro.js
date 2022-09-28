@@ -30,27 +30,27 @@ function validarRegistro() {
 
 
 
-        //crear usuario
+        //crear usuario y validacion de maximo de caracteres
         const inputContraseña = document.getElementById("contraseña")
         if (usuarioExistente.length === 0 && usuario.toLowerCase().trim() !== "admin") {
             if (contraseña === validarContraseña) {
                 if (contraseña.length > 11) {
                     Swal.fire({
-                        title: 'máximo de caracteres superados',
-                        text: 'Contraseña demasiado larga. Maximo 10 caracteres permitido',
+                        title: 'Máximo de carácteres superados',
+                        text: 'Contraseña demasiado larga. Máximo 10 carácteres permitido',
                         icon: 'warning',
                         confirmButtonText: 'ACEPTAR',
                     })
                 }
                 else if (contraseña.length < 3) {
                     Swal.fire({
-                        title: 'Contraseña demasiado corta. Debe tener, minimo, 3 caracteres',
+                        title: 'Contraseña demasiado corta. Debe tener, mínimo, 3 carácteres',
                         icon: 'warning',
                         confirmButtonText: 'ACEPTAR',
                     })
                 } else if (usuario.length > 15) {
                     Swal.fire({
-                        title: 'Nombre demasiado largo. Debe tener, maximo, 15 caracteres',
+                        title: 'Nombre demasiado largo. Debe tener, máximo, 15 carácteres',
                         icon: 'warning',
                         confirmButtonText: 'ACEPTAR',
                     })
