@@ -28,41 +28,46 @@ function validarRegistro() {
         //ver si hay mismos usuarios
         let usuarioExistente = localSTG.filter(local => local.usuario.toLowerCase().trim() === usuario.toLowerCase().trim())
 
-    
+
 
         //crear usuario
-        console.log(usuarioExistente)
+        const inputContraseña = document.getElementById("contraseña")
         if (usuarioExistente.length === 0 && usuario.toLowerCase().trim() !== "admin") {
-            /*contraseña.addEventListener("keyup", () => {
-                    if (contraseña.value.length > 11) {
-                        Swal.fire({
-                            title: 'máximo de caracteres superados',
-                            text: 'introduce hasta 10 caracteres permitido',
-                            icon: 'warning',
-                            confirmButtonText: 'ACEPTAR',
-                        })}
-                    else if (contraseña.value.length <3){
-                            Swal.fire({
-                            title: 'contraseña demasiado corta',
-                            icon: 'warning',
-                            confirmButtonText: 'ACEPTAR',
-                        })
-                    }    
-    
-                    })*/
             if (contraseña === validarContraseña) {
-                array.push({ id: localSTG[localSTG.length - 1].id + 1, usuario: usuario.trim(), contraseña: contraseña.trim(), role: 'usuario', habilitado: false })
-                localStorage.setItem('Usuarios', JSON.stringify(array))
-                console.log(array)
-                Swal.fire({
-                    title: 'REGISTRO EXITOSO',
-                    icon: 'success',
-                    html: 'Debe esperar a que el <b>Administrador</b> lo dé de <b>ALTA</b> en el sistema para poder <b>AUTENTICARSE</b> al mismo.',
-                    confirmButtonText: 'ACEPTAR',
-                })
-                document.getElementById('usuario').value = ''
-                document.getElementById('contraseña').value = ''
-                document.getElementById('validarContraseña').value = ''
+                if (contraseña.length > 11) {
+                    Swal.fire({
+                        title: 'máximo de caracteres superados',
+                        text: 'Contraseña demasiado larga. Maximo 10 caracteres permitido',
+                        icon: 'warning',
+                        confirmButtonText: 'ACEPTAR',
+                    })
+                }
+                else if (contraseña.length < 3) {
+                    Swal.fire({
+                        title: 'Contraseña demasiado corta. Debe tener, minimo, 3 caracteres',
+                        icon: 'warning',
+                        confirmButtonText: 'ACEPTAR',
+                    })
+                } else if (usuario.length > 15) {
+                    Swal.fire({
+                        title: 'Nombre demasiado largo. Debe tener, maximo, 15 caracteres',
+                        icon: 'warning',
+                        confirmButtonText: 'ACEPTAR',
+                    })
+                } else {
+                    array.push({ id: localSTG[localSTG.length - 1].id + 1, usuario: usuario.trim(), contraseña: contraseña.trim(), role: 'usuario', habilitado: false })
+                    localStorage.setItem('Usuarios', JSON.stringify(array))
+                    console.log(array)
+                    Swal.fire({
+                        title: 'REGISTRO EXITOSO',
+                        icon: 'success',
+                        html: 'Debe esperar a que el <b>Administrador</b> lo dé de <b>ALTA</b> en el sistema para poder <b>AUTENTICARSE</b> al mismo.',
+                        confirmButtonText: 'ACEPTAR',
+                    })
+                    document.getElementById('usuario').value = ''
+                    document.getElementById('contraseña').value = ''
+                    document.getElementById('validarContraseña').value = ''
+                }
             } else {
                 Swal.fire({
                     title: 'LAS CONTRASEÑAS NO SON IGUALES',

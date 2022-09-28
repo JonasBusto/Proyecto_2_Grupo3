@@ -30,3 +30,10 @@
 .div-limite-caracteres h6 {
     margin-bottom: 0px;
 }
+
+@media (max-width: 290px) {
+    .div-btn-alta-comida {
+        display: flex;
+        justify-content:space-between;
+    }
+}

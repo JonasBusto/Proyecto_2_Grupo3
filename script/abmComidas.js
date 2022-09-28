@@ -10,6 +10,7 @@ const inputBuscar = document.getElementById("input-buscar");
 const divAlertaDestacadoRepetido = document.getElementById("div-alerta-destacado");
 const limiteCaracteres = document.getElementById("limite-caracteres-desc");
 const divAlertaCaracteres = document.getElementById("alerta-limite-superado");
+const divAlertaNomberLargo = document.getElementById("alerta-nombre-largo");
 
 // Defino una clase del tipo Comida para simplificar la declaración de objetos del tipo Comida
 class Comida {
@@ -69,12 +70,11 @@ function modificarComida(index) {
     const inputNuevoPrecio = document.getElementById("input-nuevo-precio" + index);
     const nuevaDesc = document.getElementById("textarea-nueva-descripcion" + index);
     const alerta = document.getElementById("inyectar-alerta" + index);
-
     let encontrado = funcionVerificarExistenciaAUX(index)[0];
     let encontradoIndex = funcionVerificarExistenciaAUX(index)[1];
 
     if (encontrado) {
-        if (inputModificadoNombre.value.trim() === "" || inputNuevoPrecio.value.trim() === "" || nuevaDesc.value.trim() === "" || nuevaDesc.value.length > 100) {
+        if (inputModificadoNombre.value.trim() === "" || inputNuevoPrecio.value.trim() === "" || nuevaDesc.value.trim() === "" || nuevaDesc.value.length > 100 || inputModificadoNombre.value.length > 40) {
             alerta.innerHTML = `
             <h6 class="text-danger">*VERIFIQUE LOS DATOS QUE INGRESA*</h6>
             `
@@ -301,6 +301,9 @@ const actualizarPagina = () => {
                                         <label class="form-label">Nombre</label>
                                         <input type="text" class="form-control" id="input-modificado-nombre${arrayComidas[i].id}"
                                             value="${arrayComidas[i].nombre}">
+                                        <div id="alerta-nuevoNombre${arrayComidas[i].id}">
+                                            
+                                        </div>
                                     </div>
                                     <div class="d-flex flex-column mb-3">
                                         <label class="form-label">Categoria</label>
@@ -437,7 +440,7 @@ const actualizarPagina = () => {
             ${textAreaModificar.value.length}/100`
         textAreaModificar.addEventListener("keyup", () => {
             if (textAreaModificar.value.length > 100) {
-                console.log("apa");
+                // console.log("apa");
                 divAlertaLimiteNuevo.innerHTML = `
                 Limite de caracteres superados!!
                 `
@@ -453,7 +456,6 @@ const actualizarPagina = () => {
                 0/100
                 `
             } else {
-                console.log("tranca")
                 divAlertaLimiteNuevo.innerHTML = "";
                 divLimitesNuevo.style.color = "black";
                 divLimitesNuevo.innerHTML = `
@@ -461,6 +463,19 @@ const actualizarPagina = () => {
                 `
             }
         })
+
+        const divAlertaNuevoNombre = document.getElementById("alerta-nuevoNombre" + arrayComidas[i].id);
+        const inputNuevoNombre = document.getElementById("input-modificado-nombre" + arrayComidas[i].id);
+        inputNuevoNombre.addEventListener("keyup", () => {
+            if (inputNuevoNombre.value.trim().length > 40) {
+                divAlertaNuevoNombre.innerHTML = `
+                <h6 class="m-0 text-danger">Solo 40 caracteres maximo</h6>
+                `
+            } else {
+                divAlertaNuevoNombre.innerHTML = "";
+            }
+        })
+
 
         const btnEliminar = document.getElementById("btnEliminar" + arrayComidas[i].id);
         btnEliminar.addEventListener("click", () => eliminarComida(arrayComidas[i].id));
@@ -485,11 +500,19 @@ actualizarPagina();
 // EN ESTE CASO USE "keyup" PARA CONTROLAR LAS INPUTS CADA VEZ QUE PRESIONO UNA TECLA
 // VERIFICO LAS INPUT UNA POR UNA
 
-inputNuevoNombre.addEventListener("keyup", () => {
+inputNuevoNombre.addEventListener("keyup", (e) => {
     if (inputNuevoNombre.value.trim() === "" || textareaNuevaDesc.value.trim() === "" || inputNuevoPrecio.value.trim() === "" || inputNuevaImgUrl.value.trim() === "") {
         btnGuardar.disabled = true;
     } else {
-        btnGuardar.disabled = false;
+        if(inputNuevoNombre.value.length>40) {
+            divAlertaNomberLargo.innerHTML = `
+            <h6 class="m-0 text-danger">Solo 40 caracteres maximo</h6>
+            `
+            btnGuardar.disabled = true;
+        } else {
+            divAlertaNomberLargo.innerHTML = "";
+            btnGuardar.disabled = false;
+        }
     }
 })
 textareaNuevaDesc.addEventListener("keyup", () => {

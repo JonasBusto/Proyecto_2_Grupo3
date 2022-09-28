@@ -115,6 +115,16 @@ table>tbody a {
     font-weight: bold;
 }
 
+@media (max-width: 290px) {
+    .modal-footer button {
+        width: 5rem;
+        height: 4rem;
+        font-size: 0.9rem;
+        font-weight: bold;
+        margin: 0px !important;
+    }
+}
+
 .form-switch input {
     color: black;
     background-color: #faee9e;
